@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-10-10T23:57:34.234Z" agent="5.0 (Windows)" etag="lqhkXTPcRsmkfgFqzhOp" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-10T23:59:01.507Z" agent="5.0 (Windows)" etag="EfExD-vLSVmezXRPTaoj" version="13.7.9" type="github">
   <diagram id="7qihnWFPo6WTzPGFp3qb" name="Page-1">
-    <mxGraphModel dx="3873" dy="1725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2059" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -141,6 +141,9 @@
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-73" value="Collect Data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="200" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-178" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-75" target="yi_OrMjheSC8m_nI0leP-177">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-75" value="UART Receive" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="520" y="330" width="120" height="60" as="geometry" />
@@ -367,6 +370,9 @@
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-176" value="Update global/file values" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="1480" y="1580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-177" value="Transmit to next Pi" style="whiteSpace=wrap;html=1;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="330" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
