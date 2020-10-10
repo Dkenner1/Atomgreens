@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2020-10-10T23:48:27.221Z" agent="5.0 (Windows)" etag="QK34HxNqWsHA6Q2XAAMX" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-10T23:57:34.234Z" agent="5.0 (Windows)" etag="lqhkXTPcRsmkfgFqzhOp" version="13.7.9" type="github">
   <diagram id="7qihnWFPo6WTzPGFp3qb" name="Page-1">
-    <mxGraphModel dx="4304" dy="1971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3873" dy="1725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-167" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1470" width="760" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-165" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1060" width="760" height="400" as="geometry" />
+        </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-24" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="580" y="520" width="270" height="260" as="geometry" />
         </mxCell>
@@ -107,22 +113,22 @@
           <mxGeometry x="750" y="605" width="100" height="45" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-48" value="&lt;font style=&quot;font-size: 22px&quot;&gt;Rasberry Pi 0 State Priority&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="-370" y="140" width="210" height="80" as="geometry" />
+          <mxGeometry x="640" y="80" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-49" value="UART" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="-325" y="220" width="120" height="30" as="geometry" />
+          <mxGeometry x="685" y="160" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-50" value="Idle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="-325" y="280" width="120" height="40" as="geometry" />
+          <mxGeometry x="685" y="220" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-51" value="Collect Data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="-325" y="250" width="120" height="30" as="geometry" />
+          <mxGeometry x="685" y="190" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-52" value="Highest" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="-210" y="200" width="40" height="20" as="geometry" />
+          <mxGeometry x="800" y="140" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-53" value="Lowest" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="-210" y="320" width="40" height="20" as="geometry" />
+          <mxGeometry x="800" y="260" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-54" value="&lt;font style=&quot;font-size: 22px&quot;&gt;Rasberry Pi 0 State Descriptions&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
           <mxGeometry x="320" y="440" width="210" height="80" as="geometry" />
@@ -292,45 +298,75 @@
         <mxCell id="yi_OrMjheSC8m_nI0leP-144" value="Engage watering acuator" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="-120" y="1340" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-147" value="UART" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
-          <mxGeometry x="1190" y="910" width="150" height="60" as="geometry" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-147" value="Receive Data " style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1070" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-150" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-148">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1265" y="1110" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-166" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-148" target="yi_OrMjheSC8m_nI0leP-156">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-148" value="Message Received" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1205" y="980" width="120" height="60" as="geometry" />
+          <mxGeometry x="1200" y="980" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-153" value="Script update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-151" target="yi_OrMjheSC8m_nI0leP-152">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-153" value="Script update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-151">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="1600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-155" value="Pass along" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-151" target="yi_OrMjheSC8m_nI0leP-154">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-155" value="Pass along" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-151">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1040" y="1600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-151" value="Type" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1210" y="1350" width="120" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-152" value="Update required global values or file values" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1485" y="1370" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-154" value="Transmit to next Rasberry Pi" style="whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="925" y="1370" width="120" height="60" as="geometry" />
+          <mxGeometry x="1200" y="1550" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-156">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1265" y="1210" as="targetPoint" />
+            <mxPoint x="1260" y="1210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-156" value="Parse initial byte" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1205" y="1110" width="120" height="60" as="geometry" />
+          <mxGeometry x="1200" y="1110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-157" value="&lt;div align=&quot;left&quot;&gt;UART transfer: Frame design&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;As frames are transferred using one 1 byte transfer protocol must be written to parse incoming data&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;????????????????????&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="960" width="200" height="120" as="geometry" />
+          <mxGeometry x="1355" y="1080" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-159" value="Parse initial byte" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1205" y="1210" width="120" height="60" as="geometry" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-159" target="yi_OrMjheSC8m_nI0leP-164">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-159" value="Receive data byte" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-171" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-164" target="yi_OrMjheSC8m_nI0leP-159">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="1360" />
+              <mxPoint x="1180" y="1240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-172" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-164" target="yi_OrMjheSC8m_nI0leP-151">
+          <mxGeometry x="-0.7143" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="1550" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-164" value="End Byte?" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1310" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-168" value="Use Data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1490" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-173" value="UART" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="910" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-175" value="Transmit to next Rasberry Pi" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="920" y="1580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yi_OrMjheSC8m_nI0leP-176" value="Update global/file values" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="1580" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
