@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-11T19:19:46.313Z" agent="5.0 (Windows)" etag="UGbRgvTuLlyGD0DJsbOS" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-11T19:20:59.087Z" agent="5.0 (Windows)" etag="fZ2SDe4Z7JM9-uQArGO1" version="13.7.9" type="github">
   <diagram id="QLvcNtkyFLMQ6eaHcRJF" name="Page-1">
     <mxGraphModel dx="2865" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -301,6 +301,21 @@
         </mxCell>
         <mxCell id="N01aK8XhvqNWcXPDAk_N-162" value="Data" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="-520" y="740" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N01aK8XhvqNWcXPDAk_N-165" value="Bubbler" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="880" y="610" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N01aK8XhvqNWcXPDAk_N-166" value="Atomizer" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="880" y="690" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N01aK8XhvqNWcXPDAk_N-167" value="Air Conditioning" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="880" y="770" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N01aK8XhvqNWcXPDAk_N-168" value="Pump" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="880" y="850" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N01aK8XhvqNWcXPDAk_N-169" value="Nutrient dispensing" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="880" y="930" width="190" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
