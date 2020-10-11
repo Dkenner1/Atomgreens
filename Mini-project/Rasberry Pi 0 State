@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-10-11T04:20:30.538Z" agent="5.0 (Windows)" etag="zmA0lr5ULzrZbh2rPSfs" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-11T19:21:11.186Z" agent="5.0 (Windows)" etag="hlft2bvTNW38VlCy3q_b" version="13.7.9" type="github">
   <diagram id="7qihnWFPo6WTzPGFp3qb" name="Page-1">
-    <mxGraphModel dx="3268" dy="1380" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3873" dy="1725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -324,7 +324,7 @@
         <mxCell id="yi_OrMjheSC8m_nI0leP-151" value="Type" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="1200" y="1550" width="120" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="yi_OrMjheSC8m_nI0leP-156" edge="1">
+        <mxCell id="yi_OrMjheSC8m_nI0leP-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yi_OrMjheSC8m_nI0leP-156" edge="1" target="yi_OrMjheSC8m_nI0leP-159">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1260" y="1210" as="targetPoint" />
           </mxGeometry>
@@ -335,30 +335,11 @@
         <mxCell id="yi_OrMjheSC8m_nI0leP-157" value="&lt;div align=&quot;left&quot;&gt;UART transfer: Frame design&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;As frames are transferred using one 1 byte transfer protocol must be written to parse incoming data&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;????????????????????&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="1355" y="1080" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="yi_OrMjheSC8m_nI0leP-159" target="yi_OrMjheSC8m_nI0leP-164" edge="1">
+        <mxCell id="kxupoWEkaFWVDF3fxcSK-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yi_OrMjheSC8m_nI0leP-159" target="yi_OrMjheSC8m_nI0leP-151">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-159" value="Receive data byte" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="1210" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-171" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="yi_OrMjheSC8m_nI0leP-164" target="yi_OrMjheSC8m_nI0leP-159" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1180" y="1360" />
-              <mxPoint x="1180" y="1240" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-172" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yi_OrMjheSC8m_nI0leP-164" target="yi_OrMjheSC8m_nI0leP-151" edge="1">
-          <mxGeometry x="-0.7143" relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1260" y="1550" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="yi_OrMjheSC8m_nI0leP-164" value="End Byte?" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="1310" width="120" height="100" as="geometry" />
+        <mxCell id="yi_OrMjheSC8m_nI0leP-159" value="Obtain entire message (many bytes of data)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="1290" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yi_OrMjheSC8m_nI0leP-168" value="Use Data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="1" vertex="1">
           <mxGeometry x="940" y="1490" width="150" height="60" as="geometry" />
