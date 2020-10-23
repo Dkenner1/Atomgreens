@@ -7,6 +7,7 @@ import logging, os, shelve, webview, sys, traceback
 app = Flask('Microgreens')
 app.register_blueprint(main)
 
+
 def start_server():
     print('~ ' * 5)
     print('in start_server')
