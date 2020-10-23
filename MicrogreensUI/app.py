@@ -1,16 +1,25 @@
-# This is a sample Python script.
+from flask import Flask, render_template, redirect, request, url_for
+from threading import Thread, Lock, Event
+from pages.main import main
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import logging, os, shelve, webview, sys, traceback
+
+app = Flask('Microgreens')
+app.register_blueprint(main)
+
+def start_server():
+    print('~ ' * 5)
+    print('in start_server')
+    app.logger.setLevel(logging.INFO)
+    app.run(host='localhost', port=1111, threaded=True)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    t = Thread(target=start_server)
+    t.daemon = True
+    t.start()
+    width = int(1920 * 0.75)
+    height = int(1080 * .75)
+    window = webview.create_window('Microgreens', 'http://localhost:1111/', width=width,
+                                   height=height, )
+    webview.start(gui="qt", debug=True)
