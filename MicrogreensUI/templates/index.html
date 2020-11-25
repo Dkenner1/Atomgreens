@@ -2,53 +2,62 @@
 <html>
 <head lang="en">
 <link rel="stylesheet" href='/static/css/style.css' />
+	<link rel="stylesheet" href='/static/css/bootstrap.css' />
+	<link rel="stylesheet" href='/static/css/dashboard.css' />
 </head>
 	<body>
-         <section id = "1">
-             <h1>Your Microgreens</h1>
-		 </section>
-	 <div class="wrap">
-  		
-		<figure ALIGN = CENTER>
+	<div class="d-flex justify-content-center">
+		<h1>Your Microgreens</h1>
+	</div>
+	 <div class="container-fluid">
+		 <p>Notifciation</p>
+	{% for item in dict2.values() %}
+		 <a>item.msg</a>
+	{% endfor %}
+		 <table{{ dict.key }}</table>
+		 <div class="d-flex justify-content-between">
+			 <figure ALIGN = CENTER>
 			<img src = "/static/imgs/Broccoli.jpg" alt = "Microgreen Broccoli">
 			<figcaption> Tray 1: Broccoli </figcaption>
 			<div class="progress-radial progress-25">
 				<div class="overlay">25%</div>
 			</div>
-		</figure>
+			</figure>
 
-		<figure ALIGN = CENTER>
-			<img src = "/static/imgs/Beets.jpg" alt = "Microgreen Beets">
-			<figcaption> Tray 2: Beets </figcaption>
-			<div class="progress-radial progress-50">
-				<div class="overlay">50%</div>
-			</div>
-		</figure>
+			<figure ALIGN = CENTER>
+				<img src = "/static/imgs/Beets.jpg" alt = "Microgreen Beets">
+				<figcaption> Tray 2: Beets </figcaption>
+				<div class="progress-radial progress-50">
+					<div class="overlay">50%</div>
+				</div>
+			</figure>
+			<figure ALIGN = CENTER>
+				<img src = "/static/imgs/Arugula.jpg" alt = "Microgreen Arugula">
+				<figcaption> Tray 3: Arugula </figcaption>
+				<div class="progress-radial progress-75">
+					<div class="overlay">50%</div>
+				</div>
+			</figure>
 
-		<figure ALIGN = CENTER>
-			<img src = "/static/imgs/Arugula.jpg" alt = "Microgreen Arugula">
-			<figcaption> Tray 3: Arugula </figcaption>
-			<div class="progress-radial progress-75">
-				<div class="overlay">50%</div>
-			</div>
-		</figure>
-
-		<figure ALIGN = CENTER>
-			<img src = "/static/imgs/Kale.jpg" alt = "Microgreen Kale">
-			<figcaption> Tray 4: Kale </figcaption>
-			<div class="progress-radial progress-100">
-				<div class="overlay">100%</div>
-			</div>
-		</figure>
-
-		<button class="button button1">View Data</button>
-		<button class="button button2">Service Mode</button>
-  
+			<figure ALIGN = CENTER>
+				<img src = "/static/imgs/Kale.jpg" alt = "Microgreen Kale">
+				<figcaption> Tray 4: Kale </figcaption>
+				<div class="progress-radial progress-100">
+					<div class="overlay">100%</div>
+				</div>
+			</figure>
+		 </div>
+		 <div class="d-flex justify-content-center">
+			<button class="button button1">View Data</button>
+			<button class="button button2">Service Mode</button>
+		 </div>
 	</div>
-        <section id = "2">
+	<div class="d-flex justify-content-center">
+	        <section id = "2">
              <h2>Notifications</h2>
              <p><b>Kale</b> ready to harvest!</p>
 		</section>
+	</div>
 	</body>
 </html> 
 

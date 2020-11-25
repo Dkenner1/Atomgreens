@@ -1,8 +1,8 @@
-from flask import Flask, render_template, redirect, request, url_for
-from threading import Thread, Lock, Event
+from flask import Flask
+from threading import Thread
 from pages.main import main
-
-import logging, os, shelve, webview, sys, traceback
+from pymongo import MongoClient
+import logging, webview
 
 app = Flask('Microgreens')
 app.register_blueprint(main)
