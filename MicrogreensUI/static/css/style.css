@@ -26,9 +26,17 @@
   background-color: white;
   color: black;
   border: 2px solid #008CBA;
+  width: 60%;
 }
 
 .button2:hover {
   background-color: #008CBA;
   color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
 }
