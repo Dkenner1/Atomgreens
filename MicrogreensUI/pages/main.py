@@ -18,3 +18,5 @@ def settings():
 @main.route('/trayinfo/1', methods=['GET', 'POST'])
 def data():
     return render_template('tray.html')
+
+# eli was here
