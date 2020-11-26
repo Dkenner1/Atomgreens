@@ -15,6 +15,6 @@ def settings():
     return render_template('index.html')
 
 
-@main.route('/trayinfo/<dynamicid>', methods=['GET', 'POST'])
+@main.route('/trayinfo/1', methods=['GET', 'POST'])
 def data():
-    return render_template('index.html')
+    return render_template('tray.html')

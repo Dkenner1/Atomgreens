@@ -6,7 +6,7 @@
 
 	<div class="fixed-top">
         <div class="float-right">
-            <button class="button button1" onclick="document.location='index.html'"> Back </button>
+            <button class="button button1" onclick="go_home()"> Back </button>
         </div>
 	</div>
 
@@ -34,6 +34,10 @@
     </div>
 
 {% endblock %}
-
+<script>
+    function go_home() {
+        document.location= "/";
+    }
+</script>
 
 
