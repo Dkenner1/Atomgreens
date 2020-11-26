@@ -40,3 +40,9 @@
   margin-right: -0.75rem;
   margin-left: -0.75rem;
 }
+
+.center-block {
+  display: block;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
