@@ -1,9 +1,10 @@
 from flask import Flask
 from threading import Thread
 from routes.main import main
-from pymongo import MongoClient
+from server.mongoDB import view_create
 import logging, webview
 from waitress import serve
+
 
 app = Flask('Microgreens')
 app.register_blueprint(main)

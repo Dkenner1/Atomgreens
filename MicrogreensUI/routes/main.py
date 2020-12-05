@@ -1,13 +1,15 @@
 from flask import Blueprint, render_template, json, \
     redirect, request, url_for
-from server.mongoDB import tray_data
+from server.mongoDB import tray_data, status
 
 main = Blueprint('main', __name__, template_folder='templates')
 
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    for item in status.find({}, {'id:': 0}):
+        print(item)
+    return render_template('index.html', status=status.find({}, {'id:': 0}))
 
 
 @main.route('/settings', methods=['GET', 'POST'])
@@ -17,7 +19,6 @@ def settings():
 
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
 def data(trayid):
-    print('tray!')
     ph_data = tray_data.find({'tray': int(trayid), 'sensor': 'ph'}, {'_id': 0 })
     weight_data = tray_data.find({'tray': int(trayid), 'sensor': 'ph'}, {'_id': 0 })
     water_data = tray_data.find({'tray': int(trayid), 'sensor': 'water level'}, {'_id': 0 })
