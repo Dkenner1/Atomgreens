@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class = "chart-container">
+    <div class = "container-fluid">
             <canvas id="phChart"></canvas>
             <canvas id="ecChart"></canvas>
             <canvas id="weightChart"></canvas>
@@ -30,7 +30,7 @@
             <canvas id="extempChart"></canvas>
             <canvas id="redChart"></canvas>
             <canvas id="blueChart"></canvas>
-        </div>
+    </div>
 
 {% endblock %}
 {% block script %}
@@ -87,13 +87,13 @@
                         'rgb(195,178,98)',
                         'rgb(98,89,41)'
                     ],
-                    data: [(randomScalingFactor()*1),
-                        (randomScalingFactor()*1),
-                        (randomScalingFactor()*1),
-                        (randomScalingFactor()*1),
-                        (randomScalingFactor()*1),
-                        (randomScalingFactor()*1),
-                        (randomScalingFactor()*1)],
+                    data: [(randomScalingFactor()),
+                        (randomScalingFactor()),
+                        (randomScalingFactor()),
+                        (randomScalingFactor()),
+                        (randomScalingFactor()),
+                        (randomScalingFactor()),
+                        (randomScalingFactor())],
                     fill: false,
                 }],
                 options: {

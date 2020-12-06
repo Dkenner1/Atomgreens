@@ -1,7 +1,6 @@
 from flask import Flask
 from threading import Thread
 from routes.main import main
-from server.mongoDB import view_create
 import logging, webview
 from waitress import serve
 

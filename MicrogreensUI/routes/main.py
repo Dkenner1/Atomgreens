@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, json, \
     redirect, request, url_for
-from server.mongoDB import tray_data, status
+
 
 main = Blueprint('main', __name__, template_folder='templates')
 
@@ -19,10 +19,9 @@ def settings():
 
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
 def data(trayid):
-    ph_data = tray_data.find({'tray': int(trayid), 'sensor': 'ph'}, {'_id': 0})
-    weight_data = tray_data.find({'tray': int(trayid), 'sensor': 'ph'}, {'_id': 0})
-    water_data = tray_data.find({'tray': int(trayid), 'sensor': 'water level'}, {'_id': 0})
-    return render_template('tray.html', ph=ph_data, weight=weight_data, water=water_data)
+
+
+    return render_template('tray.html')
 
 # eli was here
 # Daniel replies back!
