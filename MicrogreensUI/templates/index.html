@@ -27,9 +27,17 @@
 	<div class="d-flex justify-content-center">
 		<section id = "2">
              <h2>Notifications</h2>
-             <p><b>Kale</b> ready to harvest!</p>
+			<p><b>Kale</b> ready to harvest!</p>
+			{% for item in status %}
+			<p>{{item.sensor}}</p>
+			{% endfor %}
 		</section>
 	</div>
+{% endblock %}
+{% block script %}
+<script>
+
+</script>
 {% endblock %}
 
          

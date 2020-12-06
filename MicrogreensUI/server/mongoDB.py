@@ -14,16 +14,34 @@ def view_create():
         "pipeline": [
             {
                 '$match': {
-                    'tray': 1
+                    'tray': 1,
+                    'time': {
+                        '$exists': True
+                    }
+
                 }
-            }, {
-            '$group': {
+            },
+            {
+                '$sort': {
+                    'time': -1
+                }
+            },
+            {
+            '$group':
+                {
                 '_id': '$sensor',
-                'value': {
-                    '$max': '$value'
+                'doc': {
+                    '$first': '$$ROOT'
+                }
+                }
+            },
+            {
+            '$replaceRoot':
+                {
+                    'newRoot': '$doc'
                 }
             }
-        }
+
         ]
     }
     )
