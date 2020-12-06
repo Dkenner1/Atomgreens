@@ -1,0 +1,7190 @@
+[{
+  "_id": {
+    "$oid": "5fc0a47cf27dc54904317c57"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1606459808
+},{
+  "_id": {
+    "$oid": "5fc0a47cf27dc54904317c58"
+  },
+  "tray": 1,
+  "sensor": "water",
+  "value": 6,
+  "time": 1606459808
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a0b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a0c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a0d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a0e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a0f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a10"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a11"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a12"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a13"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a14"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a15"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a16"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a17"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a18"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a19"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a1f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a20"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a21"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a22"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a23"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a24"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a25"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a26"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a27"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a28"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a29"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a2f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a30"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a31"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a32"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a33"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a34"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a35"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a36"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a37"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a38"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a39"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a3f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a40"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a41"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a42"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a43"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a44"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a45"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a46"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a47"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a48"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a49"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a4f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a50"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a51"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a52"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a53"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a54"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a55"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a56"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a57"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a58"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a59"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a5f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a60"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a61"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a62"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a63"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a64"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a65"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a66"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a67"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a68"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a69"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a6f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a70"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a71"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a72"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a73"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a74"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a75"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a76"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a77"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a78"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a79"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a7f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a80"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a81"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a82"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a83"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a84"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a85"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a86"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a87"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a88"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a89"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a8f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a90"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a91"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a92"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a93"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a94"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a95"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a96"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a97"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a98"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a99"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9a"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9c"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9d"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9e"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675a9f"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 81,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 52,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 44,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 94,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 119,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 70,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 47,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 130,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aa9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 97,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aaa"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 78,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aab"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 73,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aac"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 144,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aad"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 85,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aae"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 88,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aaf"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 69,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 122,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 106,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 104,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 53,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 115,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 54,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 137,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 128,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 78,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ab9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 111,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aba"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 102,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675abb"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 60,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675abc"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 141,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675abd"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 52,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675abe"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 37,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675abf"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 90,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 86,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 52,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 71,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 83,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 62,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 99,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 61,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 113,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ac9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 52,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aca"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 57,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675acb"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 37,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675acc"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 68,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675acd"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 92,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ace"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 53,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675acf"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 139,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 47,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 57,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 34,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 81,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 143,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 132,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 107,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ad9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 51,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ada"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 128,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675adb"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 129,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675adc"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 106,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675add"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 48,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ade"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 62,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675adf"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 48,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 91,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 25,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 67,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 87,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 63,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 148,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ae9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 69,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aea"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 75,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aeb"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 37,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aec"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 71,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aed"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 60,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aee"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 106,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aef"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 35,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af0"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af1"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 139,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af2"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 28,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af3"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 121,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af4"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 123,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af5"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 146,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af6"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 98,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af7"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 108,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af8"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 123,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675af9"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 126,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675afa"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 44,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675afb"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 103,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675afc"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 51,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675afd"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 51,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675afe"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 44,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675aff"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 131,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b00"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 150,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b01"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 138,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b02"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 47,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b03"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 114,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b04"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 142,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b05"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 73,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b06"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 63,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b07"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 79,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b08"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 96,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b09"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 113,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0a"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 113,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0b"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 74,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0c"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 28,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0d"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 108,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0e"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 59,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b0f"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 31,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b10"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 136,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b11"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 56,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b12"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 92,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b13"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 118,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b14"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 134,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b15"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 90,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b16"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 49,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b17"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 74,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b18"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 128,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b19"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1a"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 30,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1b"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 102,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1c"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 47,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1d"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 46,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1e"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 33,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b1f"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 50,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b20"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 125,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b21"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 28,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b22"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b23"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 78,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b24"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 50,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b25"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 77,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b26"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 113,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b27"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 150,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b28"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 122,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b29"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 126,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2a"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 122,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2b"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2c"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 125,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2d"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 114,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2e"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 69,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b2f"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 29,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b30"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 146,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b31"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 142,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b32"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 110,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b33"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 133,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b34"
+  },
+  "tray": 1,
+  "sensor": "weight",
+  "value": 139,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b35"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 35,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b36"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 89,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b37"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 54,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b38"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b39"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 74,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 84,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 69,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 82,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 22,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b3f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 88,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b40"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 32,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b41"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 68,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b42"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b43"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b44"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 48,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b45"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b46"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 11,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b47"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 69,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b48"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 78,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b49"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 78,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 55,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 92,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 36,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b4f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 12,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b50"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 93,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b51"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b52"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 56,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b53"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 46,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b54"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 83,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b55"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 90,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b56"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 84,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b57"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 59,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b58"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b59"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 22,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 100,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 70,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 50,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 76,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b5f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 9,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b60"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b61"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 57,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b62"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 41,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b63"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 92,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b64"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 42,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b65"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 81,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b66"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 38,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b67"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b68"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 47,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b69"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 43,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 2,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 25,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 54,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 99,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b6f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 48,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b70"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 69,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b71"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 96,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b72"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 17,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b73"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 32,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b74"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b75"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b76"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 93,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b77"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b78"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 38,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b79"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 97,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 7,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 50,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 29,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 8,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 68,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b7f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 13,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b80"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b81"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 78,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b82"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 27,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b83"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 12,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b84"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 83,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b85"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 31,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b86"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 16,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b87"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b88"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b89"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 1,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 15,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 4,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 73,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 31,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b8f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 86,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b90"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 47,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b91"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 51,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b92"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 46,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b93"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 31,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b94"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 13,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b95"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 40,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b96"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 78,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b97"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 83,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b98"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 2,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b99"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 85,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9a"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9b"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 8,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9c"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 26,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9d"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 17,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9e"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 73,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675b9f"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 29,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba0"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 89,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba1"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba2"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 12,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba3"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 17,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba4"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 7,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba5"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 16,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba6"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 15,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba7"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 3,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba8"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 99,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ba9"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 91,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675baa"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 87,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bab"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 85,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bac"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 93,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bad"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 61,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bae"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 48,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675baf"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 26,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb0"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb1"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb2"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 42,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb3"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 63,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb4"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 32,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb5"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 48,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb6"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 54,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb7"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 90,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb8"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 65,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bb9"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 59,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bba"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 54,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bbb"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 34,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bbc"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bbd"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 1,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bbe"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 46,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bbf"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 39,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc0"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc1"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 97,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc2"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 75,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc3"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc4"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 17,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc5"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 5,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc6"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 67,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc7"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 42,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc8"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 13,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bc9"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 83,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bca"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bcb"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bcc"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bcd"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bce"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bcf"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd0"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd1"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd2"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd3"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd4"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd5"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd6"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd7"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd8"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bd9"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bda"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bdb"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bdc"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bdd"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bde"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bdf"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be0"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be1"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be2"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be3"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be4"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be5"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be6"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be7"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be8"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675be9"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bea"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675beb"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bec"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bed"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bee"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bef"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf0"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf1"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf2"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf3"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf4"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf5"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf6"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf7"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf8"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bf9"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bfa"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bfb"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bfc"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bfd"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bfe"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675bff"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c00"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c01"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c02"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c03"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c04"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c05"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c06"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c07"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c08"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c09"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c0f"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c10"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c11"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c12"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c13"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 1,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c14"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c15"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c16"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c17"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c18"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c19"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c1f"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c20"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c21"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 12,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c22"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c23"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c24"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c25"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c26"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c27"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c28"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c29"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 20,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c2f"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c30"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c31"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c32"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c33"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c34"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c35"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c36"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c37"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c38"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c39"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c3f"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 6,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c40"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c41"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c42"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c43"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 16,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c44"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c45"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 3,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c46"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c47"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c48"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c49"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 18,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 14,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 5,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c4f"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c50"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c51"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c52"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 4,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c53"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 11,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c54"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 7,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c55"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 9,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c56"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 13,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c57"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 2,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c58"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c59"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 19,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5a"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5b"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 17,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5c"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 10,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5d"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 8,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5e"
+  },
+  "tray": 2,
+  "sensor": "ph",
+  "value": 15,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c5f"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 140,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c60"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 60,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c61"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 93,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c62"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 78,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c63"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 103,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c64"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 81,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c65"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c66"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 90,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c67"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 102,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c68"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 147,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c69"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 72,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6a"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 53,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6b"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 147,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6c"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 86,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6d"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 34,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6e"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 61,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c6f"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 79,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c70"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 72,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c71"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 84,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c72"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 43,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c73"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 62,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c74"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 45,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c75"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 143,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c76"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 113,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c77"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 34,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c78"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 36,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c79"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 147,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7a"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 148,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7b"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 52,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7c"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 124,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7d"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 125,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7e"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 56,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c7f"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c80"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 42,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c81"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 89,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c82"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 75,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c83"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 28,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c84"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c85"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 95,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c86"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 83,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c87"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 59,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c88"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 63,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c89"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 44,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8a"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 118,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8b"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 93,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8c"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 147,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8d"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 35,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8e"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 96,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c8f"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c90"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 106,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c91"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 104,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c92"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 129,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c93"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 134,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c94"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 45,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c95"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 55,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c96"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 62,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c97"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 58,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c98"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 99,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c99"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 130,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9a"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 59,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9b"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 98,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9c"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 136,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9d"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 35,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9e"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 114,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675c9f"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 85,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 99,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 102,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 73,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca4"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 142,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca5"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca6"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 127,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca7"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 61,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca8"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 76,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ca9"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 78,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675caa"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 25,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cab"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 149,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cac"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 102,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cad"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 63,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cae"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 32,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675caf"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 150,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 68,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 106,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 110,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb4"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 80,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb5"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 110,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb6"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 84,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb7"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 65,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb8"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 126,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cb9"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 145,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cba"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 85,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cbb"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 103,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cbc"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 98,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cbd"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 39,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cbe"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 89,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cbf"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 47,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 62,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 49,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 111,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc4"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 100,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc5"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 136,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc6"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 63,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc7"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc8"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 115,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cc9"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 117,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cca"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 141,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ccb"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 126,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ccc"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 26,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ccd"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 42,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cce"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 48,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ccf"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 74,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 42,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 27,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 46,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 133,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd4"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 60,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd5"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 117,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd6"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 79,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd7"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 124,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd8"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 139,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cd9"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 39,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cda"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 54,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cdb"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 80,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cdc"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 117,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cdd"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 115,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cde"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 29,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cdf"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 128,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 109,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 77,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 51,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 147,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce4"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 76,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce5"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 90,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce6"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 29,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce7"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 25,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce8"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 122,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ce9"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 69,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cea"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 66,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ceb"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 58,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cec"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 30,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675ced"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 134,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cee"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 134,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cef"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 64,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf0"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 134,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf1"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 144,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf2"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 90,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf3"
+  },
+  "tray": 2,
+  "sensor": "weight",
+  "value": 135,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf4"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 14,
+  "time": 1607054197
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf5"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 64,
+  "time": 1607054198
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf6"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 46,
+  "time": 1607054199
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf7"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 87,
+  "time": 1607054200
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf8"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 70,
+  "time": 1607054201
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cf9"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 42,
+  "time": 1607054202
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cfa"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 77,
+  "time": 1607054203
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cfb"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 88,
+  "time": 1607054204
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cfc"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 10,
+  "time": 1607054205
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cfd"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 60,
+  "time": 1607054206
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cfe"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 70,
+  "time": 1607054207
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675cff"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 16,
+  "time": 1607054208
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d00"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054209
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d01"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 40,
+  "time": 1607054210
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d02"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 24,
+  "time": 1607054211
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d03"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 74,
+  "time": 1607054212
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d04"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 43,
+  "time": 1607054213
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d05"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 15,
+  "time": 1607054214
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d06"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 64,
+  "time": 1607054215
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d07"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 25,
+  "time": 1607054216
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d08"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 75,
+  "time": 1607054217
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d09"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 95,
+  "time": 1607054218
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 94,
+  "time": 1607054219
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 41,
+  "time": 1607054220
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 58,
+  "time": 1607054221
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 89,
+  "time": 1607054222
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 81,
+  "time": 1607054223
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d0f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 16,
+  "time": 1607054224
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d10"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 61,
+  "time": 1607054225
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d11"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 9,
+  "time": 1607054226
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d12"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 49,
+  "time": 1607054227
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d13"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 39,
+  "time": 1607054228
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d14"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 59,
+  "time": 1607054229
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d15"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 50,
+  "time": 1607054230
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d16"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054231
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d17"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 88,
+  "time": 1607054232
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d18"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 80,
+  "time": 1607054233
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d19"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054234
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 39,
+  "time": 1607054235
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 96,
+  "time": 1607054236
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 41,
+  "time": 1607054237
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 41,
+  "time": 1607054238
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 27,
+  "time": 1607054239
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d1f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 92,
+  "time": 1607054240
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d20"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054241
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d21"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 81,
+  "time": 1607054242
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d22"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 100,
+  "time": 1607054243
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d23"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 54,
+  "time": 1607054244
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d24"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 69,
+  "time": 1607054245
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d25"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 6,
+  "time": 1607054246
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d26"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 1,
+  "time": 1607054247
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d27"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054248
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d28"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 8,
+  "time": 1607054249
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d29"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 52,
+  "time": 1607054250
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054251
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 24,
+  "time": 1607054252
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 19,
+  "time": 1607054253
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 12,
+  "time": 1607054254
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 85,
+  "time": 1607054255
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d2f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 20,
+  "time": 1607054256
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d30"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 50,
+  "time": 1607054257
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d31"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 94,
+  "time": 1607054258
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d32"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 15,
+  "time": 1607054259
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d33"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 68,
+  "time": 1607054260
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d34"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 62,
+  "time": 1607054261
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d35"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 16,
+  "time": 1607054262
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d36"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 7,
+  "time": 1607054263
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d37"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 36,
+  "time": 1607054264
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d38"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 51,
+  "time": 1607054265
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d39"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 6,
+  "time": 1607054266
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 1,
+  "time": 1607054267
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 65,
+  "time": 1607054268
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 95,
+  "time": 1607054269
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 70,
+  "time": 1607054270
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 79,
+  "time": 1607054271
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d3f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 89,
+  "time": 1607054272
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d40"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 27,
+  "time": 1607054273
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d41"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 30,
+  "time": 1607054274
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d42"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 13,
+  "time": 1607054275
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d43"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 94,
+  "time": 1607054276
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d44"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 27,
+  "time": 1607054277
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d45"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 21,
+  "time": 1607054278
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d46"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 68,
+  "time": 1607054279
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d47"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 29,
+  "time": 1607054280
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d48"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 33,
+  "time": 1607054281
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d49"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 66,
+  "time": 1607054282
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 33,
+  "time": 1607054283
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 8,
+  "time": 1607054284
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054285
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054286
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 69,
+  "time": 1607054287
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d4f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 34,
+  "time": 1607054288
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d50"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 48,
+  "time": 1607054289
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d51"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 77,
+  "time": 1607054290
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d52"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 53,
+  "time": 1607054291
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d53"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 11,
+  "time": 1607054292
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d54"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 34,
+  "time": 1607054293
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d55"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 72,
+  "time": 1607054294
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d56"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 77,
+  "time": 1607054295
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d57"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 37,
+  "time": 1607054296
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d58"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 39,
+  "time": 1607054297
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d59"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054298
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 67,
+  "time": 1607054299
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 36,
+  "time": 1607054300
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 89,
+  "time": 1607054301
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 61,
+  "time": 1607054302
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 1,
+  "time": 1607054303
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d5f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 58,
+  "time": 1607054304
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d60"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 64,
+  "time": 1607054305
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d61"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 5,
+  "time": 1607054306
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d62"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 64,
+  "time": 1607054307
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d63"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 97,
+  "time": 1607054308
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d64"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 84,
+  "time": 1607054309
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d65"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 99,
+  "time": 1607054310
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d66"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054311
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d67"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 70,
+  "time": 1607054312
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d68"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 30,
+  "time": 1607054313
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d69"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 12,
+  "time": 1607054314
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 6,
+  "time": 1607054315
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 71,
+  "time": 1607054316
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 59,
+  "time": 1607054317
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 98,
+  "time": 1607054318
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 17,
+  "time": 1607054319
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d6f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 7,
+  "time": 1607054320
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d70"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 87,
+  "time": 1607054321
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d71"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 98,
+  "time": 1607054322
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d72"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054323
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d73"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 74,
+  "time": 1607054324
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d74"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 40,
+  "time": 1607054325
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d75"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 98,
+  "time": 1607054326
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d76"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 95,
+  "time": 1607054327
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d77"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 94,
+  "time": 1607054328
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d78"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 36,
+  "time": 1607054329
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d79"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054330
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7a"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 95,
+  "time": 1607054331
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7b"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 36,
+  "time": 1607054332
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7c"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 79,
+  "time": 1607054333
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7d"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 25,
+  "time": 1607054334
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7e"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 18,
+  "time": 1607054335
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d7f"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 23,
+  "time": 1607054336
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d80"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 100,
+  "time": 1607054337
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d81"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 27,
+  "time": 1607054338
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d82"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 3,
+  "time": 1607054339
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d83"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 19,
+  "time": 1607054340
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d84"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 46,
+  "time": 1607054341
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d85"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 93,
+  "time": 1607054342
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d86"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 28,
+  "time": 1607054343
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d87"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 81,
+  "time": 1607054344
+},{
+  "_id": {
+    "$oid": "5fc9b38e5449dc1b68675d88"
+  },
+  "tray": 2,
+  "sensor": "water level",
+  "value": 31,
+  "time": 1607054345
+},{
+  "_id": {
+    "$oid": "5fcac11ad8f06309cc4da48b"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 21
+},{
+  "_id": {
+    "$oid": "5fcade93d216ba5b38473261"
+  },
+  "tray": 1,
+  "sensor": "ph",
+  "value": 25
+},{
+  "_id": {
+    "$oid": "5fcadec0d216ba5b38473262"
+  },
+  "tray": 1,
+  "sensor": "water level",
+  "value": 1000
+}]
