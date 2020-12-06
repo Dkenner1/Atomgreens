@@ -27,7 +27,14 @@
 	<div class="d-flex justify-content-center">
    <section id = "2">
 	   <h2>Notifications</h2>
-      	<p><b>Kale</b> ready to harvest!</p>
+	   {% for tray in status.tray_status %}
+	   {% if tray.iscomplete %}
+      	<p><b>Tray {{ tray.id }}: is ready to harvest!</b></p>
+	   {% endif %}
+	   {% endfor %}
+	   {% if status.water_level < 50 %}
+	   <p><b>Water Level is at low. Currently {{ status.water_level }}%</b></p>
+	   {% endif %}
    </section>
 	</div>
 {% endblock %}
