@@ -18,7 +18,6 @@ def view_create():
                     'time': {
                         '$exists': True
                     }
-
                 }
             },
             {
@@ -27,21 +26,20 @@ def view_create():
                 }
             },
             {
-            '$group':
-                {
-                '_id': '$sensor',
-                'doc': {
-                    '$first': '$$ROOT'
-                }
-                }
+                '$group':
+                    {
+                        '_id': '$sensor',
+                        'doc': {
+                            '$first': '$$ROOT'
+                        }
+                    }
             },
             {
-            '$replaceRoot':
-                {
-                    'newRoot': '$doc'
-                }
+                '$replaceRoot':
+                    {
+                        'newRoot': '$doc'
+                    }
             }
-
         ]
     }
     )
