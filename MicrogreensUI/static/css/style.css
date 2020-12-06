@@ -46,3 +46,8 @@
   margin-left: -0.75rem;
   margin-right: -0.75rem;
 }
+
+.chart-container{
+    width: 10px;
+    height: 600px
+}
