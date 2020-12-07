@@ -47,7 +47,11 @@
   margin-right: -0.75rem;
 }
 
+.green {
+    background-color: #008000;
+}
+
 .chart-container{
-    width: 10px;
-    height: 600px
+    width: 600px;
+    height: 10%;
 }
