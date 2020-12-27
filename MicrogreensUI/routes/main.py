@@ -24,5 +24,9 @@ def data(trayid):
     #water_data = tray_data.find({'tray': int(trayid), 'sensor': 'water level'}, {'_id': 0})
     return render_template('tray.html')
 
+@main.route('/service', methods=['GET', 'POST'])
+def service():
+    return render_template('service.html')
+
 # eli was here
 # Daniel replies back!
