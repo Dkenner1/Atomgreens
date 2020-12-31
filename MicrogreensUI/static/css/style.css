@@ -55,3 +55,21 @@
     width: 600px;
     height: 10%;
 }
+
+.content-header {
+  padding: 15px 0.5rem;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+
+    max-width: 960px;
+
+    padding-right: 10px;
+    padding-left:  10px;
+}
+
+.tray-box {
+
+}

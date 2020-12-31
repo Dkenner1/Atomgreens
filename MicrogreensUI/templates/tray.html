@@ -2,7 +2,7 @@
 {% block content %}
 
 	<div class="d-flex justify-content-center">
-        <h1>Tray 1</h1>
+        <h1>Tray</h1>
     </div>
 
 	<div class="fixed-top">
@@ -21,7 +21,8 @@
         </div>
     </div>
 
-    <div class = "container-fluid">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center flex-column">
             <canvas id="phChart"></canvas>
             <canvas id="ecChart"></canvas>
             <canvas id="weightChart"></canvas>
@@ -30,6 +31,7 @@
             <canvas id="extempChart"></canvas>
             <canvas id="redChart"></canvas>
             <canvas id="blueChart"></canvas>
+        </div>
     </div>
 
 {% endblock %}
@@ -40,6 +42,7 @@
     function go_home() {
         document.location= "/";
     }
+
     var ctx1 = document.getElementById('phChart').getContext('2d');
     var phChart = new Chart(ctx1, {
 			type: 'line',
