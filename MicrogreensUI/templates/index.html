@@ -52,7 +52,7 @@
       	<p><b>Tray {{ tray.id }}: is ready to harvest!</b></p>
 	   {% endif %}
 	   {% endfor %}
-	   {% if status.water_level < 50 %}
+	   {% if status.water_level is defined and status.water_level < 50 %}
 	   <p><b>Water Level is at low. Currently {{ status.water_level }}%</b></p>
 	   {% endif %}
 	   <p><b>Current Weight: {{status.weight}} gram</b></p>

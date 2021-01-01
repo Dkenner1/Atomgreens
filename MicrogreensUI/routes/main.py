@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, json, \
     redirect, request, url_for
-from util.db import query
+from util.db import connect
 import time
 
 main = Blueprint('main', __name__, template_folder='templates')
@@ -8,8 +8,11 @@ main = Blueprint('main', __name__, template_folder='templates')
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    queryStr = """SELECT sensor, value, MAX(epoch_time) AS time  FROM data GROUP BY sensor"""
-    data = query('atomgreens', queryStr)
+    conn = connect()
+    cur = conn.cursor()
+    sqlstr = """SELECT sensor, val FROM pi4_status"""
+    data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(sqlstr)}
+    conn.close()
     return render_template('index.html', status=data)
 
 
@@ -22,8 +25,8 @@ def settings():
 def data(trayid):
     etime = time.time()
     time_range = etime-604800 # 1 week period
-    queryStr = "SELECT * FROM data WHERE time >=" + str(time_range)
-    result = query(queryStr)
+    #queryStr = "SELECT * FROM data WHERE time >=" + str(time_range)
+    #result = query(queryStr)
     return render_template('tray.html')
 
 @main.route('/service', methods=['GET', 'POST'])
