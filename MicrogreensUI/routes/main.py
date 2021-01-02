@@ -33,5 +33,3 @@ def data(trayid):
 def service():
     return render_template('service.html')
 
-# eli was here
-# Daniel replies back!
