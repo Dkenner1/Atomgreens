@@ -28,11 +28,11 @@ def data(trayid):
     etime = time.time()
     time_range = etime-604800 # 1 week period
     data = {}
-    for tup in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, etime)).fetchall():
-        if tup[0] in data:
-           data[tup[0]].append((tup[1], tup[2]))
+    for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, etime)).fetchall():
+        if row[0] in data:
+           data[row[0]].append((row[1], row[2]))
         else:
-            data[tup[0]] = [(tup[1], tup[2])]
+            data[row[0]] = [(row[1], row[2])]
     conn.close()
     return render_template('tray.html', data=data)
 
