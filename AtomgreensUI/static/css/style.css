@@ -10,6 +10,29 @@
   cursor: pointer;
 }
 
+body {
+  background-color: #e6e7e8;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+}
+
+.red{
+  background-color: red;
+}
+
+.black{
+  background-color: black;
+}
+
+.white{
+  background-color: white;
+}
+
+.blue{
+  background-color: blue;
+}
+
 .button2 {
   background-color: white;
   color: black;
@@ -22,12 +45,6 @@
   color: white;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
-}
 
 .center-block {
   display: block;
@@ -101,4 +118,45 @@ td, th {
 
 tr:nth-child(even) {
   background-color: gray;
+}
+
+.service-field{
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.service-field-card{
+    border-radius: 2px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    background-color: #e3e1dc;
+  min-height: 33%;
+  overflow: hidden;
+  width: 100%;
+  padding: 3px
+}
+
+.control-box{
+    border-radius: 2px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    background-color: #e3e1dc;
+    position: absolute;
+    top: 15%;
+    left: 7.5px;
+}
+
+.header-field{
+  margin: 7.5px;
+}
+.service-field{
+
 }

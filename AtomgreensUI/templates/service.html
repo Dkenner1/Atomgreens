@@ -1,98 +1,78 @@
 {% extends "base.html" %}
 {% block content %}
 	<div class="container-fluid">
-        <div class="row">
-            <div class="">
-
+        <div class="row h-100">
+            <div class="col-2">
+                <div class="control-box h-25 w-100">
+                    <button class="cardButton my-2">Exit</button>
+                    <button class="cardButton my-2">Manual</button>
+                </div>
             </div>
+            <div class="col-10">
             <!-- Main content -->
             <section id="trayButtons">
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-center">
-                        <div class="row">
-                            <div class="col">
-                                <div class="fullCard">
-                                    <div class="cardContent">
-                                        <div class="cardInfo">
-                                            <h6>Tray 1</h6>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:25%">25%</div>
-                                            </div>
-                                            <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
-                                        </div>
-                                    </div>
+                <div class="service-field py-4">
+                    <div class="service-field-card my-2">
+                        <div class="header-field">
+                           <h2>Alerts</h2>
+                            <p>Here is where you will see all alerts that must be handled</p>
+                        </div>
+                        <div id="alert-grp" class="container">
+                            <div class="row red">
+                                <div class="col-3">
+                                    <p>Water Level is: </p>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="fullCard">
-                                    <div class="cardContent">
-                                        <div class="cardInfo">
-                                            <h6>Tray 2</h6>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:50%">50%</div>
-                                            </div>
-                                            <button class="cardButton" onclick="document.location='trayinfo/2'">More info</button>
-                                        </div>
-                                    </div>
+                                <div class="col-6">
+                                15%
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="fullCard">
-                                    <div class="cardContent">
-                                        <div class="cardInfo">
-                                            <h6>Tray 3</h6>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:75%">75%</div>
-                                            </div>
-                                            <button class="cardButton" onclick="document.location='trayinfo/3'">More info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="fullCard">
-                                    <div class="cardContent">
-                                        <div class="cardInfo">
-                                            <h6>Tray 4</h6>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:100%">100%</div>
-                                            </div>
-                                            <button class="cardButton" onclick="document.location='trayinfo/4'">More info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="fullCard">
-                                    <div class="cardContent">
-                                        <div class="cardInfo">
-                                            <h6>Tray 5</h6>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:25%">25%</div>
-                                            </div>
-                                            <button class="cardButton" onclick="document.location='trayinfo/5'">More info</button>
-                                        </div>
-                                    </div>
+                                <div class="col-3">
+                                    <button class="button2">Update</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="service-field-card my-2 white">
+                        <div class="header-field">
+                           <h2>Diagnostics</h2>
+                            <button class="button2">Run Test</button>
+                        </div>
+                        <div id="diag-grp" class="container">
+                            <div class="row red">
+                                <div class="col-3">
+                                    <p>Pi4 water level sensor not responding </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-field-card my-2 white">
+                        <div class="header-field">
+                           <h2>Settings</h2>
+                            <p>Change Service Notification Alert Conditions</p>
+                        </div>
+                        <div id="service-grp" class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <p>Water Level Lockdown %</p>
+                                </div>
+                                <div class="col-6">
+                                <input type="text">
+                                </div>
+                                <div class="col-3">
+                                    <button class="button2">Update</button>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </section>
-
+            </div>
         </div>
     </div>
-</section>
-</div><div></div>
-<div class="test">
 {% endblock %}
 {% block script %}
-
 <script>
 
 </script>
 {% endblock %}
 
-</div>
 
          
