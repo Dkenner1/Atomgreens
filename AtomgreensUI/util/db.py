@@ -10,3 +10,5 @@ def query(table, queryStr):
     conn = connect()
     cur = conn.cursor()
     cur.execute(queryStr)
+
+

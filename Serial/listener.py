@@ -36,6 +36,7 @@ def read_msg(ser_in, ser_out):
     
     for byt in range(1, msglen):
         recv_buff += wait_for_byte(ser_in)
+        print( )
         print(recv_buff)
     print('~' * 5)
     print(recv_buff)
