@@ -1,5 +1,6 @@
 from util import *
 from time import sleep
+from unpacker import SerialMsg
 from definitions import piID
 import struct
 
@@ -17,27 +18,13 @@ def listen(ser_in, ser_out):
 
 
 def read_msg(ser_in, ser_out):
-    recv_buff = []
-    recv_buff += ser_in.read()
-
-    dest = bit_seg_read(recv_buff[-1], 5, 7)
-    dev = bit_seg_read(recv_buff[-1], 2, 4)
-    flgs = bit_seg_read(recv_buff[-1], 2, 4)
-
-    recv_buff += wait_for_byte(ser_in)
-    typ = bit_seg_read(recv_buff[-1], 5, 7)
-    msglen = bit_seg_read(recv_buff[-1], 0, 4)
-
-    for byt in range(0, msglen):
-        recv_buff += wait_for_byte(ser_in)
-        print(recv_buff)
-    print('~' * 5)
-    print(recv_buff)
-    print(repackage_bytes(recv_buff))
-    print('Pi ID is: ' + str(piID))
-    if dest != piID:
+    msg = SerialMsg(ser_in.read())
+    while not msg.msg_complete:
+        msg.interpret(wait_for_byte(ser_in))
+    print(msg.msg)
+    if msg.msg['piId'] != piID:
         print('Not right device: forwarding out serial out')
-        ser_out.write(repackage_bytes(recv_buff))
+        ser_out.write(repackage_bytes(msg.input_buff))
     else:
         print('Received New packet')
 
