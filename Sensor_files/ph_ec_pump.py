@@ -20,8 +20,8 @@ class PhEcPump:
 
     # Question: What is the correct value/amount (cutoff) of PH buffer and nutrient solution?
     # Placeholder values
-    stdValPH = 7
-    stdValEC = 50
+    stdValPH = 5.5
+    stdValEC = 250
 
     phPumpCount = 0
     ecPumpCount = 0
@@ -42,20 +42,24 @@ class PhEcPump:
     # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
         # PH pump
     if phVal < stdValPH:
+        runPH = ((phVal - stdValPH) * 10) * SPR
+        phPumpCount = ((phVal - stdValPH) * 10)
         # Turn on PH pump
+
         for x in range(SPR):
             GPIO.output(pinPHBlue, GPIO.LOW)
             GPIO.output(pinPHGrn, GPIO.HIGH)
             sleep(delay)
             GPIO.output(pinPHGrn, GPIO.LOW)
             GPIO.output(pinPHBlue, GPIO.HIGH)
-            # Increment phPumpCount
-        phPumpCount = phPumpCount + 1
-        # Insert phPumpCount value into database | Question: add_meas() function to be used?
-        add_meas(1,9,(pumpCnt+phPumpCount))
+
+    # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
+    add_meas(1,10,(pumpCnt + phPumpCount))
 
     # EC pump
     if ecVal < stdValEC:
+        ecPH = ((ecVal - stdValEC) * 10) * SPR
+        ecPumpCount = ((ecVal - stdValEC) * 10)
         # Turn on EC pump
         for x in range(SPR):
             GPIO.output(pinECGrn, GPIO.LOW)
@@ -63,10 +67,9 @@ class PhEcPump:
             sleep(delay)
             GPIO.output(pinECBlue, GPIO.LOW)
             GPIO.output(pinECGrn, GPIO.HIGH)
-            # Increment ecPumpCount
-        ecPumpCount = ecPumpCount + 1
-        # Insert ecPumpCount value into database | Question: add_meas() function to be used?
-        add_meas(1, 9, (pumpCnt + ecPumpCount))
+
+    # Increment ecPumpCount and insert ecPumpCount value into database | Question: add_meas() function to be used?
+    add_meas(1, 9, (pumpCnt + ecPumpCount))
 
 
 
