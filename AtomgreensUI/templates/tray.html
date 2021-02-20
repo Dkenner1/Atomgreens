@@ -1,26 +1,80 @@
 {% extends "base.html" %}
 {% block content %}
 
-	<div class="d-flex justify-content-center">
-        <h1>Tray</h1>
-    </div>
+    <div class="wrapper">
+        <div class="content-header">
+			<div class="container-fluid">
+				<h1>Tray</h1>
+			</div>
+		</div>
 
 	<div class="fixed-top">
         <div class="float-right">
-            <button class="button button1" onclick="go_home()"> Back </button>
+            <button class="button button2" onclick="go_home()"> Back </button>
         </div>
 	</div>
 
     <div class ="row">
         <div class="container-fluid">
             <div class="d-flex justify-content-center">
-                <button class="button button1">Last Cycle </button>
-                <button class="button button1">Last Month</button>
-                <button class="button button1">All Time</button>
+                <button class="button button2">Last Cycle </button>
+                <button class="button button2">Last Month</button>
+                <button class="button button2">All Time</button>
             </div>
         </div>
     </div>
 
+        <section class="trayCharts">
+            <div class="d-flex align-items-center flex-column">
+                <div class="container-fluid">
+                    <div class="card-body">
+                        <canvas id="phChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <canvas id="ecChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="weightChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="intempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="humtempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="extempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="redChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card-body">
+                        <div class="chart-container">
+                             <canvas id="blueChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+        </section>
     <div class="container-fluid">
         <div class="d-flex align-items-center flex-column">
             <canvas id="phChart"></canvas>
@@ -33,6 +87,8 @@
             <canvas id="blueChart"></canvas>
         </div>
     </div>
+    </div>
+
 
 {% endblock %}
 {% block script %}

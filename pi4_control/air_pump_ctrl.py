@@ -3,6 +3,11 @@
 import RPi.GPIO as GPIO
 
 
+def air_on():
+    GPIO.output(airPump, GPIO.HIGH)
+    print("Dispensing air...")
+
+
 class AirPumpCtrl:
     GPIO.setmode(GPIO.BOARD)
 
@@ -11,6 +16,4 @@ class AirPumpCtrl:
     GPIO.setup(airPump, GPIO.OUT)
 
     # Function for turning air pump on
-    def air_on():
-        GPIO.output(airPump, GPIO.HIGH)
-        print("Dispensing air...")
+
