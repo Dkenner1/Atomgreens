@@ -10,10 +10,10 @@ listen(ser, ser)
 
 
 def foo(msg):
-    print("You've got mail!" + str(msg))
+    print("You've got mail! *** " + str(msg))
 
 
-eventHub.subscribe(foo, 3)
+eventHub.subscribe(foo, 'DEFAULT')
 
 if __name__ == '__main__':
     sender.send(2, 3, 16)

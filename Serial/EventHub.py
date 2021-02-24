@@ -26,6 +26,8 @@ class Hub:
         return func
 
     def publish(self, *topics, **kwargs):
+        for subscriber in self.response_mapper['DEFAULT']:
+            subscriber(**kwargs)
         for topic in topics:
             for subscriber in self.response_mapper[topic]:
                 subscriber(**kwargs)
