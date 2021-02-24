@@ -3,7 +3,7 @@ from time import sleep
 from unpacker import SerialMsg
 from definitions import piID
 import struct
-
+from EventHub import eventHub
 
 @threaded
 def listen(ser_in, ser_out):
@@ -26,6 +26,7 @@ def read_msg(ser_in, ser_out):
         print('Not right device: forwarding out serial out')
         ser_out.write(repackage_bytes(msg.input_buff))
     else:
+        eventHub.publish(msg.msg['devId'], msg.msg['msg'])
         print('Received New packet')
 
 
