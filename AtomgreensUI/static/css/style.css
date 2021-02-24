@@ -38,6 +38,7 @@ body {
   color: black;
   border: 2px solid #008CBA;
   width: 60%;
+  text-align: center;
 }
 
 .button2:hover {
@@ -57,8 +58,13 @@ body {
 }
 
 .chart-container{
-    width: 600px;
-    height: 10%;
+    min-height: 250px;
+    height: 250px;
+    max-height: 250px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .content-header {
@@ -66,25 +72,21 @@ body {
 }
 
 .wrapper {
+     width: 960px;
+    margin-left: auto;
     margin-right: auto;
-    margin-left:  auto;
-
-    max-width: 960px;
-
-    padding-right: 10px;
-    padding-left:  10px;
 }
 
 .fullCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
+  border-radius: .25rem;
+    box-shadow: 0 0 1px rgb(0 0 0), 0 1px 3px rgb(0 0 0);
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .cardContent {
-    background-color: seagreen;
+    background-color: #adb5bd;
     font-size: 20px;
 }
 
@@ -93,7 +95,7 @@ body {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: mediumseagreen;
+  background-color: blue;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -118,6 +120,10 @@ td, th {
 
 tr:nth-child(even) {
   background-color: gray;
+}
+
+.h6 {
+    text-align: center;
 }
 
 .service-field{
@@ -160,3 +166,4 @@ tr:nth-child(even) {
 .service-field{
 
 }
+
