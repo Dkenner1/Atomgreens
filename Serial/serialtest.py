@@ -13,7 +13,8 @@ def foo(msg):
     print("You've got mail! *** " + str(msg))
 
 
-eventHub.subscribe(foo, 'DEFAULT')
+eventHub.subscribe(foo, "DEFAULT")
+eventHub.subscribe(updateTime, 7)
 
 if __name__ == '__main__':
-    sender.send(2, 3, 16)
+    sender.send(2, 3, 16.36)

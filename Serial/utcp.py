@@ -19,7 +19,7 @@ class UTCP:
         self.__header1(destpi, destdev)
         self.__header2(bdata)
         self.sendPacket += bdata
-        print('Packet to be sent' + str(self.sendPacket))
+        print('Packet to be sent: ' + str(self.sendPacket))
         self.ser_out.write(self.sendPacket)
 
     def __header1(self, destpi, destdev):
