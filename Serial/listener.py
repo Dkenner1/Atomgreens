@@ -26,7 +26,7 @@ def read_msg(ser_in, ser_out):
         print('Not right device: forwarding out serial out')
         ser_out.write(repackage_bytes(msg.input_buff))
     else:
-        eventHub.publish(msg.msg['devId'], msg.msg['msg'])
+        eventHub.publish(msg.msg['devId'], msg=msg.msg['msg'])
         print('Received New packet')
 
 

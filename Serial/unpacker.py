@@ -21,15 +21,15 @@ class SerialMsg:
         if self.msg_complete:
             return
 
-        self.input_buff.append(dbyte)
+        self.input_buff += dbyte
         if self.curr_byte <= self.config['headers']:
             for key, val in self.details.items():
                 if val['byte'] == self.curr_byte:
-                    self.msg[key] = bit_seg_read(dbyte, val['rng'][0], val['rng'][1])
+                    self.msg[key] = bit_seg_read(self.input_buff[-1], val['rng'][0], val['rng'][1])
             self.curr_byte += 1
             return
 
-        self.msg['raw_msg'].append(dbyte)
+        self.msg['raw_msg'] += (dbyte)
         if self.curr_byte == self.msg['length'] + self.config['headers']:
             self.convert_data()
             self.msg_complete=True
@@ -45,7 +45,8 @@ class SerialMsg:
         elif self.msg['type'] == self.type_enum['str']:
             self.repacked = struct.pack(str(self.msg['length']) + 's', bytes(self.msg['msg'], encoding='utf8'))
         else:
-            print('error')
+            self.msg['raw_msg']
+            print('Repacking error')
             return None
 
     def create_msg_pattern(self):
@@ -54,6 +55,7 @@ class SerialMsg:
         return {**msgdict, **headerinfo}
 
     def convert_data(self):
+        print(self.msg['raw_msg'])
         if self.msg['type'] == self.type_enum['int']:
             self.msg['msg'] = struct.unpack('i', bytearray(self.msg['raw_msg']))[0]
         elif self.msg['type'] == self.type_enum['float']:
@@ -61,4 +63,5 @@ class SerialMsg:
         elif self.msg['type'] == self.type_enum['str']:
             self.msg['msg'] = intarr2str(self.msg['raw_msg'])
         else:
-            print('error')
+            
+            print('Conversion error')

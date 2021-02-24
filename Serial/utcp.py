@@ -3,7 +3,7 @@ import struct
 
 
 class UTCP:
-    typeEnum = {'str': 1, 'float': 2, 'int': 3}    
+    typeEnum = {'str': 1, 'float': 2, 'int': 0}    
     def __init__(self, _ser_out):
         #ser = serial
         self.ser_out = _ser_out
@@ -19,8 +19,7 @@ class UTCP:
         self.__header1(destpi, destdev)
         self.__header2(bdata)
         self.sendPacket += bdata
-        print('Packet to be sent' )
-        print(self.sendPacket)
+        print('Packet to be sent' + str(self.sendPacket))
         self.ser_out.write(self.sendPacket)
 
     def __header1(self, destpi, destdev):
@@ -35,9 +34,9 @@ class UTCP:
         print(data)
         print(self.data_type)
         if self.data_type == 'int':
-            return struct.pack('>i', data)
+            return struct.pack('i', data)
         elif self.data_type == 'float':
-            return struct.pack('>f', data)
+            return struct.pack('f', data)
         elif self.data_type == 'str':
             strlen = str(len(self.data))
             return struct.pack(strlen + 's', bytes(data, encoding='utf8'))
