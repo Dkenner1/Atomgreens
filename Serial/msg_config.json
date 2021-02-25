@@ -25,6 +25,7 @@
   "type_enum": {
     "int": 0,
     "str": 1,
-    "float": 2
+    "float": 2,
+    "dict": 3
   }
 }
