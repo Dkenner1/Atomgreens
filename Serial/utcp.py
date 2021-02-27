@@ -1,9 +1,9 @@
 from util import *
 import struct
-
+import json
 
 class UTCP:
-    typeEnum = {'str': 1, 'float': 2, 'int': 0}    
+    typeEnum = {'str': 1, 'float': 2, 'int': 0, 'dict': 3}    
     def __init__(self, _ser_out):
         #ser = serial
         self.ser_out = _ser_out
@@ -38,8 +38,11 @@ class UTCP:
         elif self.data_type == 'float':
             return struct.pack('f', data)
         elif self.data_type == 'str':
-            strlen = str(len(self.data))
+            strlen = str(len(data))
             return struct.pack(strlen + 's', bytes(data, encoding='utf8'))
+        elif self.data_type == 'dict':
+            data = json.dumps(data)
+            return struct.pack(str(len(data)) + 's', bytes(data, encoding='utf8'))
         else:
             print('error')
             return None

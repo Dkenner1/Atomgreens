@@ -62,6 +62,7 @@ class SerialMsg:
             self.msg['msg'] = struct.unpack('f', bytearray(self.msg['raw_msg']))[0]
         elif self.msg['type'] == self.type_enum['str']:
             self.msg['msg'] = intarr2str(self.msg['raw_msg'])
+        elif self.msg['type'] == self.type_enum['dict']:
+            self.msg['msg'] = json.loads(intarr2str(self.msg['raw_msg']))
         else:
-            
             print('Conversion error')
