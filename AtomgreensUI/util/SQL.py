@@ -17,7 +17,7 @@ SELECT_PI_SENSOR_ALL = """SELECT devices.device AS device, measurements.val AS v
 
 SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val AS val, measurements.epoch_time AS etime 
                             FROM measurements
-                            INNER JOIN active_nodes ON active_nodes.id = measurements.devId
+                            INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
                             WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?; """
 
