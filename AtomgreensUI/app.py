@@ -1,6 +1,6 @@
 from flask import Flask
 from routes.main import main
-import logging
+import logging, threading
 from waitress import serve
 
 
@@ -24,5 +24,6 @@ def start_db():
 
 
 if __name__ == '__main__':
-    start_server()
+    threading.Thread(target=start_server())
+
 

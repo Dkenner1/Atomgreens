@@ -1,4 +1,4 @@
-from util import bit_seg_read, intarr2str
+from util import *
 import struct
 import json
 
@@ -38,17 +38,8 @@ class SerialMsg:
         self.curr_byte += 1
 
     def repack(self):
-        if self.msg['type'] == self.type_enum['int']:
-            self.repacked = struct.pack('i', self.msg['msg'])
-        elif self.msg['type'] == self.type_enum['float']:
-            self.repacked = struct.pack('f', self.msg['msg'])
-        elif self.msg['type'] == self.type_enum['str']:
-            self.repacked = struct.pack(str(self.msg['length']) + 's', bytes(self.msg['msg'], encoding='utf8'))
-        else:
-            self.msg['raw_msg']
-            print('Repacking error')
-            return None
-
+        self.repacked = repackage_bytes(self.input_buff)
+        
     def create_msg_pattern(self):
         msgdict = {'raw_msg': [], 'msg': None}
         headerinfo = {key: None for key in self.config['details'].keys()}

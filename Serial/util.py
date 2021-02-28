@@ -1,4 +1,5 @@
 import threading
+import struct
 
 def wait_for_byte(ser_in):
     while not ser_in.inWaiting():
@@ -31,9 +32,14 @@ def threaded(func):
         thrd.start()
     return threadedfunc
 
-
 def intarr2str(buff):
     s=""
     for i in buff:
         s += chr(i)
     return s
+
+def repackage_bytes(chr_arr):
+    bstr = bytes()
+    for byt in chr_arr:
+        bstr += struct.pack('c', bytes(chr(byt), encoding='utf8'))
+    return bstr

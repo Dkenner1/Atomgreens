@@ -12,18 +12,18 @@ class UTCP:
         self.sendLen = 0
         #dev = devInfo
 
-    def send(self, destpi, destdev, data):
+    def send(self, destpi, destdev, data, flags):
         self.send_packet = None
         self.data_type = typeName(data)
         bdata = self.__data_pack(data)
-        self.__header1(destpi, destdev)
+        self.__header1(destpi, destdev, flags)
         self.__header2(bdata)
         self.sendPacket += bdata
         print('Packet to be sent: ' + str(self.sendPacket))
         self.ser_out.write(self.sendPacket)
 
-    def __header1(self, destpi, destdev):
-        dest = chr(bitmask(bitmask(0, destpi, 5, 3), destdev, 2, 3))
+    def __header1(self, destpi, destdev, flags=0):
+        dest = chr(bitmask(bitmask(bitmask(0, destpi, 5, 3), destdev, 2, 3), flags, 0, 2))
         self.sendPacket = struct.pack('c', bytes(dest, encoding='utf8'))
 
     def __header2(self, bdata):
@@ -31,8 +31,6 @@ class UTCP:
         self.sendPacket += struct.pack('c', bytes(head2, encoding='utf8'))
              
     def __data_pack(self, data):
-        print(data)
-        print(self.data_type)
         if self.data_type == 'int':
             return struct.pack('i', data)
         elif self.data_type == 'float':
@@ -44,7 +42,7 @@ class UTCP:
             data = json.dumps(data)
             return struct.pack(str(len(data)) + 's', bytes(data, encoding='utf8'))
         else:
-            print('error')
+            print('Pack error')
             return None
 
 

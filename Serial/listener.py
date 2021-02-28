@@ -22,20 +22,14 @@ def read_msg(ser_in, ser_out):
     while not msg.msg_complete:
         msg.interpret(wait_for_byte(ser_in))
     print(msg.msg)
+    eventHub.publish('FLAGS', msg=msg.msg)
     if msg.msg['piId'] != piID:
         print('Not right device: forwarding out serial out')
+        eventHub.publish('DEFAULT', msg=msg.msg)
         ser_out.write(repackage_bytes(msg.input_buff))
     else:
-        eventHub.publish(msg.msg['devId'], msg=msg.msg['msg'])
+        eventHub.publish(msg.msg['devId'], msg=msg.msg)
         print('Received New packet')
-
-
-def repackage_bytes(chr_arr):
-    bstr = bytes()
-    for byt in chr_arr:
-        bstr += struct.pack('c', bytes(chr(byt), encoding='utf8'))
-    return bstr
-
 
 def baudcalc(ser):
     datagram_rate = ser.baudrate / (ser.bytesize + ser.stopbits + 1)
