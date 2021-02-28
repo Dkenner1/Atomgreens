@@ -14,7 +14,8 @@ def foo(msg):
 
 
 eventHub.subscribe(foo, "DEFAULT")
-if __name__ == '__main__':
+
+def test():
     sender.send(2, 3, {"hello!": 1})
 
     
