@@ -1,21 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
 import serial
-
-import configparser
-import datetime
-from datetime import datetime
-import json
-import logging
-import os
-import sys
-import time
-import shutil
-import glob
-import pandas as pd
-from array import *
-import collections.abc
-import serial 
 from utcp import UTCP 
 
 import smbus
