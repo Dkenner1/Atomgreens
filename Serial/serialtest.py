@@ -2,7 +2,6 @@ import serial
 from utcp import UTCP
 from listener import listen
 from EventHub import eventHub
-import definitions
 from database.db import add_meas
 import json
 
@@ -27,7 +26,7 @@ def updatePiID(msg=None):
 eventHub.subscribe(updatePiID, "FLAGS")
 
 if __name__ == '__main__':
-    sender.send(2, 3, 3, 1)
+    sender.send(3, 3, 2, 1)
 
     
     

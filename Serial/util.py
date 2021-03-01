@@ -41,5 +41,5 @@ def intarr2str(buff):
 def repackage_bytes(chr_arr):
     bstr = bytes()
     for byt in chr_arr:
-        bstr += struct.pack('c', bytes(chr(byt), encoding='utf8'))
+        bstr += byt.to_bytes(1, 'big')
     return bstr

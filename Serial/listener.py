@@ -1,9 +1,12 @@
 from util import *
 from time import sleep
 from unpacker import SerialMsg
-from definitions import piID
+import json
 import struct
 from EventHub import eventHub
+
+config = json.load(open('msg_config.json', 'r'))
+piID = config['piID']
 
 @threaded
 def listen(ser_in, ser_out):

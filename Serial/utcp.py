@@ -12,7 +12,7 @@ class UTCP:
         self.sendLen = 0
         #dev = devInfo
 
-    def send(self, destpi, destdev, data, flags):
+    def send(self, destpi, destdev, data, flags=0):
         self.send_packet = None
         self.data_type = typeName(data)
         bdata = self.__data_pack(data)
@@ -20,11 +20,12 @@ class UTCP:
         self.__header2(bdata)
         self.sendPacket += bdata
         print('Packet to be sent: ' + str(self.sendPacket))
+        print('First byte?: ' + str(self.sendPacket[0]))
         self.ser_out.write(self.sendPacket)
 
     def __header1(self, destpi, destdev, flags=0):
-        dest = chr(bitmask(bitmask(bitmask(0, destpi, 5, 3), destdev, 2, 3), flags, 0, 2))
-        self.sendPacket = struct.pack('c', bytes(dest, encoding='utf8'))
+        dest = bitmask(bitmask(bitmask(0, destpi, 5, 3), destdev, 2, 3), flags, 0, 1)
+        self.sendPacket = dest.to_bytes(1,'big')
 
     def __header2(self, bdata):
         head2 = chr(bitmask(bitmask(0, self.typeEnum[self.data_type], 5, 3), len(bdata), shift=0, limit=5))
