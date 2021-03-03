@@ -1,11 +1,12 @@
 from flask import Flask
-from routes.main import main
+from routes import main, service
 import logging, threading
 from waitress import serve
 
 
 app = Flask('Atomgreens')
-app.register_blueprint(main)
+app.register_blueprint(main.main)
+app.register_blueprint(service.service_routes)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1
 
 def start_server():

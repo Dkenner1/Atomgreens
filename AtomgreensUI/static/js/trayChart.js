@@ -1,7 +1,4 @@
 
-    function go_home() {
-        document.location= "/";
-    }
 
     function ctrlPage() {
         document.location= "trayControl'";

@@ -16,11 +16,6 @@ def index():
     return render_template('index.html', status=data)
 
 
-@main.route('/settings', methods=['GET', 'POST'])
-def settings():
-    return render_template('index.html')
-
-
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
 def data(trayid):
     conn = connect()
@@ -36,12 +31,3 @@ def data(trayid):
     conn.close()
     return render_template('tray.html', data=data)
 
-@main.route('/service', methods=['GET', 'POST'])
-def service():
-    return render_template('service.html')
-
-@main.route('/trayControl', methods=['GET', 'POST'])
-def trayControl():
-    return render_template('trayCtrl.html')
-
-#I made a comment!
