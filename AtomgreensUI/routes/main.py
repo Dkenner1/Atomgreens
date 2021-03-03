@@ -40,4 +40,8 @@ def data(trayid):
 def service():
     return render_template('service.html')
 
+@main.route('/trayControl', methods=['GET', 'POST'])
+def trayControl():
+    return render_template('trayCtrl.html')
+
 #I made a comment!

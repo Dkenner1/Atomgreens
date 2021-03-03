@@ -46,6 +46,17 @@ body {
   color: white;
 }
 
+.back-button {
+    line-height: 12px;
+    width: 18px;
+    font-size: 8pt;
+    text-align: left;
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .center-block {
   display: block;
