@@ -11,8 +11,9 @@ main = Blueprint('main', __name__, template_folder='templates')
 def index():
     conn = connect()
     cur = conn.cursor()
-    data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(PI4_STATUS)}
+    data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(STATUS)}
     conn.close()
+    print(data)
     return render_template('index.html', status=data)
 
 
@@ -21,13 +22,18 @@ def data(trayid):
     conn = connect()
     cur = conn.cursor()
     etime = time.time()
-    time_range = etime-604800 # 1 week period
+    time_range = etime - 604800  # 1 week period
     data = {}
     for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, etime)).fetchall():
         if row[0] in data:
-           data[row[0]].append((row[1], row[2]))
+            data[row[0]].append((row[1], row[2]))
         else:
             data[row[0]] = [(row[1], row[2])]
     conn.close()
     return render_template('tray.html', data=data)
 
+
+@main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
+def control(trayid):
+    print("We got here!")
+    return render_template('trayCtrl.html', data=data)

@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     # Populate active_device tables
     for pi in range(1, 5):
-        for dev in range(1,5):
+        for dev in range(1,15):
             add_node(pi, dev)
 
     # Populate measurement table

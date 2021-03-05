@@ -23,6 +23,8 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
 
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
 
+STATUS = """SELECT device, val FROM status"""
+
 def create_status_view(name, ID):
     return "CREATE VIEW " + name + " AS SELECT * FROM status WHERE piId=" + str(ID)
 
