@@ -22,7 +22,7 @@
 										    <div class="progress">
                                                 <div class="progress-bar" style="width:25%">25%</div>
                                             </div>
-								  		    <button class="cardButton" onclick="document.location='trayControl'">More info</button>
+								  		    <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
 									    </div>
 							  	    </div>
 						        </div>
@@ -141,10 +141,30 @@
                                             <th>External Humidity (%) </th>
                                         </tr>
                                         <tr>
-                                            <td>7.0</td>
-                                            <td>7.0</td>
-                                            <td>80</td>
-                                            <td>30</td>
+                                            <td>
+                                                <div id="ph">
+                                                    <div id="ph_level">
+                                                        7.0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                 <p><b>{{status.ph}}</b></p>
+                                            </td>
+                                            <td>
+                                                <div id="ex_temp">
+                                                    <div id="ex_temp_val" >
+                                                       80
+                                                    </div>
+                                                </div>
+                                            </td>
+                                           <td>
+                                                <div id="ex_hum">
+                                                    <div id="ex_temp_hum" >
+                                                       80
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>Current EC</th>
@@ -153,10 +173,34 @@
                                             <th>Internal Humidity (%) </th>
                                         </tr>
                                         <tr>
-                                            <td>7.0</td>
-                                            <td>7.0</td>
-                                            <td>75</td>
-                                            <td>80</td>
+                                            <td>
+                                                <div id="ec">
+                                                    <div id="ec_level" >
+                                                       7.0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div id="ec_tank">
+                                                    <div id="ec_tank_level" >
+                                                       7.0
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div id="temp">
+                                                    <div id="temp_val" >
+                                                       75
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div id="in_hum">
+                                                    <div id="in_hum_val" >
+                                                       80
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -180,7 +224,7 @@
 {% block script %}
 
 <script>
-
+<script src="/static/js/main.js"></script>
 </script>
 {% endblock %}
 
