@@ -25,7 +25,6 @@ def read_msg(ser_in, ser_out):
     while not msg.msg_complete:
         msg.interpret(wait_for_byte(ser_in))
     print(msg.msg)
-    eventHub.publish('FLAGS', msg=msg.msg)
     if msg.msg['piId'] != piID:
         print('Not right device: forwarding out serial out')
         eventHub.publish('DEFAULT', msg=msg.msg)

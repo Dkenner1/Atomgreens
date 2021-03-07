@@ -21,7 +21,10 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             INNER JOIN devices ON devices.id = active_nodes.devId
                             WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?; """
 
+MOST_RECENT = """SELECT *, MAX(epoch_time) AS time FROM measurements"""
+
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
+MEASURMENTS = """SELECT * FROM measurements"""
 
 def create_status_view(name, ID):
     return "CREATE VIEW " + name + " AS SELECT * FROM status WHERE piId=" + str(ID)

@@ -1,3 +1,5 @@
+from db import query
+from SQL import MOST_RECENT, MEASURMENTS
 
 class Process:
     def __init__(self, _return_dict):
@@ -17,6 +19,6 @@ def test2(*args):
     print(x)
 
 if __name__ == "__main__":
-    testdict = {'Key1': None, 'Key2': 2}
-    test2(1,2,3,4,5)
+    for item in query(MEASURMENTS):
+        print(item)
 
