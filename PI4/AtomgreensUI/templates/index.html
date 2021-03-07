@@ -20,9 +20,9 @@
 									    <div class="cardInfo">
 								  		    <h6>Tray 1</h6>
 										    <div class="progress">
-                                                <div class="progress-bar" style="width:25%">25%</div>
+                                                <div class="progress-bar" style="width:100%">100%</div>
                                             </div>
-								  		    <button class="cardButton" onclick="document.location='trayControl'">More info</button>
+								  		     <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
 									    </div>
 							  	    </div>
 						        </div>
@@ -101,13 +101,7 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                {% for tray in status.tray_status %}
-                                {% if tray.iscomplete %}
-                                <div class="alert alert-success">
-                                <p><b>Tray {{ tray.id }}: is ready to harvest!</b></p>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
+
                             </div>
 
                             <div class="container-fluid">
@@ -136,31 +130,65 @@
                                     <table id="infoTable" >
                                         <tr>
                                             <th>Current PH</th>
-                                            <th>PH Tank Level</th>
+                                            <th>PH Tank Level (%)</th>
                                             <th>External Temperature (℉) </th>
                                             <th>External Humidity (%) </th>
                                         </tr>
                                         <tr>
-                                            {% if status.weight is defined %}
-                                            <td>{{ status.weight }}</td>
+                                            {% if status.ph is defined %}
+                                            <td>{{ status.ph }}</td>
                                             {% else %}
-                                            <td> 0 </td>
+                                            <td> 7.0 </td>
                                             {% endif %}
-                                            <td>7.0</td>
-                                            <td>80</td>
-                                            <td>30</td>
+
+                                            {% if status.phTank is defined %}
+                                            <td>{{ status.phTank }}</td>
+                                            {% else %}
+                                            <td> 80 </td>
+                                            {% endif %}
+
+                                            {% if status.exTemp is defined %}
+                                            <td>{{ status.exTemp }}</td>
+                                            {% else %}
+                                            <td> 70 </td>
+                                            {% endif %}
+
+                                            {% if status.exHum is defined %}
+                                            <td>{{ status.exHum }}</td>
+                                            {% else %}
+                                            <td> 30 </td>
+                                            {% endif %}
                                         </tr>
                                         <tr>
                                             <th>Current EC</th>
-                                            <th>Nutrient Tank Level</th>
+                                            <th>Nutrient Tank Level (%)</th>
                                             <th>Current Temperature (℉) </th>
                                             <th>Internal Humidity (%) </th>
                                         </tr>
                                         <tr>
-                                            <td>7.0</td>
-                                            <td>7.0</td>
-                                            <td>75</td>
-                                            <td>80</td>
+                                            {% if status.ec is defined %}
+                                            <td>{{ status.ec }}</td>
+                                            {% else %}
+                                            <td> 6.0 </td>
+                                            {% endif %}
+
+                                            {% if status.ecTank is defined %}
+                                            <td>{{ status.ecTank }}</td>
+                                            {% else %}
+                                            <td> 80 </td>
+                                            {% endif %}
+
+                                            {% if status.temperature is defined %}
+                                            <td>{{ status.temperature }}</td>
+                                            {% else %}
+                                            <td> 0 </td>
+                                            {% endif %}
+
+                                            {% if status.humidity is defined %}
+                                            <td>{{ status.humidity }}</td>
+                                            {% else %}
+                                            <td> 0 </td>
+                                            {% endif %}
                                         </tr>
                                     </table>
                                 </div>

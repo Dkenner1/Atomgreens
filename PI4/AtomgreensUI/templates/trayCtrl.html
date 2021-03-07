@@ -1,70 +1,114 @@
 {% extends "base.html" %}
 {% block content %}
-	<div class="container-fluid">
-        <section id="trayControls">
+    <div class="wrapper">
+        <div class="content-header">
             <div class="container-fluid">
-                <div class="d-flex justify-content-center">
-                     <div class="container">
-                        <div class="fullCard">
-                            <div class="cardContent">
-                                <div class="cardInfo">
-                                    <h6>Tray 1: Broccoli</h6>
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width:100%">100%</div>
+                <h1>Tray Controls</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <section id="trayControls">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <h6>Tray: Broccoli</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width:100%">100%</div>
+                                        </div>
+                                        <p>Broccoli done!</p>
+                                        <button class="cardButton">Harvest</button>
                                     </div>
-                                    <button class="cardButton">Continue</button>
                                 </div>
                             </div>
-                        </div>
-
-                         <div class="row">
-                                <div class="fullCard">
-								    <div class="cardContent">
-									    <div class="cardInfo">
-								  		    <h6>Tray 1: Broccoli</h6>
-                                            <p><b>Broccoli done!</b></p>
-								  		    <button class="cardButton">Harvest</button>
-									    </div>
-							  	    </div>
-						        </div>
                          </div>
-                         <div class="row">
-                                <div class="fullCard">
-								    <div class="cardContent">
-									    <div class="cardInfo">
-								  		    <h6>Harvesting:</h6>
-                                            <p><b>Remove tray</b></p>
-								  		    <button class="cardButton">Continue</button>
-									    </div>
-							  	    </div>
-						        </div>
-                         </div>
-                         <div class="row">
-                                <div class="fullCard">
-								    <div class="cardContent">
-									    <div class="cardInfo">
-								  		    <h6>Harvesting:</h6>
-                                            <p><b>Insert tray</b></p>
-								  		    <button class="cardButton">Continue</button>
-									    </div>
-							  	    </div>
-						        </div>
-                         </div>
-                         <div class="row">
-                                <div class="fullCard">
-								    <div class="cardContent">
-									    <div class="cardInfo">
-								  		    <h6>Select Microgreens:</h6>
-								  		    <button class="cardButton">Broccoli</button>
-                                            <button class="cardButton">Beets</button>
-									    </div>
-							  	    </div>
-						        </div>
-                         </div>
-                     </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <p>Harvesting: </p>
+                                        <p><i>Remove Tray</i></p>
+                                        <button class="cardButton">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <p>Harvesting: </p>
+                                        <p><i>Insert Tray</i></p>
+                                        <button class="cardButton">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <p>Water level low.</p>
+                                        <p><b>Perform Maintenance</b></p>
+                                        <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <p>PH level low.</p>
+                                        <p><b>Perform Maintenance</b></p>
+                                        <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                         <div class="container">
+                            <div class="fullCard">
+                                <div class="cardContent">
+                                    <div class="cardInfo">
+                                        <p>Nutrient level low.</p>
+                                        <p><b>Perform Maintenance</b></p>
+                                        <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 {% endblock %}
 {% block script %}
