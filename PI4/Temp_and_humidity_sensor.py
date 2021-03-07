@@ -1,24 +1,14 @@
 import RPi.GPIO as GPIO
 from time import sleep
 import serial
-
-import configparser
-import datetime
-from datetime import datetime
-import json
-import logging
-import os
-import sys
-import time
-import shutil
-import glob
-import pandas as pd
-from array import *
-import collections.abc
+from utcp import UTCP 
 
 import smbus
 from smbus import SMBus
 from smbus2 import SMBus, i2c_msg
+
+ser = serial.Serial(port="/dev/serial0", baudrate=9600)
+sender = UTCP(ser)
 
 bus = SMBus(1)
 i2c_ch = 1 
@@ -33,21 +23,25 @@ reg_Serial_ID3 = 0xFD     #Last byte bit of the serial ID of the part
 reg_Manufacturer_ID = 0xFE#ID of Texas Instruments
 reg_Device_ID = 0xFF      #ID of the device
 
-def read_temp_humidity(): #get a temp measurment     
-    register_config = [0x10,0x00]
-    bus.write_i2c_block_data(i2c_address, reg_Configuration, register_config) #update the resister configuration 
-    msg = i2c_msg.write(i2c_address,[reg_Temperature])
-    bus.i2c_rdwr(msg)
-    sleep(.02)
-    msg = i2c_msg.read(i2c_address,4)
-    bus.i2c_rdwr(msg)
-    return list(msg)
+class TH:
+    def read_temp_humidity(msg=None): #get a temp measurment     
+        register_config = [0x10,0x00]
+        bus.write_i2c_block_data(i2c_address, reg_Configuration, register_config) #update the resister configuration 
+        msg = i2c_msg.write(i2c_address,[reg_Temperature])
+        bus.i2c_rdwr(msg)
+        sleep(.02)
+        msg = i2c_msg.read(i2c_address,4)
+        bus.i2c_rdwr(msg)
 
-t = read_temp_humidity()
-temp = (t[0]<<8)^t[1]
-tempurature = (temp/pow(2,16))*165-40
-print(tempurature)
+        temp = (msg[0]<<8)^msg[1]
+        tempurature = (temp/pow(2,16))*165-40
+        formatted_string = "{:.1f}".format(tempurature)
+        tempurature = float(formatted_string)
+        sender.send(0, 2, tempurature)
 
-hum = (t[2]<<8)^t[3]
-humidity = (hum/pow(2,16))*100
-print(humidity)
+        hum = (msg[2]<<8)^msg[3]
+        humidity = (hum/pow(2,16))*100
+        formatted_string = "{:.1f}".format(humidity)
+        humidity = float(formatted_string)
+        sender.send(0, 1, humidity)
+        return
