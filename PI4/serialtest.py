@@ -29,10 +29,5 @@ eventHub.subscribe(updatePiID, "FLAGS")
 eventHub.subscribe(default_msg, "DEFAULT")
 
 if __name__ == '__main__':
-    sender.send(1, 2, 1)
-    sleep(0.1)
-    print(query(MOST_RECENT))
-    
-
-    
+    sender.send(0, 2, 1) # pi id, dev id, data
     

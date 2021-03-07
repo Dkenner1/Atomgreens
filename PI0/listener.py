@@ -67,18 +67,16 @@ def listen(ser_in, ser_out):
 
 
 def read_msg(ser_in, ser_out):
-    decoder = SerialMsg(ser_in.read())
-    while not decoder.msg_complete:
-        decoder.interpret(wait_for_byte(ser_in))
-    print(decoder.msg)
-    eventHub.publish('FLAGS', msg=decoder.msg)
-    if decoder.msg['piId'] != piID and ser_out is not None:
+    msg = SerialMsg(ser_in.read())
+    while not msg.msg_complete:
+        msg.interpret(wait_for_byte(ser_in))
+    print("Received msg: " + str(msg.msg))
+    if msg.msg['piId'] != piID:
         print('Not right device: forwarding out serial out')
-        eventHub.publish('DEFAULT', msg=decoder.msg)
-        ser_out.write(repackage_bytes(decoder.input_buff))
+        eventHub.publish('DEFAULT', msg=msg.msg)
+        ser_out.write(repackage_bytes(msg.input_buff))
     else:
-        eventHub.publish(decoder.msg['devId'], msg=decoder.msg)
-        print('Received New packet')
+        eventHub.publish(msg.msg['devId'], 'FLAGS', msg=msg.msg)
 
 def baudcalc(ser):
     datagram_rate = ser.baudrate / (ser.bytesize + ser.stopbits + 1)
