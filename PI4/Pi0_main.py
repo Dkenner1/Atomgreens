@@ -2,8 +2,8 @@ import RPi.GPIO as GPIO
 from time import sleep
 import serial
 import configparser 
-from EventHub import eventHub
-from listener import listen
+from Serial.EventHub import eventHub
+from Serial.listener import listen
 import utcp
 import pwm_callable
 import weight_sensor
