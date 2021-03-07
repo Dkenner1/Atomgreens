@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(32,GPIO.OUT) #sets pin 11 to be an output
+GPIO.setup(32,GPIO.OUT) #turns on blue lights
 GPIO.output(32, GPIO.HIGH)
 from time import sleep
 import serial
@@ -32,6 +32,6 @@ eventHub.subscribe(Temp_and_humidity_sensor.TH.read_temp_humidity, 2)
 # eventHub.subscribe(pwm_callable.setPWM.recive, 6)
 
 
-GPIO.setup(33,GPIO.OUT) #sets pin 11 to be an output
+GPIO.setup(33,GPIO.OUT) #turns on red lights 
 GPIO.output(33, GPIO.HIGH)
 
