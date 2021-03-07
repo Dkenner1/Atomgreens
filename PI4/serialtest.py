@@ -13,11 +13,9 @@ listen(ser, ser)
 
 
 def default_msg(msg=None):
-    print("adding msg")
     add_meas(msg['piId'], msg['devId'], msg['msg'])
 
 def updatePiID(msg=None):
-    print(msg)
     if msg['flags'] == 1:
         print('Flag update')
         with open('msg_config.json') as jfile:

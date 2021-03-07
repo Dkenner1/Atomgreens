@@ -46,7 +46,6 @@ class SerialMsg:
         return {**msgdict, **headerinfo}
 
     def convert_data(self):
-        print(self.msg['raw_msg'])
         if self.msg['type'] == self.type_enum['int']:
             self.msg['msg'] = struct.unpack('i', bytearray(self.msg['raw_msg']))[0]
         elif self.msg['type'] == self.type_enum['float']:
