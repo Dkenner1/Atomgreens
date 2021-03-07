@@ -13,7 +13,7 @@ def index():
     cur = conn.cursor()
     data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(STATUS)}
     conn.close()
-    print(data)
+    print("Page data: " + str(data))
     return render_template('index.html', status=data)
 
 

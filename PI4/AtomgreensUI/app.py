@@ -17,14 +17,7 @@ def start_server():
     #app.run(host='0.0.0.0', port=5000, threaded=True)
 
 
-def start_db():
-    print('~ ' * 5)
-    print('in start_server')
-    app.logger.setLevel(logging.INFO)
-    app.run(host='localhost', port=1111, threaded=True)
-
 
 if __name__ == '__main__':
     threading.Thread(target=start_server())
-
 
