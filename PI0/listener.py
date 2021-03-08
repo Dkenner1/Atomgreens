@@ -63,6 +63,9 @@ def listen(ser_in, ser_out):
             print('New Message')
             read_msg(ser_in, ser_out)
             print('Read message, blocking again')
+
+        with open("/home/pi/listenerfile", "w") as f:
+            f.write("Listener run successfully\n")
         sleep(sleepamt)
 
 
@@ -71,8 +74,6 @@ def read_msg(ser_in, ser_out):
     while not msg.msg_complete:
         msg.interpret(wait_for_byte(ser_in))
     print("Received msg: " + str(msg.msg))
-    with open("/home/pi/gotserial", "w") as f:
-        f.write(str(msg))
     if msg.msg['piId'] != piID:
         print('Not right device: forwarding out serial out')
         eventHub.publish('DEFAULT', msg=msg.msg)
