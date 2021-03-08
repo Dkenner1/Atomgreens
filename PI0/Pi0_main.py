@@ -1,18 +1,19 @@
 import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(32,GPIO.OUT) #turns on blue lights
+GPIO.output(32, GPIO.HIGH)
 
 from time import sleep
 import serial
 from EventHub import eventHub
 from listener import listen
-import pwm_callable
+# import pwm_callable
 # from weight_sensor import w_sensor
 import Temp_and_humidity_sensor_pi0
 # from Solinoid import pwm
 # import json
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(32,GPIO.OUT) #turns on blue lights
-GPIO.output(32, GPIO.HIGH)
+
 
 ser = serial.Serial(port="/dev/ttyAMA0", baudrate=9600)  # Open port with baud rate
 listen(ser, ser)
@@ -34,7 +35,7 @@ eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 2)
 
 with open("/home/pi/required_file", "w") as f:
     f.write("OK\n")
-
 GPIO.setup(33,GPIO.OUT) #turns on red lights 
 GPIO.output(33, GPIO.HIGH)
+
 
