@@ -1,9 +1,12 @@
 import RPi.GPIO as GPIO
+<<<<<<< HEAD
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(32,GPIO.OUT) #turns on blue lights
 GPIO.output(32, GPIO.HIGH)
 
+=======
+>>>>>>> 4c9f47da027f139cb5e44fb67d58af604c43e71d
 from time import sleep
 import serial
 from EventHub import eventHub
@@ -24,7 +27,7 @@ def updatePiID(msg=None):
         with open('output_msg.txt', 'w') as jfile:
             jfile.write("here are some words")
             jfile.close()
-            
+
 eventHub.subscribe(updatePiID, "FLAGS")
 eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 1)
 eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 2)
@@ -33,8 +36,12 @@ eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 2)
 # eventHub.subscribe(pwm_callable.setPWM.recive, 5)
 # eventHub.subscribe(pwm_callable.setPWM.recive, 6)
 
+<<<<<<< HEAD
 with open("/home/pi/required_file", "w") as f:
     f.write("OK\n")
+=======
+
+>>>>>>> 4c9f47da027f139cb5e44fb67d58af604c43e71d
 GPIO.setup(33,GPIO.OUT) #turns on red lights 
 GPIO.output(33, GPIO.HIGH)
 
