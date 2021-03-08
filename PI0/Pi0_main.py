@@ -25,8 +25,8 @@ def updatePiID(msg=None):
             jfile.close()
 
 eventHub.subscribe(updatePiID, "FLAGS")
-eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 1)
-eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 2)
+eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 3)
+eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 4)
 # eventHub.subscribe(w_sensor.weight, 3)
 # eventHub.subscribe(pwm.recive, 4)
 # eventHub.subscribe(pwm_callable.setPWM.recive, 5)

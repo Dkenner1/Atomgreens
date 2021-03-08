@@ -37,3 +37,9 @@ def intarr2str(buff):
     for i in buff:
         s += chr(i)
     return s
+
+def repackage_bytes(chr_arr):
+    bstr = bytes()
+    for byt in chr_arr:
+        bstr += byt.to_bytes(1, 'big')
+    return bstr
