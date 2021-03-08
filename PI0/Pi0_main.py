@@ -1,4 +1,11 @@
 import RPi.GPIO as GPIO
+<<<<<<< HEAD
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(32,GPIO.OUT) #turns on blue lights
+GPIO.output(32, GPIO.HIGH)
+=======
+>>>>>>> 1a4339829a482bd6313f516d7d1ec362e5cac7c7
 from time import sleep
 import serial
 from EventHub import eventHub
@@ -8,12 +15,9 @@ import pwm_callable
 import Temp_and_humidity_sensor_pi0
 # from Solinoid import pwm
 # import json
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(32,GPIO.OUT) #turns on blue lights
-GPIO.output(32, GPIO.HIGH)
 
-ser = serial.Serial(port="/dev/ttyAMA0", baudrate=9600)  # Open port with baud rate
+
+ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
 listen(ser, ser)
 
 def updatePiID(msg=None):
