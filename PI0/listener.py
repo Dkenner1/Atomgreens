@@ -63,9 +63,6 @@ def listen(ser_in, ser_out):
             print('New Message')
             read_msg(ser_in, ser_out)
             print('Read message, blocking again')
-
-        with open("/home/pi/listenerfile", "w") as f:
-            f.write("Listener run successfully\n")
         sleep(sleepamt)
 
 
