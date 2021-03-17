@@ -1,9 +1,14 @@
 import threading
 import struct
+from time import sleep
 
-def wait_for_byte(ser_in):
+def wait_for_byte(ser_in, sleepamt):
+    timeout=0
     while not ser_in.inWaiting():
-        pass
+        timeout += 1
+        if timeout > 5:
+            raise RuntimeError("Message Timeout")
+        sleep(sleepamt)
     return ser_in.read()
 
 
