@@ -31,7 +31,7 @@ class Hub:
                 subscriber(kwargs)
         for topic in topics:
             for subscriber in self.response_mapper[topic]:
-                subscriber(kwargs)
+                subscriber(**kwargs)
 
 
 eventHub = Hub()
