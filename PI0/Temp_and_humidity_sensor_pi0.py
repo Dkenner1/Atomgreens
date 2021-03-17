@@ -2,12 +2,11 @@ import RPi.GPIO as GPIO
 from time import sleep
 import serial
 from utcp import UTCP 
-
 import smbus
 from smbus import SMBus
 from smbus2 import SMBus, i2c_msg
 
-ser = serial.Serial(port="/dev/ttyAMA0", baudrate=9600)
+ser = serial.Serial(port="/dev/Serial0", baudrate=9600)
 sender = UTCP(ser)
 
 bus = SMBus(1)

@@ -1,6 +1,6 @@
 import sqlite3, time
 from database.paths import db_dir
-from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT
+from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT, select_table
 
 def connect(dp_path=db_dir):
     return sqlite3.connect(dp_path)
