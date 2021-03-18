@@ -1,8 +1,9 @@
 import RPi.GPIO as GPIO
 import ph_ec_pump
 import ADC_callable
-PHVal = ADC_callable.ADC.call(2)
-print(PHVal)
+ph_ec_pump.PhEcPump.On()
+# PHVal = ADC_callable.ADC.call(2)
+# print(PHVal)
 # from time import sleep
 # import serial
 # import configparser 
