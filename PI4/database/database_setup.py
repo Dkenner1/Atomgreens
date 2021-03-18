@@ -1,6 +1,6 @@
 import sqlite3
 import time, random
-from util.SQL import *
+from SQL import *
 # Setup File
 con=sqlite3.connect('./atomgreens.db')
 cur = con.cursor()
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     add_device('cooler')
 
     # Populate active_device tables
-    for pi in range(1, 5):
+    for pi in range(0, 5):
         for dev in range(1,5):
             add_node(pi, dev)
 

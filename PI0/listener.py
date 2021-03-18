@@ -1,58 +1,11 @@
 from util import *
 from time import sleep
 from unpacker import SerialMsg
-#import json
+import json
 import struct
 from EventHub import eventHub
 
-config = {
-    "piID": 4,
-    "headers": 2,
-    "details": {
-        "piId": {
-            "byte": 1,
-            "rng": [
-                5,
-                7
-            ]
-        },
-        "devId": {
-            "byte": 1,
-            "rng": [
-                2,
-                4
-            ]
-        },
-        "flags": {
-            "byte": 1,
-            "rng": [
-                0,
-                1
-            ]
-        },
-        "type": {
-            "byte": 2,
-            "rng": [
-                5,
-                7
-            ]
-        },
-        "length": {
-            "byte": 2,
-            "rng": [
-                0,
-                4
-            ]
-        }
-    },
-    "type_enum": {
-        "int": 0,
-        "str": 1,
-        "float": 2,
-        "dict": 3
-    }
-}
-piID = 1
+config = json.load(open('config.json', 'r'))
 
 @threaded
 def listen(ser_in, ser_out):
@@ -67,16 +20,23 @@ def listen(ser_in, ser_out):
 
 
 def read_msg(ser_in, ser_out):
+    global config
+    sleepamt = baudcalc(ser_in)
     msg = SerialMsg(ser_in.read())
     while not msg.msg_complete:
-        msg.interpret(wait_for_byte(ser_in))
+        try:
+            msg.interpret(wait_for_byte(ser_in, sleepamt))
+        except RuntimeError as err:
+            print("Error: ", err)
+            return
     print("Received msg: " + str(msg.msg))
-    if msg.msg['piId'] != piID:
-        print('Not right device: forwarding out serial out')
-        eventHub.publish('DEFAULT', msg=msg.msg)
-        ser_out.write(repackage_bytes(msg.input_buff))
+    if msg.msg['flags']:
+        eventHub.publish('FLAGS', ser=ser_out, msg=msg.msg)
+        config = json.load(open('config.json', 'r'))
+    elif msg.msg['piId'] != config['piID']:
+        eventHub.publish('DEFAULT', 'FWD', ser=ser_out, msg=msg.msg, repackaged=repackage_bytes(msg.input_buff))
     else:
-        eventHub.publish(msg.msg['devId'], 'FLAGS', msg=msg.msg)
+        eventHub.publish(msg.msg['devId'], msg=msg.msg)
 
 def baudcalc(ser):
     datagram_rate = ser.baudrate / (ser.bytesize + ser.stopbits + 1)
