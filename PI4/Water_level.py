@@ -1,16 +1,13 @@
 import RPi.GPIO as GPIO
-from time import sleep
-import serial
-from utcp import UTCP 
+#from util.db import connect, add_meas
+#from util.SQL import PI4_STATUS
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 waterLevel = 16
 GPIO.setup(waterLevel, GPIO.IN)
 
-ser = serial.Serial(port="/dev/serial0", baudrate=9600)
-sender = UTCP(ser)
-
-class TH:
-    def read_temp_humidity(): #get a temp measurment
-        add_meas(1, 14, GPIO.input(waterLevel)) #pi id, dev id, value
-        return
+class waterLevel:
+    def read_waterLevel(): #read the wate level 
+        add_meas(1, 14, GPIO.input(waterLevel)) #pi_id, dev_id, value
+        

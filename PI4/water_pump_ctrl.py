@@ -1,5 +1,3 @@
-# water_pump.py
-
 import RPi.GPIO as GPIO
 from time import sleep
 #from util.db import connect, add_meas
