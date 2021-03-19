@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
 SPR = 200 # Steps per revolution
-delay = 0.1
+delay = 0.027
 
 pinPHBlack = 40
 pinPHGrn = 38

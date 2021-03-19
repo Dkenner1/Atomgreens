@@ -5,7 +5,9 @@ import logging, threading
 from waitress import serve
 
 from AtomgreensUI.app import start_server
-import PI4_sensor_scheduler
+import PI4_schedule
+import Stop
 
+Stop.stop.off() #turns off all of the GPIO in order to prevent undesired premature function
 threading.Thread(target=start_server())
-PI4_sensor_scheduler.schedule.call()
+PI4_schedule.schedule.call()

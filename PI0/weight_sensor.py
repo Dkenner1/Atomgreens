@@ -58,6 +58,5 @@ class passweight:
         sender.send(0, 3, int(count_ave))
         return 
 
-w_sensor = passweight()
 
 
