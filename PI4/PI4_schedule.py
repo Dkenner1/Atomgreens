@@ -11,6 +11,14 @@ ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud r
 sender = UTCP(ser)
 listen(ser, ser)
 
+def serial(devid):
+    sender.send(1, devid, 5) # get the temp and humidity sensor data from the 1st pi0
+    sender.send(2, devid, 5) # 2nd pi0
+    sender.send(3, devid, 5) # 3rd pi0
+    sender.send(4, devid, 5) # 4th pi0
+    sender.send(5, devid, 5) # 5th pi0
+
+
 def schedule(): #run every 10 minutes - have all of the sensor files run
     #sender.send(piID, devID, Data)
     Temp_and_humidity_sensor_pi4.TH.read_temp_humidity()
@@ -19,6 +27,14 @@ def schedule(): #run every 10 minutes - have all of the sensor files run
     sender.send(3, 1, 5) # 3rd pi0
     sender.send(4, 1, 5) # 4th pi0
     sender.send(5, 1, 5) # 5th pi0
+    
+    sender.send(1, 3, 5) # get the weight data from the 1st pi0
+    sender.send(2, 3, 5) # 2nd pi0
+    sender.send(3, 3, 5) # 3rd pi0
+    sender.send(4, 3, 5) # 4th pi0
+    sender.send(5, 3, 5) # 5th pi0
+    
+    
     
     
     
