@@ -5,7 +5,7 @@ import json
 import struct
 from EventHub import eventHub
 
-config = json.load(open('config.json', 'r'))
+config = json.load(open('msg_config.json', 'r'))
 
 @threaded
 def listen(ser_in, ser_out):
