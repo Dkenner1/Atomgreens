@@ -10,5 +10,5 @@ listen(ser, ser)
 
 eventHub.subscribe(store, 'DEFAULT')
 
-sender.send(1, 2, 1 ) # pi id, dev id, data
+sender.send(1, 3, 0) # pi id, dev id, data
     
