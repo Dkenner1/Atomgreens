@@ -4,9 +4,12 @@ import ADC_callable
 import DFRobot_PH
 import DFRobot_EC
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
 GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
-GPIO.setwarnings(False) 
+
 class PH_EC:
     def readPHEC():        
         waterTemp = ADC_callable.ADC.call(0)
@@ -24,7 +27,7 @@ class PH_EC:
         temperature = (74.4921 / (waterTemp-3.3)) + 70.1467
         PH = DFRobot_PH.ph.readPH(ph)
         EC = ec.DFRobot_EC.ec.readEC(ec, temperature)
+        PH = DFRobot_PH.DFRobot_PH.readPH(ph)
+        EC = DFRobot_EC.DFRobot_PH.readEC(ec, temperature)
 
         print("Temperature: %.1f ^C EC: %.2f ms/cm PH: %.2f" % (temperature, EC, PH))
-
-sleep(1.0)
