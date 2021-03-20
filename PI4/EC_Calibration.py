@@ -8,15 +8,22 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(15, GPIO.OUT)
 
-waterTemp = 25
+temperature = 25
 
 GPIO.output(15, GPIO.HIGH)
 sleep(1)
 EC = ADC_callable.ADC.call(1)
 GPIO.output(15, GPIO.LOW)
-
-temperature = (74.4921 / (waterTemp - 3.3)) + 70.1467
-temperature = 25
-EC = DFRobot_EC.DFRobot_EC.calibration(EC, temperature)
-
 print(EC)
+
+rawEC = 1000*EC/820.0/200.0
+if (rawEC>0.9 and rawEC<1.9): 
+    compECsolution = 12.88*(1.0+0.0185*(temperature-25.0))
+    KValueLow = 820.0*200.0*compECsolution/1000.0/EC
+    print(KValueLow)
+elif (rawEC>9 and rawEC<16.8):
+    compECsolution = 12.88*(1.0+0.0185*(temperature-25.0))
+    KValueHigh = 820.0*200.0*compECsolution/1000.0/EC
+    print(KValueHigh)
+
+
