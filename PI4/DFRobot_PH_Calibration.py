@@ -2,15 +2,15 @@ import RPi.GPIO as GPIO
 from time import sleep
 import ADC_callable
 import DFRobot_PH
-import DFRobot_EC
+#import DFRobot_EC
 
 GPIO.setup(13, GPIO.OUT)
 #GPIO.setup(15, GPIO.OUT)
 GPIO.setwarnings(False)
 
 
-class PH_EC_Calibration:
-	def readPHECTest():
+class PH_Calibration:
+	def readPHTest():
 		waterTemp = 25
 
 		GPIO.output(13, GPIO.HIGH)
