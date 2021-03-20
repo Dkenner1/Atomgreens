@@ -20,8 +20,8 @@ class PH_EC:
         GPIO.output(15, GPIO.LOW)
 
         temperature = (74.4921 / (waterTemp-3.3)) + 70.1467
-        PH = ph.DFRobot_PH.readPH(ph, temperature)
-        EC = ec.DFRobot_EC.readEC(ec, temperature)
+        PH = DFRobot_PH.ph.readPH(ph, temperature)
+        EC = ec.DFRobot_EC.ec.readEC(ec, temperature)
 
         print("Temperature: %.1f ^C EC: %.2f ms/cm PH: %.2f" % (temperature, EC, PH))
 

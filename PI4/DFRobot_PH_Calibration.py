@@ -1,29 +1,32 @@
-import sys
-sys.path.append('../')
-import time
-ADS1115_REG_CONFIG_PGA_6_144V        = 0x00 # 6.144V range = Gain 2/3
-ADS1115_REG_CONFIG_PGA_4_096V        = 0x02 # 4.096V range = Gain 1
-ADS1115_REG_CONFIG_PGA_2_048V        = 0x04 # 2.048V range = Gain 2 (default)
-ADS1115_REG_CONFIG_PGA_1_024V        = 0x06 # 1.024V range = Gain 4
-ADS1115_REG_CONFIG_PGA_0_512V        = 0x08 # 0.512V range = Gain 8
-ADS1115_REG_CONFIG_PGA_0_256V        = 0x0A # 0.256V range = Gain 16
+import RPi.GPIO as GPIO
+from time import sleep
+import ADC_callable
+import DFRobot_PH
+import DFRobot_EC
 
-from DFRobot_ADS1115 import ADS1115
-from DFRobot_PH      import DFRobot_PH
+GPIO.setup(13, GPIO.OUT)
+#GPIO.setup(15, GPIO.OUT)
+GPIO.setwarnings(False)
 
-ads1115 = ADS1115()
-ph      = DFRobot_PH()
 
-ph.begin()
-while True :
-	temperature = 25
-	#Set the IIC address
-	ads1115.setAddr_ADS1115(0x48)
-	#Sets the gain and input voltage range.
-	ads1115.setGain(ADS1115_REG_CONFIG_PGA_6_144V)
-	#Get the Digital Value of Analog of selected channel
-	adc0 = ads1115.readVoltage(0)
-	print "A0:%dmV "%(adc0['r'])
-	#Calibrate the calibration data
-	ph.calibration(adc0['r'])
-	time.sleep(1.0)
+class PH_EC_Calibration:
+	def readPHECTest():
+		waterTemp = 25
+
+		GPIO.output(13, GPIO.HIGH)
+		ph = ADC_callable.ADC.call(1)
+		GPIO.output(13, GPIO.LOW)
+
+		#GPIO.output(15, GPIO.HIGH)
+		#ec = ADC_callable.ADC.call(2)
+		#GPIO.output(15, GPIO.LOW)
+
+		temperature = (74.4921 / (waterTemp - 3.3)) + 70.1467
+		temperature = 25
+		PH = DFRobot_PH.ph.calibration(ph, temperature)
+		#EC = ec.DFRobot_EC.calibration(ec, temperature)
+
+		print("PH: %.2f" % (PH))
+
+
+sleep(1.0)
