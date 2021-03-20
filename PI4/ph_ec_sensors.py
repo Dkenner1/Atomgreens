@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
 from time import sleep
 import ADC_callable
-from DFRobot_PH import readPH
-from DFRobot_EC import readEC
+import DFRobot_PH
+import DFRobot_EC
 
 GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
@@ -20,8 +20,8 @@ class PH_EC:
         GPIO.output(15, GPIO.LOW)
 
         temperature = (74.4921 / (waterTemp-3.3)) + 70.1467
-        PH = ph.readPH(ph, temperature)
-        EC = ec.readEC(ec, temperature)
+        PH = ph.DFRobot_PH.readPH(ph, temperature)
+        EC = ec.DFRobot_EC.readEC(ec, temperature)
 
         print("Temperature: %.1f ^C EC: %.2f ms/cm PH: %.2f" % (temperature, EC, PH))
 
