@@ -55,32 +55,32 @@ class PhEcPump:
         GPIO.output(29, GPIO.HIGH) #turn on the pumps 
 
         # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
-            # PH pump
-    #     if phVal < stdValPH:
-    #         runPH = ((phVal - stdValPH) * 10) * SPR
-    #         phPumpCount = ((phVal - stdValPH) * 10)
-    #         # Turn on PH pump
-    # 
-    #         for x in range(round(revNum)):
-                GPIO.output(pinECBlack, GPIO.LOW)
-                GPIO.output(pinECRed, GPIO.HIGH)
-                sleep(delay)
-                GPIO.output(pinECRed, GPIO.LOW)
-                GPIO.output(pinECGrn, GPIO.HIGH)
-                sleep(delay)
-                GPIO.output(pinECGrn, GPIO.LOW)
-                GPIO.output(pinECBlue, GPIO.HIGH)
-                sleep(delay)
-                GPIO.output(pinECBlue, GPIO.LOW)
-                GPIO.output(pinECBlack, GPIO.HIGH)
-                sleep(delay)
-    #     GPIO.output(pinPHGrn, GPIO.LOW)
-    #     GPIO.output(pinPHBlue, GPIO.LOW)
-    #     GPIO.output(pinPHGrn, GPIO.LOW)
-    #     GPIO.output(pinPHBlue, GPIO.LOW)
-    #     # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
-    #     # add_meas(1,10,(pumpCnt + phPumpCount))
-    #     print(pumpCnt + phPumpCount)
+        # PH pump
+        if phVal < stdValPH:
+            runPH = ((phVal - stdValPH) * 10) * SPR
+            phPumpCount = ((phVal - stdValPH) * 10)
+            # Turn on PH pump
+
+            for x in range(round(revNum)):
+                    GPIO.output(pinECBlack, GPIO.LOW)
+                    GPIO.output(pinECRed, GPIO.HIGH)
+                    sleep(delay)
+                    GPIO.output(pinECRed, GPIO.LOW)
+                    GPIO.output(pinECGrn, GPIO.HIGH)
+                    sleep(delay)
+                    GPIO.output(pinECGrn, GPIO.LOW)
+                    GPIO.output(pinECBlue, GPIO.HIGH)
+                    sleep(delay)
+                    GPIO.output(pinECBlue, GPIO.LOW)
+                    GPIO.output(pinECBlack, GPIO.HIGH)
+                    sleep(delay)
+        GPIO.output(pinPHGrn, GPIO.LOW)
+        GPIO.output(pinPHBlue, GPIO.LOW)
+        GPIO.output(pinPHGrn, GPIO.LOW)
+        GPIO.output(pinPHBlue, GPIO.LOW)
+        # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
+        # add_meas(1,10,(pumpCnt + phPumpCount))
+        print(pumpCnt + phPumpCount)
 
         # EC pump
         print(ecVal)
