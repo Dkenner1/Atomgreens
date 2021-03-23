@@ -2,9 +2,8 @@ import time
 import sys
 
 _kvalue                 = .987
-_kvalueLow              = 1.0
-_kvalueHigh             = 1.0
-_cmdReceivedBufferIndex = 0
+_kvalueLow              = 1.0728
+_kvalueHigh             = 1.0687
 _voltage                = 0.0
 _temperature            = 25.0
 
@@ -18,5 +17,8 @@ class DFRobot_EC():
             _kvalue = _kvalueLow
         value = rawEC * _kvalue
         value = value / (1.0+0.0185*(temperature-25.0))
-        return value
+        formatted_string = "{:.5f}".format(value)
+        EC = float(formatted_string)
+        return EC
+
 
