@@ -7,6 +7,7 @@ from EventHub import eventHub
 from behaviors import *  #you might not need this file
 from util.db import connect
 from util.SQL import *
+
 import Temp_and_humidity_sensor_pi4
 import Water_level
 import ph_ec_sensors
@@ -42,20 +43,19 @@ def schedule(): #run every 10 minutes - have all of the sensor files run
     serial(1, 5) # get the temp and humidity data from all of the pi0s 
     serial(3, 5) # get the weight data from all PI0's 
     Water_level.waterLevel.read_waterLevel() #get the waver level
-    ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
     
-    #dont allow the user to enter maintanence mode here 
+    
     #actuators
     if (solOn == 0): #check to see if the solinoids should be shut
-        water_pump_ctrl.WaterPumpCtrl.water(0) #turn off the water & air pump 
         serial(4, 0) #turn off the solinoids
+        #ph_ec_pump.PhEcPump.On() #activate the PH and EC pump in order to keep the level constent in the water
+        #pump turns off in the PH_EC_pump file
+        # Delete when adding the PH and EC stuff in the loop 
+        water_pump_ctrl.WaterPumpCtrl.water(0) 
     else:
         solOn = solOn - 1 # determines if we have waited the right amount of time 
-    #ph_ec_pump.PhEcPump.On() #activate the PH and Ec pump in order to keep the level constent in the water
     #climate_control.ClimateCtrl.control() #activate climate control for this chunk of time 
     
-    
-    #Allow the user to enter maintanence mode here
 
 def LEDon():
     #get LED intesnity Data
@@ -63,7 +63,7 @@ def LEDon():
     for x in range(5):
         if (#call DB for trayActive?):
             sender.send(x, 5, #call DB for LED intensity)
-            sender.send(x, 6, #call DB for LED intensity) 
+            sender.send(x, 6, #call DB for LED intensity)
     '''
     serial(5, 80) #turn on the RED LEDs to 80
     serial(6, 50) #turn on the RED LEDs to 50
@@ -75,18 +75,18 @@ def LEDoff():
 def water():
     serial(4, 1) #turn on the solinoids
     solOn = 1
-    water_pump_ctrl.WaterPumpCtrl.water(1) #turn on the air and water pump
-    
+    water_pump_ctrl.WaterPumpCtrl.water(1) #turn on the air and water pump 
+    #ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
     '''
     for x in range(5):
         if (#call DB for trayActive?):
-            sender.send(x, 4, #call DB for LED intensity)
+            sender.send(x, 4, #call DB for duration)
     '''
     
 schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
 schedule.every(10).seconds.do(schedule) #every 10 min get data
-schedule.every().day.at("21:00").do(LEDoff)
-schedule.every().day.at("5:00").do(LEDon)
+schedule.every().day.at("21:00").do(LEDon)
+schedule.every().day.at("13:00").do(LEDoff)
 
 while True:
     schedule.run_pending()

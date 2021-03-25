@@ -7,9 +7,6 @@ import smbus
 from smbus import SMBus
 from smbus2 import SMBus, i2c_msg
 
-ser = serial.Serial(port="/dev/serial0", baudrate=9600)
-sender = UTCP(ser)
-
 bus = SMBus(1)
 i2c_ch = 1 
 i2c_address = 64 #HDC1080 address on the I2C bus

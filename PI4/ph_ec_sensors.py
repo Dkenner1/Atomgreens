@@ -11,7 +11,9 @@ GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
 
 class PH_EC:
-    def readPHEC():        
+    @threaded
+    def readPHEC():
+        sleep(5)
         waterTemp = ADC_callable.ADC.call(0)
 
         GPIO.output(13, GPIO.HIGH)

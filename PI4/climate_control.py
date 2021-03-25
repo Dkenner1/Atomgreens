@@ -12,9 +12,9 @@ class ClimateCtrl:
     GPIO.setmode(GPIO.BOARD)
 
     # GPIO pin for water pump
-    DCTEC = 31
-    fan = 33
-    heater = 37
+    DCTEC = 7
+    fan = 11
+    heater = 12
 
     GPIO.setup(DCTEC, GPIO.OUT)
     GPIO.setup(fan, GPIO.OUT)
@@ -41,7 +41,7 @@ class ClimateCtrl:
             GPIO.output(heater, GPIO.HIGH)
             GPIO.output(fan, GPIO.HIGH)
             sleep(onMinutes) #sleeps for the correct amount of seconds 
-            # After diff minutes, turn off heater and fan for the "difference amount" of minutes
+            # After diff minutes, turn off heater and fan 
             GPIO.output(heater, GPIO.LOW)
             GPIO.output(fan, GPIO.LOW)
             # Question: Call temperature sensor for reading after diff minutes or wait for 10 minute timer and repeat climate control procedure?
@@ -56,7 +56,7 @@ class ClimateCtrl:
             # Turn on TEC cooler, DC peristaltic pump and fan for the "difference amount" of minutes
             GPIO.output(DCTEC, GPIO.HIGH)
             GPIO.output(fan, GPIO.HIGH)
-            # After diff minutes, TEC cooler, DC peristaltic pump and fan off
+            # After diff minutes, turn off the TEC cooler, DC peristaltic pump and fan
             sleep(onMinutes)
             GPIO.output(DCTEC, GPIO.HIGH)
             GPIO.output(fan, GPIO.HIGH)
