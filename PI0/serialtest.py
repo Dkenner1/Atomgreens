@@ -2,13 +2,12 @@ import serial
 from utcp import UTCP
 from listener import listen
 from EventHub import eventHub
-#from db import add_meas
+from db import add_meas
 import json
 
 ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
 sender = UTCP(ser)
 listen(ser, ser)
-
 
 def default_msg(msg=None):
     add_meas(msg['piId'], msg['devId'], msg['msg'])
@@ -30,3 +29,4 @@ if __name__ == '__main__':
 
     
     
+

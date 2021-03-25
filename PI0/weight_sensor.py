@@ -39,9 +39,9 @@ class passweight:
                 GPIO.output(CLK, GPIO.LOW) #put the CLK low to start the next cycle
                 if (GPIO.input(DO) == 1): #if the weight sensor 
                     count = count + 1
-                    print("1")
+                    print('1')
                 else:
-                    print("0")
+                    print('0')
                 i = i-1
             GPIO.output(CLK, GPIO.HIGH) #put the clock high for one lasting setting of the gain 
             count = count^0x800000
