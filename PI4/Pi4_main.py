@@ -1,23 +1,14 @@
-import RPi.GPIO as GPIO
-import ph_ec_pump
-import ADC_callable
-ph_ec_pump.PhEcPump.On()
-# PHVal = ADC_callable.ADC.call(2)
-# print(PHVal)
-# from time import sleep
-# import serial
-# import configparser 
-# from Serial.EventHub import eventHub
-# from Serial.listener import listen
-# import utcp
-# import pwm_callable
-# import weight_sensor
-# import Temp_and_humidity_sensor
-# import Solinoid
-# 
-# eventHub.subscribe(Temp_and_humidity_sensor.TH.read_temp_humidity, 1)
-# eventHub.subscribe(Temp_and_humidity_sensor.TH.read_temp_humidity, 2)
-# eventHub.subscribe(weight_sensor, 3)
-# eventHub.subscribe(Solinoid, 4)
-# eventHub.subscribe(pwm_callable.setPWM.recive(msg), 5)
-# eventHub.subscribe(pwm_callable.setPWM.recive(msg), 6)
+from time import sleep
+from database.db import connect
+from database.SQL import PI4_STATUS
+
+conn = connect()
+cur = conn.cursor()
+for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 11'): #get the latest temp value 
+    PH = row
+for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 12'): #get the latest temp value 
+    EC = row
+conn.close()
+
+print (float(EC)) # [row#][col#]
+print (float(PH)) # [tray#][val(not epoch time)]
