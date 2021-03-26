@@ -44,7 +44,7 @@ class ClimateCtrl:
             GPIO.output(heater, GPIO.LOW)
             GPIO.output(fan, GPIO.LOW)
 
-        if curTemp > overTemp
+        if curTemp > overTemp:
             # Determine difference from curTemp and overTemp
             onMinutes =  curTemp - overTemp
             if (onMinutes > 9.8): #we call this file every 10 min therefore this cannot last more then 10 min 

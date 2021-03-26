@@ -5,8 +5,9 @@ from utcp import UTCP
 from listener import listen
 from EventHub import eventHub
 from behaviors import *  #you might not need this file
-from util.db import connect
-from util.SQL import *
+from database.db import connect
+from database.db import add_meas
+from database.SQL import *
 
 import Temp_and_humidity_sensor_pi4
 import Water_level
@@ -20,7 +21,7 @@ sender = UTCP(ser)
 listen(ser, ser)
 solOn = 0
 
-def serial(devid, data):
+def Pi0All(devid, data):
     #sender.send(piID, devID, Data)
     sender.send(1, devid, data) # get the temp and humidity sensor data from the 1st pi0
     sender.send(2, devid, data) # 2nd pi0
@@ -50,12 +51,12 @@ def LEDon():
                 sender.send(x, 6, Blue[x][0]) #sender.send(piID, devID, Data)
     conn.close()
     '''
-    serial(5, 80) #turn on the RED LEDs to 80
-    serial(6, 50) #turn on the RED LEDs to 50
+    Pi0All(5, 80) #turn on the RED LEDs to 80
+    Pi0All(6, 50) #turn on the RED LEDs to 50
     
 def LEDoff():
-    serial(5, 0)
-    serial(6, 0) 
+    Pi0All(5, 0)
+    Pi0All(6, 0) 
     
 def water():
     '''
@@ -69,20 +70,20 @@ def water():
                 sender.send(x, 4, 1) #sender.send(piID, devID, Data)
     conn.close()
     '''
-    serial(4, 1) #turn on the solinoids (replace this with the above code)
+    Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
     solOn = 1
     water_pump_ctrl.WaterPumpCtrl.water(1) #turn on the air and water pump 
     #ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
 
 def schedule(): #run every 10 minutes - have all of the sensor files run
     Temp_and_humidity_sensor_pi4.TH.read_temp_humidity() #get the temp and humidity data from the breakout board 
-    serial(1, 5) # get the temp and humidity data from all of the pi0s 
-    serial(3, 5) # get the weight data from all PI0's 
+    Pi0All(1, 5) # get the temp and humidity data from all of the pi0s 
+    Pi0All(3, 5) # get the weight data from all PI0's 
     Water_level.waterLevel.read_waterLevel() #get the waver level
     
     #actuators
     if (solOn == 0): #check to see if the solinoids should be shut
-        serial(4, 0) #turn off the solinoids
+        Pi0All(4, 0) #turn off the solinoids
         #ph_ec_pump.PhEcPump.On() #activate the PH and EC pump in order to keep the level constent in the water
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 

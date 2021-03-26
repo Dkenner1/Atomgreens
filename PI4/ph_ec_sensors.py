@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
+from database.db import add_meas
 import ADC_callable
 import DFRobot_PH
 import DFRobot_EC
