@@ -8,7 +8,7 @@
     var phChart = new Chart(ctx1, {
 			type: 'line',
 			data: {
-                labels: ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM', '10:05 AM'],
+                labels: ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
                 datasets: [{
                     label: 'PH of Water',
                     borderColor: [
