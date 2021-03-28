@@ -30,6 +30,8 @@ def data(trayid):
         else:
             data[row[0]] = [(row[1], row[2])]
     conn.close()
+    for i in data:
+        print(i, data[i])
     return render_template('tray.html', data=data)
 
 
