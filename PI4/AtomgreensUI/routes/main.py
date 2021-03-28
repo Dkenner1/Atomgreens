@@ -33,10 +33,7 @@ def data(trayid):
     for i in data:
         print(i)
         print(i, data[i])
-    legend = 'Monthly Data'
-    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = [10, 9, 8, 7, 6, 4, 7, 8]
-    return render_template('tray.html', data=data, labels=labels, values=values)
+    return render_template('tray.html', data=data)
 
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])

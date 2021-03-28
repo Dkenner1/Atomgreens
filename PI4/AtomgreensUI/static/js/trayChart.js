@@ -1,10 +1,6 @@
 
-    function ctrlPage() {
-        document.location= "trayControl'";
-    }
-
     var phData = {
-        labels : ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
+        labels :  ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
 
         datasets: [{
             label: 'PH of Water',
@@ -15,6 +11,8 @@
     }
 
     var ctx1 = document.getElementById('phChart').getContext('2d');
+    ctx1.canvas.width = 1000;
+    ctx1.canvas.height = 250;
     var phChart = new Chart(ctx1, {
 			type: 'line',
 			data: phData,
@@ -25,6 +23,8 @@
     };
 
     var ctx2 = document.getElementById('ecChart').getContext('2d');
+    ctx2.canvas.width = 1000;
+    ctx2.canvas.height = 250;
     var ecChart = new Chart(ctx2, {
 			type: 'line',
 			data: {
@@ -63,6 +63,8 @@
 		});
 
     var ctx3 = document.getElementById('weightChart').getContext('2d');
+    ctx3.canvas.width = 1000;
+    ctx3.canvas.height = 250;
     var weightChart = new Chart(ctx3, {
 			type: 'line',
 			data: {
@@ -101,6 +103,8 @@
 		});
 
     var ctx4 = document.getElementById('intempChart').getContext('2d');
+    ctx4.canvas.width = 1000;
+    ctx4.canvas.height = 250;
     var intempChart = new Chart(ctx4, {
 			type: 'line',
 			data: {
@@ -139,6 +143,8 @@
 		});
 
      var ctx5 = document.getElementById('humtempChart').getContext('2d');
+     ctx5.canvas.width = 1000;
+     ctx5.canvas.height = 250;
     var humtempChart = new Chart(ctx5, {
 			type: 'line',
 			data: {
@@ -177,6 +183,8 @@
 		});
 
     var ctx6 = document.getElementById('extempChart').getContext('2d');
+    ctx6.canvas.width = 1000;
+    ctx6.canvas.height = 250;
     var extempChart = new Chart(ctx6, {
 			type: 'line',
 			data: {
@@ -215,6 +223,8 @@
 		});
 
     var ctx7 = document.getElementById('redChart').getContext('2d');
+    ctx7.canvas.width = 1000;
+    ctx7.canvas.height = 250;
     var redChart = new Chart(ctx7, {
 			type: 'line',
 			data: {
@@ -253,6 +263,8 @@
 		});
 
     var ctx8 = document.getElementById('blueChart').getContext('2d');
+    ctx8.canvas.width = 1000;
+    ctx8.canvas.height = 250;
     var blueChart = new Chart(ctx8, {
 			type: 'line',
 			data: {

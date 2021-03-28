@@ -20,11 +20,7 @@
 									    <div class="cardInfo">
 								  		    <h6>Tray 1</h6>
 										     <div class="progress">
-                                                 {% if status.t is defined and status.water_level < 50 %}
-                                                    <div class="progress-bar" style="width:50%">50%</div>
-                                                 {% else %}
-                                                     <div class="progress-bar" style="width:25%">25%</div>
-                                                 {% endif %}
+                                                <div class="progress-bar" style="width:{{ (status.weight/40)*100 }}%">{{ (status.weight/40)*100  }}%</div>
                                             </div>
                                             <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
 									    </div>
@@ -66,7 +62,7 @@
 									    <div class="cardInfo">
 								  		    <h6>Tray 4</h6>
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:100%">100%</div>
+  											    <div class="progress-bar" style="width:{{ (status.weight/40)*100 }}%">{{ (status.weight/40)*100  }}%</div>
 										    </div>
 								  		    <button class="cardButton" onclick="document.location='trayinfo/4'">More info</button>
 									    </div>
