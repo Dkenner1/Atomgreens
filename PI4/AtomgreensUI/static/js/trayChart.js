@@ -4,6 +4,7 @@
         document.location= "trayControl'";
     }
 
+    
     var ctx1 = document.getElementById('phChart').getContext('2d');
     var phChart = new Chart(ctx1, {
 			type: 'line',
