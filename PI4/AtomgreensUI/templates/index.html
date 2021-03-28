@@ -20,7 +20,11 @@
 									    <div class="cardInfo">
 								  		    <h6>Tray 1</h6>
 										     <div class="progress">
-                                                <div class="progress-bar" style="width:50%">50%</div>
+                                                 {% if status.t is defined and status.water_level < 50 %}
+                                                    <div class="progress-bar" style="width:50%">50%</div>
+                                                 {% else %}
+                                                     <div class="progress-bar" style="width:25%">25%</div>
+                                                 {% endif %}
                                             </div>
                                             <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
 									    </div>
@@ -207,10 +211,18 @@
             </div>
         </section>
 
-        <section id="refreshScreen">
+        <section id="refreshButton">
             <div class="container-fluid">
                 <div class="d-flex justify-content-center">
                     <button class="button" onclick="go_home()">Refresh</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="refreshTime">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <p>Last Updated: <span id="datetime"></span></p>
                 </div>
             </div>
         </section>
@@ -219,9 +231,7 @@
 {% endblock %}
 {% block script %}
 
-<script>
 
-</script>
 {% endblock %}
 
          

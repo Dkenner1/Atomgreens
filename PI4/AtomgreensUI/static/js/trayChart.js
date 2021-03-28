@@ -1,40 +1,23 @@
 
-
     function ctrlPage() {
         document.location= "trayControl'";
     }
 
-    
+    var phData = {
+        labels : ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
+
+        datasets: [{
+            label: 'PH of Water',
+            borderColor: ['rgb(73,143,133)', 'rgb(41,98,98)'],
+            data : [14, 7, 12, 2, 5, 10, 8],
+            fill: false,
+        }]
+    }
+
     var ctx1 = document.getElementById('phChart').getContext('2d');
     var phChart = new Chart(ctx1, {
 			type: 'line',
-			data: {
-                labels: ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
-                datasets: [{
-                    label: 'PH of Water',
-                    borderColor: [
-                        'rgb(73,143,133)',
-                        'rgb(41,98,98)'
-                    ],
-                    data: [14, 7, 15, 0, 9, 1, 3, 6],
-                    fill: false,
-                }],
-                options: {
-                    responsive: false,
-                    maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
-                                suggestedMin: 0,
-
-                                // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
-                                suggestedMax: 15
-                            }
-                        }]
-                    }
-                }
-            }
+			data: phData,
 		});
 
     window.randomScalingFactor = function() {
