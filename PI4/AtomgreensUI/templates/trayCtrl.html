@@ -63,14 +63,13 @@
                     </div>
                 </div>
 
-                {% if status.water_level is defined and status.water_level < 50 %}
-                    <div class="container-fluid">
+                <div class="container-fluid">
                     <div class="d-flex justify-content-center">
                          <div class="container">
                             <div class="fullCard">
                                 <div class="cardContent">
                                     <div class="cardInfo">
-                                        <p>PH level low.</p>
+                                        <p>Water level low.</p>
                                         <p><b>Perform Maintenance</b></p>
                                         <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
                                     </div>
@@ -80,14 +79,13 @@
                     </div>
                 </div>
 
-                {% endif %}
                 <div class="container-fluid">
                     <div class="d-flex justify-content-center">
                          <div class="container">
                             <div class="fullCard">
                                 <div class="cardContent">
                                     <div class="cardInfo">
-                                        <p>Water level low.</p>
+                                        <p>PH level low.</p>
                                         <p><b>Perform Maintenance</b></p>
                                         <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
                                     </div>
