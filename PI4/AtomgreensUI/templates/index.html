@@ -33,9 +33,15 @@
 								    <div class="cardContent">
 									    <div class="cardInfo">
 								  		    <h6>Tray 2</h6>
+                                            {% if times[1] < 100 %}
                                             <div class="progress">
-                                                <div class="progress-bar" style="width:{{times[1]}}%">{{times[1]}}%</div>
-                                            </div>
+  											    <div class="progress-bar" style="width:{{times[4]}}%">{{times[4]}}%</div>
+										    </div>
+                                            {% else %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:100%">100%</div>
+										    </div>
+                                            {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/2'">More info</button>
 									    </div>
 							  	    </div>
@@ -47,9 +53,15 @@
 								    <div class="cardContent">
 									    <div class="cardInfo">
 								  		    <h6>Tray 3</h6>
-										    <div class="progress">
+										    {% if times[2] < 100 %}
+                                            <div class="progress">
   											    <div class="progress-bar" style="width:{{times[2]}}%">{{times[2]}}%</div>
 										    </div>
+                                            {% else %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:100%">100%</div>
+										    </div>
+                                            {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/3'">More info</button>
 									    </div>
 							  	    </div>
@@ -61,9 +73,15 @@
 								    <div class="cardContent">
 									    <div class="cardInfo">
 								  		    <h6>Tray 4</h6>
+                                            {% if times[3] < 100 %}
                                             <div class="progress">
   											    <div class="progress-bar" style="width:{{times[3]}}%">{{times[3]}}%</div>
 										    </div>
+                                            {% else %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:100%">100%</div>
+										    </div>
+                                            {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/4'">More info</button>
 									    </div>
 							  	    </div>
@@ -75,9 +93,15 @@
 								    <div class="cardContent">
 									    <div class="cardInfo">
 								  		    <h6>Tray 5</h6>
+                                            {% if times[4] < 100 %}
                                             <div class="progress">
   											    <div class="progress-bar" style="width:{{times[4]}}%">{{times[4]}}%</div>
 										    </div>
+                                            {% else %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:100%">100%</div>
+										    </div>
+                                            {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/5'">More info</button>
 									    </div>
 							  	    </div>
@@ -100,8 +124,15 @@
                                     <h2>Notifications</h2>
                                 </div>
                             </div>
-                            <div class="container-fluid">
 
+                            <div class="container-fluid">
+                            {%for i in range(0,5)%}
+                                {% if times[i] >= 100 %}
+                                    <div class="alert alert-success">
+                                        <p><b>Tray {{i + 1}} ready to harvest!</b></p>
+                                    </div>
+                                {% endif %}
+                            {%endfor%}
                             </div>
 
                             <div class="container-fluid">

@@ -24,7 +24,7 @@ def index():
                   int(((now - (datetime.date.fromtimestamp((eTime - 5 * day - 2 * hour)))).days / 7) * 100)]
     conn.close()
     print("Page data: " + str(data))
-    print(int(((now - (datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour)))).days / 7) * 100))
+    print((datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour))))
     return render_template('index.html', status=data, times=startTimes)
 
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
