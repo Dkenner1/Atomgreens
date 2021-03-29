@@ -101,13 +101,12 @@
 <script src="/static/js/trayChart.js"></script>
 <script>
 function convertTime(ts) {
-    var utcSeconds = ts*1000;
-    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
-    d.setUTCSeconds(utcSeconds);
+    var d = new Date(ts*1000); // The 0 there is the key, which sets the date to the epoch
+    return d.toLocaleString();
 }
     var phData = {
         labels :  [{% for etime in data['ph'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -130,7 +129,7 @@ function convertTime(ts) {
 
     var ecData = {
         labels :  [{% for etime in data['EC'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -153,7 +152,7 @@ function convertTime(ts) {
 
     var weightData = {
         labels :  [{% for etime in data['weight'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -176,7 +175,7 @@ function convertTime(ts) {
 
     var inTempData = {
         labels :  [{% for etime in data['heater'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -199,7 +198,7 @@ function convertTime(ts) {
 
     var humidityData = {
         labels :  [{% for etime in data['humidity'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -222,7 +221,7 @@ function convertTime(ts) {
 
     var exTempData = {
         labels :  [{% for etime in data['temperature'] %}
-                    "{{etime[1]}}",
+                    (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -245,7 +244,7 @@ function convertTime(ts) {
 
     var redData = {
         labels :  [{% for etime in data['red light'] %}
-                    "{{etime[1]}}",
+                   (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
@@ -268,7 +267,7 @@ function convertTime(ts) {
 
     var blueData = {
         labels :  [{% for etime in data['blue light'] %}
-                    "{{etime[1]}}",
+                   (convertTime({{etime[1]}})),
                     {% endfor %}],
 
         datasets: [{
