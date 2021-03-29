@@ -33,8 +33,8 @@ def data(trayid):
     for i in data:
         print(i)
         print(i, data[i])
+    print(data["humidity"][0][1])
     return render_template('tray.html', data=data)
-
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
 def control(trayid):
@@ -44,4 +44,5 @@ def control(trayid):
     data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(PI4_STATUS)}
     conn.close()
     print("Page data: " + str(data))
-    return render_template('trayCtrl.html', data=data)
+    return render_template('trayCtrl.html', status=data)
+

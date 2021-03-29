@@ -1,11 +1,15 @@
 
     var phData = {
-        labels :  ['9:00 AM', '9:10 AM', '9:20 AM', '9:30 AM', '9:40 AM', '9:50 AM', '10:00 AM'],
+        labels :  [{% for etime in data['ph'] %}
+                    "{{etime}}",
+                    {% endfor %}],
 
         datasets: [{
             label: 'PH of Water',
             borderColor: ['rgb(73,143,133)', 'rgb(41,98,98)'],
-            data : [14, 7, 12, 2, 5, 10, 8],
+            data : [{% for item in data['ph'] %}
+                    {{item[0]}},
+                    {% endfor %}],
             fill: false,
         }]
     }
