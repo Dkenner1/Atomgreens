@@ -77,10 +77,16 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            <div class="progress">
-                                <div class="progress-bar" style="width:50%">50%</div>
-                            </div>
-                             <button class="cardButton" onclick="document.location='/trayinfo/trayid/trayControl'">Tray Control</button>
+                            {% if times[0] < 100 %}
+                                <div class="progress">
+                                    <div class="progress-bar" style="width:{{times[0]}}%">{{times[0]}}%</div>
+                                </div>
+                            {% else %}
+                               <div class="progress">
+                                    <div class="progress-bar" style="width:100%">100%</div>
+                               </div>
+                                <button class="cardButton" onclick="document.location='/trayinfo/trayid/trayControl'">Tray Control</button>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

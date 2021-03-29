@@ -42,7 +42,7 @@
                                         <div class="cardInfo">
                                             <p>Harvesting: </p>
                                             <p><i>Remove Tray</i></p>
-                                             {% if status.weight is defined and status.weight%}
+                                             {% if status.weight is defined and status.weight == 0%}
                                                 <button class="cardButton" onclick="insertTray()">Continue</button>
                                              {% else %}
                                                 <button class="cardButton">Check Weight</button>

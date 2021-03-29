@@ -24,7 +24,6 @@ def index():
                   int(((now - (datetime.date.fromtimestamp((eTime - 5 * day - 2 * hour)))).days / 7) * 100)]
     conn.close()
     print("Page data: " + str(data))
-    print((datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour))))
     return render_template('index.html', status=data, times=startTimes)
 
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
@@ -39,12 +38,22 @@ def data(trayid):
             data[row[0]].append((row[1], row[2]))
         else:
             data[row[0]] = [(row[1], row[2])]
+
+    eTime = time.time()
+    day = 86400
+    hour = 3600
+    now = datetime.date.today()
+    startTimes = [int(((now - (datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((eTime - 3 * day - 2 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((eTime - 1 * day - 0 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((eTime - 4 * day - 5 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((eTime - 5 * day - 2 * hour)))).days / 7) * 100)]
     conn.close()
     for i in data:
         print(i)
         print(i, data[i])
     print(data["humidity"][0][1])
-    return render_template('tray.html', data=data)
+    return render_template('tray.html', data=data, times=startTimes)
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
 def control(trayid):
