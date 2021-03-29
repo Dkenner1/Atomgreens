@@ -94,6 +94,11 @@
 <script src="/static/js/ChartJS/Chart.bundle.js"></script>
 <script src="/static/js/trayChart.js"></script>
 <script>
+function convertTime(ts) {
+    var utcSeconds = ts*1000;
+    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    d.setUTCSeconds(utcSeconds);
+}
     var phData = {
         labels :  [{% for etime in data['ph'] %}
                     "{{etime[1]}}",
@@ -277,6 +282,8 @@
 			type: 'line',
 			data: blueData,
 		});
+
+
 </script>
 {% endblock %}
 
