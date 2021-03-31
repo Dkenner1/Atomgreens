@@ -4,7 +4,7 @@ from util.db import connect
 from util.SQL import PI4_STATUS
 
 class ClimateCtrl:
-    # Constant variable declaration
+    # Constant variable declaration 
     idealTemp = 26.5
     underTemp = 24.5 # 26.5 - 2
     overTemp = 28.5 # 26.5 + 2
