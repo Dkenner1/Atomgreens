@@ -25,10 +25,9 @@ class ClimateCtrl:
         # Query database for last stored temperature value of tray 4
         conn = connect()
         cur = conn.cursor()
-        data = {item[0].replace('', '_'): item[1] for item in cur.execute(PI4_STATUS)}
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 4 and devid = 2'): #get the latest temp value 
+            curTemp = row
         conn.close()
-        # Store temp value as local file variable, curTemp | Question: Conversion necessary?
-        curTemp = data['temp']
 
         if curTemp < underTemp:
             # Determine difference from curTemp and underTemp
@@ -44,9 +43,8 @@ class ClimateCtrl:
             # After diff minutes, turn off heater and fan 
             GPIO.output(heater, GPIO.LOW)
             GPIO.output(fan, GPIO.LOW)
-            # Question: Call temperature sensor for reading after diff minutes or wait for 10 minute timer and repeat climate control procedure?
 
-        if curTemp > overTemp
+        if curTemp > overTemp:
             # Determine difference from curTemp and overTemp
             onMinutes =  curTemp - overTemp
             if (onMinutes > 9.8): #we call this file every 10 min therefore this cannot last more then 10 min 
@@ -60,7 +58,6 @@ class ClimateCtrl:
             sleep(onMinutes)
             GPIO.output(DCTEC, GPIO.HIGH)
             GPIO.output(fan, GPIO.HIGH)
-            # Question: Call temperature sensor for reading after diff minutes or wait for 10 minute timer and repeat climate control procedure?
 
 
 

@@ -70,7 +70,7 @@ def add_meas(piId, devId, val):
         id = result[0]
         meas_data = (id, int(time.time()), val)
     else:
-        add_device(piId, devId)
+        add_node(piId, devId)
         meas_data = (cur.lastrowid, int(time.time()), val)
 
     print('Record to be inserted: ')
@@ -125,13 +125,13 @@ if __name__ == "__main__":
     add_device('cooler')
 
     # Populate active_device tables
-    for pi in range(1, 5):
+    for pi in range(0, 5):
         for dev in range(1,15):
             add_node(pi, dev)
 
     # Populate measurement table
-    for rec in range(1,40):
-        add_meas(random.randint(1,4), random.randint(1,4), random.randint(1,50))
+    for rec in range(1, 10000):
+        add_meas(random.randint(1,5), random.randint(1, 15), random.randint(1,50))
     # Create Views
     view_create()
     con.commit()

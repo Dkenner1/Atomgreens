@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
-#from util.db import connect, add_meas
-#from util.SQL import PI4_STATUS
+from util.db import connect, add_meas
+from util.SQL import PI4_STATUS
 import water_pump_ctrl
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -26,8 +26,7 @@ for pin in control_pins:
     GPIO.setup(pin, GPIO.OUT)
 GPIO.output(29, GPIO.LOW) #turns off both pumps
 
-# Question: What is the correct value/amount (cutoff) of PH buffer and nutrient solution?
-        # Placeholder values, find and insert new values here with testing 
+# Placeholder values, find and insert new values here with testing 
 stdValPH = 5.5
 stdValEC = 250
 
@@ -38,24 +37,23 @@ ecPumpCount = 0
 class PhEcPump:
     @threaded
     def On(): 
-        # Query database for last stored PH and EC sensor value and pump counts
-        # conn = connect()
-        # cur = conn.cursor()
-        # data = {item[0].replace('','_'): item[1] for item in cur.execute(PI4_STATUS)}
-        # conn.close()
-        
-        # placeholder values, should retreive from database whenever script is called 
-        phPumpCtDB = 0
-        ecPumpCtDB = 0
+        conn = connect()
+        cur = conn.cursor()
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 11'): #get the latest temp value 
+            phVal = row
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 12'): #get the latest temp value 
+            ecVal = row
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 10'): #get the latest temp value 
+            phPumpCtDB = row
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 9'): #get the latest temp value 
+            ecPumpCtDB = row
+        conn.close()
 
-        # placeholder values, should retreive from database whenever script is called 
-        phVal = 5.6
-        ecVal = 240
         GPIO.output(29, GPIO.HIGH) #turn on the pumps 
-
         # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
+        
         # PH pump
-        if phVal < stdValPH:
+        if (phVal < (stdValPH-.2)): 
             runPH = ((phVal - stdValPH) * 10) * SPR
             phPumpCount = ((phVal - stdValPH) * 10)
             # Turn on PH pump
@@ -77,11 +75,10 @@ class PhEcPump:
         GPIO.output(pinPHGrn, GPIO.LOW)
         GPIO.output(pinPHBlue, GPIO.LOW)
         # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
-        # add_meas(1,10,(phPumpCtDB + phPumpCount))
-        print(phPumpCtDB + phPumpCount)
+        add_meas(1,10,(phPumpCtDB + phPumpCount))
 
         # EC pump
-        if (ecVal < stdValEC and ecVal > 5):
+        if (ecVal < (stdValEC - 10) and ecVal > 5):
             runEC = ((stdValEC - ecVal)/10) * SPR
             ecPumpCount = ((stdValEC - ecVal) * 10)
             # Turn on EC pump
@@ -103,8 +100,8 @@ class PhEcPump:
         GPIO.output(pinECGrn, GPIO.LOW)
         GPIO.output(pinECBlue, GPIO.LOW)
         # Increment ecPumpCount and insert ecPumpCount value into database | Question: add_meas() function to be used?
-        #add_meas(1, 9, (ecPumpCtDB + ecPumpCount))
+        add_meas(1, 9, (ecPumpCtDB + ecPumpCount))
         GPIO.output(29, GPIO.LOW) #turn off the pumps
-        
+    
         sleep(5)
         water_pump_ctrl.WaterPumpCtrl.water(0) #turn off the water & air pump 
