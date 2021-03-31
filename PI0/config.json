@@ -1,4 +1,4 @@
-config = {
+{
     "piID": 4,
     "headers": 2,
     "details": {
@@ -45,4 +45,3 @@ config = {
         "dict": 3
     }
 }
-piID = 1
