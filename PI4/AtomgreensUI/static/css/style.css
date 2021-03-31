@@ -134,6 +134,11 @@ td, th {
   padding: 8px;
 }
 
+.yellow {
+background-color: #FFFF00;
+opacity: 0.8
+}
+
 tr:nth-child(even) {
   background-color: #adb5bd;
 }
