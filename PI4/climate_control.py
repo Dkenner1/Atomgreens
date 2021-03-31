@@ -1,7 +1,8 @@
 import RPi.GPIO as GPIO
 from time import sleep
-from util.db import connect
-from util.SQL import PI4_STATUS
+from database.db import connect
+from database.SQL import PI4_STATUS
+from util import threaded 
 
 class ClimateCtrl:
     # Constant variable declaration 

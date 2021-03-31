@@ -1,8 +1,10 @@
 import RPi.GPIO as GPIO
 from time import sleep
-from util.db import connect, add_meas
-from util.SQL import PI4_STATUS
+from database.db import connect, add_meas
+from database.SQL import PI4_STATUS
+from util import threaded 
 import water_pump_ctrl
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
