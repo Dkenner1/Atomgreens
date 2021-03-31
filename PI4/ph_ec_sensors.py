@@ -4,6 +4,7 @@ from database.db import add_meas
 import ADC_callable
 import DFRobot_PH
 import DFRobot_EC
+from util import threaded 
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)

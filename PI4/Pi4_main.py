@@ -5,16 +5,17 @@ from utcp import UTCP
 from database.db import add_meas
 from database.paths import db_dir
 from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT, select_table
+import PI4_schedule
 
 #add_node(0,) #piId, devId 
-
+'''
 conn = connect(db_dir) 
 cur = conn.cursor() 
 cur.execute('UPDATE nodes SET devId = 5 WHERE devId = 3 and piId = 0')
 #for row in cur.execute('INSERT FROM nodes WHERE nodeId = 5'): 
 #    print(row) 
 conn.close() 
-
+'''
 
 '''
 for x in range(1,5): #add measurments to all of the pi0's

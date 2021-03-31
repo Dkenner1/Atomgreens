@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
-from util.db import connect, add_meas
-from util.SQL import PI4_STATUS
+from database.db import connect, add_meas
+from database.SQL import PI4_STATUS
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
