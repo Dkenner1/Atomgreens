@@ -10,5 +10,15 @@ listen(ser, ser)
 
 eventHub.subscribe(store, 'DEFAULT')
 
-sender.send(1, 3, 0) # pi id, dev id, data
-    
+#turn on blue lights
+sender.send(1, 5, 20) # pi id, dev id, data
+sleep(2)
+#turn on red lights
+sender.send(1, 6, 20) # pi id, dev id, data
+sleep(2)
+#turn on actuator
+sender.send(1, 4, 1) # pi id, dev id, data
+sleep(2)
+#turn off actuator
+sender.send(1, 4, 0) # pi id, dev id, data
+sleep(2)

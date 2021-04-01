@@ -1,6 +1,7 @@
 import sqlite3, time
 from util.paths import db_dir
-from util.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT
+from util.SQL import *
+
 
 def connect(dp_path=db_dir):
     print(db_dir)
@@ -11,6 +12,7 @@ def query(table, queryStr):
     conn = connect()
     cur = conn.cursor()
     cur.execute(queryStr)
+
 
 def add_meas(piId, sensId, val, dbpath=db_dir):
     conn = connect(dbpath)
@@ -25,8 +27,16 @@ def add_meas(piId, sensId, val, dbpath=db_dir):
         print('Invalid piID/DeviceID combination')
     conn.close()
 
+
 def add_node(piId, devId, active=True, dbpath=db_dir):
     conn = connect(dbpath)
     cur = conn.cursor()
     cur.execute(NODE_INSRT, (piId, devId, active))
     conn.close()
+
+def get_latest(pi, devId, dbpath=db_dir):
+    conn = connect(dbpath)
+    cur = conn.cursor()
+    data = list(cur.execute(SELECT_LATEST_PIDEV, (pi, devId)).fetchall())
+    conn.close()
+    return data

@@ -20,9 +20,7 @@ def diagnostic_start():
 @service_routes.route('/service/poll', methods=['GET', 'POST'])
 def poll():
     print("Polling endpoint!")
-    if switcher():
-        return jsonify({"water_level": 15})
-    return jsonify({"water_level": 50})
+    return jsonify({"water_level": 44})
 
 
 @service_routes.route('/service/setting_update', methods=['GET', 'POST'])

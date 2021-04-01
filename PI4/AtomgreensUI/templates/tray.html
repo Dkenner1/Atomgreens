@@ -93,9 +93,32 @@
             </div>
         </section>
     </div>
-
 {% endblock %}
 {% block script %}
+
+<script>
+var x;
+        function run_test() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                let text = xhttp.responseText
+                try {
+                    let response = JSON.parse(xhttp.responseText)
+                    x=response;
+                    generate_graphs();
+                    }
+                } catch (e) {
+                    var newDoc = document.open("text/html", "replace")
+                    newDoc.write(text)
+                    newDoc.close()
+                }
+            }
+        };
+        xhttp.open("GET", "/tray/1/data", true);
+        xhttp.send();
+    }
+</script>
 <script src="/static/js/ChartJS/Chart.js"></script>
 <script src="/static/js/ChartJS/Chart.bundle.js"></script>
 <script src="/static/js/trayChart.js"></script>
