@@ -78,7 +78,7 @@
                 </div>
 
                 <div id="options" style="display: none">
-                   {% if status.weight is defined and status.weight > 0 %}
+                   {% if (status.weight is defined and status.weight > 0) and (status.water_level is defined and status.water_level >= 50) and (status.ph is defined and status.ph > 7) and (status.EC is defined and status.EC > 7)%}
                         <div class="container-fluid">
                             <div class="d-flex justify-content-center">
                                  <div class="container">
@@ -105,7 +105,7 @@
                 </div>
 
                 <div id="waterCheck" style="display: none">
-                   {% if status.water_level is defined and status.water_level < 50%}
+                   {% if status.water_level < 50%}
                         <div class="container-fluid">
                             <div class="d-flex justify-content-center">
                                  <div class="container">
@@ -125,7 +125,7 @@
                 </div>
 
                 <div id="phCheck" style="display: none">
-                    {% if status.ph is defined and status.ph < 7%}
+                    {% if status.ph < 7%}
                         <div class="container-fluid">
                             <div class="d-flex justify-content-center">
                                  <div class="container">
@@ -145,7 +145,7 @@
                 </div>
 
                 <div id="ecCheck" style="display: none">
-                    {% if status.EC is defined and status.EC < 7%}
+                    {% if status.EC < 7%}
                         <div class="container-fluid">
                             <div class="d-flex justify-content-center">
                                  <div class="container">
@@ -215,6 +215,7 @@ function options(){
     T.style.display = "block";
   }
 
+  settingsUpdate();
 }
 
 function settingsUpdate(){
