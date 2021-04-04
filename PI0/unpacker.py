@@ -1,55 +1,8 @@
 from util import *
 import struct
-#import json
+import json
 
-msg_config = {
-    "piID": 4,
-    "headers": 2,
-    "details": {
-        "piId": {
-            "byte": 1,
-            "rng": [
-                5,
-                7
-            ]
-        },
-        "devId": {
-            "byte": 1,
-            "rng": [
-                2,
-                4
-            ]
-        },
-        "flags": {
-            "byte": 1,
-            "rng": [
-                0,
-                1
-            ]
-        },
-        "type": {
-            "byte": 2,
-            "rng": [
-                5,
-                7
-            ]
-        },
-        "length": {
-            "byte": 2,
-            "rng": [
-                0,
-                4
-            ]
-        }
-    },
-    "type_enum": {
-        "int": 0,
-        "str": 1,
-        "float": 2,
-        "dict": 3
-    }
-}
-
+msg_config = json.load(open('config.json', 'r'))
 
 class SerialMsg:
     def __init__(self, initialbyte, _config=msg_config):
@@ -92,7 +45,6 @@ class SerialMsg:
         return {**msgdict, **headerinfo}
 
     def convert_data(self):
-        print(self.msg['raw_msg'])
         if self.msg['type'] == self.type_enum['int']:
             self.msg['msg'] = struct.unpack('i', bytearray(self.msg['raw_msg']))[0]
         elif self.msg['type'] == self.type_enum['float']:

@@ -1,5 +1,5 @@
 from collections import defaultdict
-
+import time
 
 class Hub:
     def __init__(self):
@@ -26,12 +26,13 @@ class Hub:
         return func
 
     def publish(self, *topics, **kwargs):
+        start = time.time()
         if 'DEFAULT' not in topics:
             for subscriber in self.response_mapper['DEFAULT']:
                 subscriber(kwargs)
         for topic in topics:
             for subscriber in self.response_mapper[topic]:
                 subscriber(**kwargs)
-
+        print("TIME REQUIRED FOR PUBLISH: " + str(time.time()-start))
 
 eventHub = Hub()
