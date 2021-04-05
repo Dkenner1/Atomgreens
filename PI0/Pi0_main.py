@@ -28,6 +28,6 @@ eventHub.subscribe(tempfunc, 2)
 #eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 3)
 #eventHub.subscribe(Temp_and_humidity_sensor_pi0.TH.read_temp_humidity, 4)
 # eventHub.subscribe(w_sensor.weight, 3)
-eventHub.subscribe(Solinoid.solinoid.actuate, 4)
+eventHub.subscribe(Solinoid.actuate, 4)
 eventHub.subscribe(pwm_callable.receive, 5, 6)
 

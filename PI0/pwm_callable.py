@@ -25,7 +25,9 @@ def receive(**kwargs):
     if kwargs is not None:
         msg=kwargs['msg']
         PWM_off()
-        global red, blue
+        red=0
+        blue=0
+        print("receive pwm msg: "  + str(msg))
         if msg['devId']==5:
             red = msg['msg'] 
         if msg['devId']==6:
