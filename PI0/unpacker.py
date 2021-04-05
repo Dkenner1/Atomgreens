@@ -2,7 +2,7 @@ from util import *
 import struct
 import json
 
-msg_config = json.load(open('config.json', 'r'))
+msg_config = config
 
 class SerialMsg:
     def __init__(self, initialbyte, _config=msg_config):
