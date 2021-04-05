@@ -23,12 +23,12 @@ def PWM_off():
 
 def receive(**kwargs):
     if kwargs is not None:
-        msg=kwargs['msg']['msg']
+        msg=kwargs['msg']
         PWM_off()
         global red, blue
-        if 'red' in msg.keys():
+        if msg['devId']==5:
             red = msg['red'] 
-        if 'blue' in msg.keys():
+        if msg['devId']==6:
             blue = msg['blue'] 
         PWM_on(red, blue)
     
