@@ -10,12 +10,13 @@ solinoid = 31
 GPIO.setup(solinoid, GPIO.OUT)
 GPIO.output(solinoid, GPIO.LOW)
 
-class solinoid:
-    def actuate(command):
-        if (command == 1): #if we want to turn on the solinoid 
-            GPIO.output(solinoid, GPIO.HIGH)
-        else: 
-            GPIO.output(solinoid, GPIO.LOW)
+def actuate(**kwargs):
+    if kwargs is not None and 'msg' in kwargs:
+        command=kwargs['msg']['msg']
+    if (command == 1): #if we want to turn on the solinoid 
+        GPIO.output(solinoid, GPIO.HIGH)
+    else: 
+        GPIO.output(solinoid, GPIO.LOW)
     
 
 
