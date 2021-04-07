@@ -29,7 +29,7 @@ def tempfunc(**kwargs):
 eventHub.subscribe(updatePiID, 'FLAGS')
 eventHub.subscribe(fwd, 'FWD')
 eventHub.subscribe(tempfunc, 2)
-eventHub.subscribe(Temp_and_humidity_sensor_pi0.read_temp_humidity, 3, 4)
+eventHub.subscribe(Temp_and_humidity_sensor_pi0.read_temp_humidity, 1, 2)
 # eventHub.subscribe(w_sensor.weight, 3)
 eventHub.subscribe(Solinoid.actuate, 4)
 eventHub.subscribe(pwm_callable.receive, 5, 6)
