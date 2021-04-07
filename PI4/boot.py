@@ -8,6 +8,7 @@ from AtomgreensUI.app import start_server
 import PI4_schedule
 import Stop
 
-Stop.stop.off() #turns off all of the GPIO in order to prevent undesired premature function
-threading.Thread(target=start_server())
-PI4_schedule.schedule.call()
+#Stop.stop.off() #turns off all of the GPIO in order to prevent undesired premature function
+#threading.Thread(target=start_server())
+#PI4_schedule.call()
+PI4_schedule.LEDon()
