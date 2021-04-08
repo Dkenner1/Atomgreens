@@ -13,17 +13,19 @@ def query(queryStr):
     cur = conn.cursor()
     return [item for item in cur.execute(queryStr)]    
     
-def add_meas(piId, devId, val, etime=int(time.time()),dbpath=db_dir):
+def add_meas(piId, devId, val, dbpath=db_dir):
+    conn = connect(dbpath)
+    cur = conn.cursor()
     result = cur.execute(SELECT_NODEID, (piId, devId)).fetchone()
     if result:
         id = result[0]
-        meas_data = (id, etime, val)
+        meas_data = (id, int(time.time()), val)
+        print('Record to be inserted: ' + str(meas_data))
+        cur.execute(MEAS_INSRT, meas_data)
     else:
-        add_node(piId, devId)
-        meas_data = (cur.lastrowid, etime, val)
-    print('Record to be inserted: ')
-    print(meas_data)
-    cur.execute(MEAS_INSRT, meas_data)
+        print('Invalid piID/DeviceID combination')
+    conn.commit()
+    conn.close()
 
 def add_node(piId, devId, active=True, dbpath=db_dir):
     conn = connect(dbpath)
