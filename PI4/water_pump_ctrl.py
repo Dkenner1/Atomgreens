@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
-#from util.db import connect, add_meas
-#from util.SQL import PI4_STATUS
+from database.db import connect, add_meas
+from database.SQL import PI4_STATUS
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
@@ -17,7 +17,7 @@ GPIO.setup(airPump, GPIO.OUT)
 waterLevel = 16
 GPIO.setup(waterLevel, GPIO.IN)
 
-def water(waterPump):
+def water(ctrl):
     if (waterPump): # and GPIO.input(waterLevel)
         print(GPIO.input(waterLevel)) #should print 1
         # print("Water Pump: On")

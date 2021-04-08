@@ -3,12 +3,12 @@ from flask import Flask
 # from routes import main, service
 import logging, threading
 # from waitress import serve
+from time import sleep
 
 # from AtomgreensUI.app import start_server
 import PI4_schedule
 import Stop
-
-#Stop.stop.off() #turns off all of the GPIO in order to prevent undesired premature function
+sleep(2)
+Stop.off() #turns off all of the GPIO in order to prevent undesired premature function
 #threading.Thread(target=start_server())
-#PI4_schedule.call()
-PI4_schedule.water()
+PI4_schedule.call()

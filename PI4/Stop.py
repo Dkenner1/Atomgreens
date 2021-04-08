@@ -28,16 +28,16 @@ PH_Blue = 32
 PH_Red = 36
 PH_Grn = 38
 PH_Black = 40 
-
+global control_pins
 control_pins = [SDA, SLC, TEC_Perisoltic, Fan, PH_on, EC_on, Din, SCLK, Step_CTRL,
                 EC_Blue, EC_Red, RC_Grn, EC_Black, TX, heater, water_pump, Air_pump,
                 PH_Blue, PH_Red, PH_Grn, PH_Black]
-class stop:
-    def off(): 
-        for pin in control_pins:
-            GPIO.setup(pin, GPIO.OUT)
-        GPIO.setup(ADC_CS, GPIO.OUT)
-            
-        for pin in control_pins:
-            GPIO.output(pin, GPIO.LOW)  
-        GPIO.output(ADC_CS, GPIO.HIGH)
+def off():
+    global control_pins
+    for pin in control_pins:
+        GPIO.setup(pin, GPIO.OUT)
+    GPIO.setup(ADC_CS, GPIO.OUT)
+        
+    for pin in control_pins:
+        GPIO.output(pin, GPIO.LOW)  
+    GPIO.output(ADC_CS, GPIO.HIGH)
