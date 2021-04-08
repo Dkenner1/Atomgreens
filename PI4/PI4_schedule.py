@@ -1,5 +1,6 @@
 import schedule
 import time
+from time import sleep
 import serial
 from utcp import UTCP
 from listener import listen
@@ -77,7 +78,7 @@ def water():
     '''
     Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
     solOn = 1
-    water_pump_ctrl.WaterPumpCtrl.water(1) #turn on the air and water pump 
+    water_pump_ctrl.water(1) #turn on the air and water pump 
     #ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
 
 def schedule(): #run every 10 minutes - have all of the sensor files run
