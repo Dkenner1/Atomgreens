@@ -25,6 +25,7 @@ solOn = 0
 
 def Pi0All(devid, data):
     #sender.send(piID, devID, Data)
+    sleep(.5)
     sender.send(1, devid, data) # get the temp and humidity sensor data from the 1st pi0
     sleep(.5)
     #sender.send(2, devid, data) # 2nd pi0
@@ -58,10 +59,12 @@ def LEDon():
                 sender.send(x, 6, Blue[x][0]) #sender.send(piID, devID, Data)
     conn.close()
     '''
+    print('LED on')
     Pi0All(5, 80) #turn on the Red LEDs to 80%
     Pi0All(6, 50) #turn on the Blue LEDs to 50%
     
 def LEDoff():
+    print('LED off')
     Pi0All(5, 0)
     Pi0All(6, 0) 
     
@@ -77,33 +80,38 @@ def water():
                 sender.send(x, 4, 1) #sender.send(piID, devID, Data)
     conn.close()
     '''
+    print('Water')
     Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
     global solOn
     solOn = 1
     water_pump_ctrl.water(1) #turn on the air and water pump 
     #ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
 
-def schedule(): #run every 10 minutes - have all of the sensor files run
+def scheduler(): #run every 10 minutes - have all of the sensor files run
+    print('Scheduler')
     #Temp_and_humidity_sensor_pi4.TH.read_temp_humidity() #get the temp and humidity data from the breakout board 
-    Pi0All(1, 5) # get the temp and humidity data from all of the pi0s 
+    Pi0All(1, 5) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
     Water_level.read_waterLevel() #get the water level
     
     global solOn
     #actuators
+    print(solOn)
     if (solOn == 0): #check to see if the solinoids should be shut
         Pi0All(4, 0) #turn off the solinoids
+        print('turn off solinoids')
         #ph_ec_pump.PhEcPump.On() #activate the PH and EC pump in order to keep the level constent in the water
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 
         water_pump_ctrl.water(0)
     else:
+        print('Itorate for solinoids')
         solOn = solOn - 1 # determines if we have waited the right amount of time 
     #climate_control.ClimateCtrl.control() #activate climate control for this chunk of time 
    
 def call():
-    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
-    schedule.every(10).minutes.do(schedule) #every 10 min get data
+    schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
+    schedule.every(1).minutes.do(scheduler) #every 10 min get data
     schedule.every().day.at("21:00").do(LEDon)
     schedule.every().day.at("13:00").do(LEDoff)
 

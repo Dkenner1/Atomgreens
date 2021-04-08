@@ -18,7 +18,7 @@ waterLevel = 16
 GPIO.setup(waterLevel, GPIO.IN)
 
 def water(ctrl):
-    if (waterPump): # and GPIO.input(waterLevel)
+    if (ctrl): # and GPIO.input(waterLevel)
         print(GPIO.input(waterLevel)) #should print 1
         # print("Water Pump: On")
         GPIO.output(waterPump, GPIO.HIGH)
