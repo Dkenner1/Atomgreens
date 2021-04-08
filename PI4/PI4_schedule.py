@@ -25,9 +25,9 @@ solOn = 0
 
 def Pi0All(devid, data):
     #sender.send(piID, devID, Data)
-    sleep(.5)
+    sleep(2)
     sender.send(1, devid, data) # get the temp and humidity sensor data from the 1st pi0
-    sleep(.5)
+    sleep(2)
     #sender.send(2, devid, data) # 2nd pi0
     #sleep(.5)
     #sender.send(3, devid, data) # 3rd pi0
@@ -90,9 +90,9 @@ def water():
 def scheduler(): #run every 10 minutes - have all of the sensor files run
     print('Scheduler')
     #Temp_and_humidity_sensor_pi4.TH.read_temp_humidity() #get the temp and humidity data from the breakout board 
-    Pi0All(1, 1) # get the temp and humidity data from all of the pi0s
+    Pi0All(1, 0) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
-    Water_level.read_waterLevel() #get the water level
+    #Water_level.read_waterLevel() #get the water level
     
     global solOn
     #actuators
