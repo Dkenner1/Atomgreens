@@ -14,15 +14,14 @@ sleep(2)
 #turn off red 
 sender.send(1, 6, 0) # pi id, dev id, data
 sleep(2)
-#call the temp sensor
-sender.send(1, 1, 0) # pi id, dev id, data
-sleep(2)
-#sender.send(1, 6, 90) # pi id, dev id, data
-#sleep(2)
-#turn on actuator
-sender.send(1, 4, 1) # pi id, dev id, data
-sleep(2)
 #turn off blue
 sender.send(1, 5, 0) # pi id, dev id, data
 sleep(2)
+#call the temp sensor
+sender.send(1, 1, 0) # pi id, dev id, data
+sleep(2)
+#turn on actuator
+sender.send(1, 4, 1) # pi id, dev id, data
+sleep(2)
+
 
