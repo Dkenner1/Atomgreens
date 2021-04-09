@@ -39,15 +39,14 @@ def data(trayid):
         else:
             data[row[0]] = [(row[1], row[2])]
 
-    eTime = time.time()
     day = 86400
     hour = 3600
     now = datetime.date.today()
-    startTimes = [int(((now - (datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 3 * day - 2 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 1 * day - 0 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 4 * day - 5 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 5 * day - 2 * hour)))).days / 7) * 100)]
+    startTimes = [int(((now - (datetime.date.fromtimestamp((etime - 2 * day - 5 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((etime - 3 * day - 2 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((etime - 1 * day - 0 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((etime - 4 * day - 5 * hour)))).days / 7) * 100),
+                  int(((now - (datetime.date.fromtimestamp((etime - 5 * day - 2 * hour)))).days / 7) * 100)]
     conn.close()
     return render_template('tray.html', data=data, times=startTimes)
 

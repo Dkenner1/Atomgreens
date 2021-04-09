@@ -42,11 +42,7 @@
                                         <div class="cardInfo">
                                             <p>Harvesting: </p>
                                             <p><i>Remove Tray</i></p>
-                                             {% if status.weight is defined and status.weight == 0%}
                                                 <button class="cardButton" onclick="insertTray()">Continue</button>
-                                             {% else %}
-                                                <button class="cardButton">Check Weight</button>
-                                             {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -64,11 +60,7 @@
                                         <div class="cardInfo">
                                             <p>Harvesting: </p>
                                             <p><i>Insert Tray</i></p>
-                                             {% if status.weight is defined and status.weight > 0 %}
-                                                <button class="cardButton" onclick="options();settingsUpdate()">Continue</button>
-                                             {% else %}
-                                                <button class="cardButton">Check Weight</button>
-                                             {% endif %}
+                                                <button class="cardButton" onclick="options()">Continue</button>
                                         </div>
                                     </div>
                                 </div>
@@ -78,92 +70,88 @@
                 </div>
 
                 <div id="options" style="display: none">
-                   {% if (status.weight is defined and status.weight > 0) and (status.water_level is defined and status.water_level >= 50) and (status.ph is defined and status.ph > 7) and (status.EC is defined and status.EC > 7)%}
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-center">
-                                 <div class="container">
-                                    <div class="fullCard">
-                                        <div class="cardContent">
-                                            <div class="cardInfo">
-                                                <p>Select Microgreen Type</p>
-                                                <form action="/action_page.php">
-                                                  <label for="microgreen">Choose a microgreen:</label>
-                                                    <select name="microgreen" id="microgreen">
-                                                        <option value="broccoli">Broccoli</option>
-                                                        <option value="beets">Beets</option>
-                                                    </select>
-                                                  <br><br>
-                                                  <input type="submit" value="Start Growing">
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                </div>
 
-                <div id="waterCheck" style="display: none">
-                   {% if status.water_level < 50%}
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-center">
-                                 <div class="container">
-                                    <div class="fullCard">
-                                        <div class="cardContent">
-                                            <div class="cardInfo">
-                                                <p>Water level low.</p>
-                                                <p><b>Perform Maintenance</b></p>
-                                                <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                    <div id="waterCheck" style="display: none">
+                       {% if status.water_level < 50%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard">
+                                            <div class="cardContent">
+                                                <div class="cardInfo">
+                                                    <p>Water level low.</p>
+                                                    <p><b>Perform Maintenance</b></p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                 </div>
+                                     </div>
+                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                </div>
+                        {% endif %}
+                    </div>
 
-                <div id="phCheck" style="display: none">
-                    {% if status.ph < 7%}
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-center">
-                                 <div class="container">
-                                    <div class="fullCard">
-                                        <div class="cardContent">
-                                            <div class="cardInfo">
-                                                <p>PH level low.</p>
-                                                <p><b>Perform Maintenance</b></p>
-                                                <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                    <div id="phCheck" style="display: none">
+                        {% if status.ph < 7%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard">
+                                            <div class="cardContent">
+                                                <div class="cardInfo">
+                                                    <p>PH level low.</p>
+                                                    <p><b>Perform Maintenance</b></p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                 </div>
+                                     </div>
+                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                </div>
+                        {% endif %}
+                    </div>
 
-                <div id="ecCheck" style="display: none">
-                    {% if status.EC < 7%}
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-center">
-                                 <div class="container">
-                                    <div class="fullCard">
-                                        <div class="cardContent">
-                                            <div class="cardInfo">
-                                                <p>Nutrient level low.</p>
-                                                <p><b>Perform Maintenance</b></p>
-                                                <button class="button cardButton" onclick="document.location='/service'">Service Mode</button>
+                    <div id="ecCheck" style="display: none">
+                        {% if status.EC < 7%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard">
+                                            <div class="cardContent">
+                                                <div class="cardInfo">
+                                                    <p>Nutrient level low.</p>
+                                                    <p><b>Perform Maintenance</b></p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                 </div>
+                                     </div>
+                                </div>
                             </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center">
+                             <div class="container">
+                                <div class="fullCard">
+                                    <div class="cardContent">
+                                        <div class="cardInfo">
+                                            <p>Select Microgreen Type</p>
+                                            <form action="">
+                                              <label for="microgreen">Choose a microgreen:</label>
+                                                <select name="microgreen" id="microgreen">
+                                                    <option value="broccoli">Broccoli</option>
+                                                    <option value="beets">Beets</option>
+                                                </select>
+                                              <br><br>
+                                              <input type="submit" value="Start Growing">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
                         </div>
-                    {% endif %}
-                </div>
-            </section>
+                    </div>
+                 </div>
+            </div>
         </div>
     </div>
 
@@ -215,18 +203,14 @@ function options(){
     T.style.display = "block";
   }
 
-  settingsUpdate();
-}
+  var a = document.getElementById("insertTray");
+    a.style.display = "none";
 
-function settingsUpdate(){
- var x = document.getElementById("insertTray");
-    x.style.display = "none";
-
-  var T = document.getElementById("waterCheck");
-  if (T.style.display === "block") {
-    T.style.display = "none";
+  var B = document.getElementById("waterCheck");
+  if (B.style.display === "block") {
+    B.style.display = "none";
   } else {
-    T.style.display = "block";
+    B.style.display = "block";
   }
 
   var y = document.getElementById("phCheck");
@@ -243,6 +227,7 @@ function settingsUpdate(){
     z.style.display = "block";
   }
 }
+
 
 
 
