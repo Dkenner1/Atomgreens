@@ -1,11 +1,4 @@
-from time import sleep
-from database.db import connect
-from database.SQL import PI4_STATUS
-from utcp import UTCP 
-from database.db import add_meas
-from database.paths import db_dir
-from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT, select_table
-import PI4_schedule
+
 import climate_control
 
 climate_control.control()
