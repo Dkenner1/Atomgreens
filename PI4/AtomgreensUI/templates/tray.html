@@ -77,7 +77,7 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            {% if times[0] < 100 %}
+                            {% if times[0] < 10 %}
                                 <div class="progress">
                                     <div class="progress-bar" style="width:{{times[0]}}%">{{times[0]}}%</div>
                                 </div>
@@ -97,27 +97,7 @@
 {% block script %}
 
 <script>
-var x;
-        function run_test() {
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                let text = xhttp.responseText
-                try {
-                    let response = JSON.parse(xhttp.responseText)
-                    x=response;
-                    generate_graphs();
-                    }
-                } catch (e) {
-                    var newDoc = document.open("text/html", "replace")
-                    newDoc.write(text)
-                    newDoc.close()
-                }
-            }
-        };
-        xhttp.open("GET", "/tray/1/data", true);
-        xhttp.send();
-    }
+
 </script>
 <script src="/static/js/ChartJS/Chart.js"></script>
 <script src="/static/js/ChartJS/Chart.bundle.js"></script>
