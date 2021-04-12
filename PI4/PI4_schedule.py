@@ -89,7 +89,7 @@ def water():
 
 def scheduler(): #run every 10 minutes - have all of the sensor files run
     print('Scheduler')
-    #Temp_and_humidity_sensor_pi4.TH.read_temp_humidity() #get the temp and humidity data from the breakout board 
+    #Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
     Pi0All(1, 0) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
     #Water_level.read_waterLevel() #get the water level
@@ -107,7 +107,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     else:
         print('Itorate for solinoids')
         solOn = solOn - 1 # determines if we have waited the right amount of time 
-    #climate_control.ClimateCtrl.control() #activate climate control for this chunk of time 
+    #climate_control.control() #activate climate control for this chunk of time 
    
 def call():
     schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time

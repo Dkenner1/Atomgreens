@@ -4,31 +4,35 @@ from database.db import connect
 from database.SQL import PI4_STATUS
 from util import threaded 
 
-class ClimateCtrl:
-    # Constant variable declaration 
-    idealTemp = 26.5
-    underTemp = 24.5 # 26.5 - 2
-    overTemp = 28.5 # 26.5 + 2
+# Constant variable declaration 
+idealTemp = 26.5
+underTemp = 24.5 # 26.5 - 2
+overTemp = 28.5 # 26.5 + 2
 
-    GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)
 
-    # GPIO pin for water pump
-    DCTEC = 7
-    fan = 11
-    heater = 12
+# GPIO pin for water pump
+DCTEC = 7
+fan = 11
+heater = 12
 
-    GPIO.setup(DCTEC, GPIO.OUT)
-    GPIO.setup(fan, GPIO.OUT)
-    GPIO.setup(heater, GPIO.OUT)
+GPIO.setup(DCTEC, GPIO.OUT)
+GPIO.setup(fan, GPIO.OUT)
+GPIO.setup(heater, GPIO.OUT)
     
+class ClimateCtrl:
+
     @threaded
     def control():
         # Query database for last stored temperature value of tray 4
+        '''
         conn = connect()
         cur = conn.cursor()
-        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 4 and devid = 2'): #get the latest temp value 
+        for row in cur.execute('SELECT val, MAX(epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1, nodes.devId=2'): #get the latest temp value 
             curTemp = row
         conn.close()
+        '''
+        curTemp = 27
 
         if curTemp < underTemp:
             # Determine difference from curTemp and underTemp
