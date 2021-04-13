@@ -14,7 +14,7 @@
         <!--<div class ="row">
             <div class="container-fluid">
                 <div class="d-flex justify-content-center">
-                    <button id="cycle" class="button button2">Last Cycle</button>
+                    <button id="cycle" class="button button2">Current Cycle</button>
                     <button id="month" class="button button2">Last Month</button>
                     <button id="all" class="button button2">All Time</button>
                 </div>
@@ -79,13 +79,13 @@
                         <div class="cardInfo">
                             {% if times[0] < 10 %}
                                 <div class="progress">
-                                    <div class="progress-bar" style="width:{{times[0]}}%">{{times[0]}}%</div>
+                                    <div class="progress-bar" style="width:{{times[0]}}%">{{ times[0] }}%</div>
                                 </div>
                             {% else %}
                                <div class="progress">
                                     <div class="progress-bar" style="width:100%">100%</div>
                                </div>
-                                <button class="cardButton" onclick="document.location='/trayinfo/trayid/trayControl'">Tray Control</button>
+                                <button class="cardButton" onclick="document.location='/trayinfo/{{trayid}}/trayControl'">Tray Control</button>
                             {% endif %}
                         </div>
                     </div>

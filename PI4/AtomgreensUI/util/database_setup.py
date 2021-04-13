@@ -1,9 +1,12 @@
 import sqlite3
 import time, random
+from util.paths import db_dir
 from util.SQL import *
+from util.db import connect
 # Setup File
-con=sqlite3.connect('./atomgreens.db')
+con = sqlite3.connect('./atomgreens.db')
 cur = con.cursor()
+
 
 def create_tables():
     # Clear all previous tables/views to prevent repeat entries
@@ -53,25 +56,43 @@ def create_tables():
     FOREIGN KEY (nodeId) REFERENCES nodes (id))"""
     cur.execute(CREATE_MEAS_TABLE_SQL)
 
+    CREATE_RUNS_TABLE_SQL = """ CREATE TABLE IF NOT EXISTS runs 
+    (id INTEGER PRIMARY KEY, 
+    piId INTEGER NOT NULL, 
+    start INTEGER NOT NULL, 
+    stop INTEGER DEFAULT 0)"""
+    cur.execute(CREATE_RUNS_TABLE_SQL)
+
     # Check that tables have been created
     cur.execute(SELECT_TBLE_NAMES)
     print(cur.fetchall())
+
+
+def start_run(piId, start=0, stop=0):
+    # Populate Sensor table
+    if stop != 0:
+        cur.execute(RUN_START_WSTOP, (piId, start, stop))
+    else:
+        cur.execute(RUN_START, (piId, int(time.time())))
+
 
 def add_device(device, sensor=False):
     # Populate Sensor table
     cur.execute(DEV_INSRT, (device, sensor))
 
+
 def add_node(piId, devId, active=True):
     cur.execute(NODE_INSRT, (piId, devId, active))
 
-def add_meas(piId, devId, val):
+
+def add_meas(piId, devId, val, etime=int(time.time()), dbpath=db_dir):
     result = cur.execute(SELECT_NODEID, (piId, devId)).fetchone()
     if result:
         id = result[0]
-        meas_data = (id, int(time.time()), val)
+        meas_data = (id, etime, val)
     else:
         add_node(piId, devId)
-        meas_data = (cur.lastrowid, int(time.time()), val)
+        meas_data = (cur.lastrowid, etime, val)
 
     print('Record to be inserted: ')
     print(meas_data)
@@ -79,7 +100,7 @@ def add_meas(piId, devId, val):
 
 
 def view_create():
-    #Create All current sensor information view
+    # Create All current sensor information view
     ACTIVE_DEVS_VIEW = """CREATE VIEW active_nodes AS 
     SELECT * 
     FROM nodes
@@ -90,11 +111,12 @@ def view_create():
     measurements.val AS val, MAX(measurements.epoch_time) AS 'epoch_time' 
     FROM measurements 
     INNER JOIN nodes ON measurements.nodeId = nodes.id 
-    INNER JOIN devices ON nodes.devId = devices.id 
+    INNER JOIN devices ON nodes.devId = devices.id
+    WHERE devices.sensor=1
     GROUP BY measurements.nodeId"""
     print(cur.execute(STATUS_STATE_VIEW).fetchall())
 
-    #Create Indepent Sensor View
+    # Create Indepent Sensor View
     cur.execute(create_status_view("pi0_2_status", 2))
     print(cur.execute(select_table("pi0_2_status")).fetchall())
 
@@ -103,6 +125,12 @@ def view_create():
     print('View test:')
     print(cur.execute(select_table("pi4_status")).fetchall())
 
+    # Current runs
+    CURRENT_RUNS_STATE_VIEW = """CREATE VIEW current_runs AS 
+    SELECT *, MAX(start)
+    FROM runs 
+    GROUP BY piId"""
+    print(cur.execute(CURRENT_RUNS_STATE_VIEW))
 
 
 if __name__ == "__main__":
@@ -124,14 +152,26 @@ if __name__ == "__main__":
     add_device('heater')
     add_device('cooler')
 
+    day = 86400
+    hour = 3600
+    eTime = time.time()
+
+    start_run(1)
+    start_run(2)
+    start_run(3)
+    start_run(4)
+    start_run(5)
+    start_run(5, int(eTime-7*day), int(eTime))
     # Populate active_device tables
     for pi in range(0, 5):
-        for dev in range(1,15):
+        for dev in range(1, 15):
             add_node(pi, dev)
+
 
     # Populate measurement table
     for rec in range(1, 10000):
-        add_meas(random.randint(1,5), random.randint(1, 15), random.randint(1,50))
+        add_meas(random.randint(0, 5), random.randint(1, 15), random.randint(1, 50),
+                 int(eTime - random.randint(0, 7) * day - random.randint(0, 24) * hour))
     # Create Views
     view_create()
     con.commit()
