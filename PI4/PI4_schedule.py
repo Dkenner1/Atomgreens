@@ -100,7 +100,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     if (solOn == 0): #check to see if the solinoids should be shut
         Pi0All(4, 0) #turn off the solinoids
         print('turn off solinoids')
-        #ph_ec_pump.PhEcPump.On() #activate the PH and EC pump in order to keep the level constent in the water
+        #ph_ec_pump.On() #activate the PH and EC pump in order to keep the level constent in the water
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 
         water_pump_ctrl.water(0)
@@ -112,7 +112,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
 def call():
     schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
     schedule.every(1).minutes.do(scheduler) #every 10 min get data
-    schedule.every().day.at("21:00").do(LEDon)
+    schedule.every().day.at("16:02").do(LEDon)
     schedule.every().day.at("13:00").do(LEDoff)
 
     while True:

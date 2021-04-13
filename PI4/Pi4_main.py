@@ -1,7 +1,18 @@
-
 import climate_control
+import ph_ec_pump
+from time import sleep 
 
-climate_control.control()
+ph_ec_pump.On()
+#climate_control.control()
+
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+CTRL = 29
+
+sleep(20)
+GPIO.output(29, GPIO.LOW) #turns off both pumps
+
 
 #add_node(0,) #piId, devId 
 '''
