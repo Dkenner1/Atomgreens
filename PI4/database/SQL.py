@@ -1,6 +1,8 @@
 DEV_INSRT = """INSERT INTO devices (device, sensor) VALUES (?, ?)"""
 NODE_INSRT = """INSERT INTO nodes (piId, devId, active) VALUES (?,?,?)"""
 MEAS_INSRT = """INSERT INTO measurements (nodeId, epoch_time, val)  VALUES (?,?,?)"""
+RUN_START_WSTOP = """INSERT INTO runs (piId, start, stop)  VALUES (?,?,?)"""
+RUN_START = """INSERT INTO runs (piId, start)  VALUES (?,?)"""
 
 SELECT_NODEID = """SELECT id FROM nodes WHERE piId=? AND devId=?"""
 SELECT_TBLE_NAMES = "SELECT name FROM sqlite_master WHERE type='table'"
@@ -19,12 +21,13 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             FROM measurements
                             INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
-                            WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?; """
-
-MOST_RECENT = """SELECT *, MAX(epoch_time) AS time FROM measurements"""
+                            WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?;"""
 
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
-MEASURMENTS = """SELECT * FROM measurements"""
+
+STATUS = """SELECT device, val FROM status"""
+
+SELECT_LATEST_PIDEV="""SELECT * FROM status WHERE devId=? and piId=?"""
 
 def create_status_view(name, ID):
     return "CREATE VIEW " + name + " AS SELECT * FROM status WHERE piId=" + str(ID)

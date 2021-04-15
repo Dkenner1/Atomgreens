@@ -1,8 +1,8 @@
 import sqlite3
 import time, random
-from util.paths import db_dir
-from util.SQL import *
-from util.db import connect
+from paths import db_dir
+from SQL import *
+from db import connect
 # Setup File
 con = sqlite3.connect('./atomgreens.db')
 cur = con.cursor()

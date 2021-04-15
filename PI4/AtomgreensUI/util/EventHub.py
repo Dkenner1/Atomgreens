@@ -26,7 +26,12 @@ class Hub:
         return func
 
     def publish(self, *topics, **kwargs):
+        if 'DEFAULT' not in topics:
+            print("calling event: DEFAULT")
+            for subscriber in self.response_mapper['DEFAULT']:
+                subscriber(**kwargs)
         for topic in topics:
+            print("calling event: " + str(topic))
             for subscriber in self.response_mapper[topic]:
                 subscriber(**kwargs)
 

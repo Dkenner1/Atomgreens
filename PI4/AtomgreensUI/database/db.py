@@ -1,6 +1,6 @@
 import sqlite3, time
-from util.paths import db_dir
-from util.SQL import *
+from database.paths import db_dir
+from database.SQL import *
 
 
 def connect(dp_path=db_dir):

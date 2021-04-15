@@ -1,4 +1,3 @@
-
 class Process:
     def __init__(self, _return_dict):
         self.steps = []

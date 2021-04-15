@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, jsonify, request
 import random
-from util.db import connect
-from util.SQL import *
+from database.db import connect
+from database.SQL import *
 import time
 
 service_routes = Blueprint('service', __name__, template_folder='templates')
