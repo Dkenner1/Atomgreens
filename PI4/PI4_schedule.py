@@ -89,7 +89,7 @@ def water():
 
 def scheduler(): #run every 10 minutes - have all of the sensor files run
     print('Scheduler')
-    #Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
+    Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
     Pi0All(1, 0) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
     #Water_level.read_waterLevel() #get the water level
