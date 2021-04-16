@@ -2,8 +2,8 @@ from flask import Blueprint, render_template, json, \
     redirect, request, url_for
 from database.db import connect
 from database.SQL import *
-from devices.Temp_and_humidity_sensor_pi4 import read_temp_humidity
-from devices.ph_ec_pump import On
+#from devices.Temp_and_humidity_sensor_pi4 import read_temp_humidity
+#from devices.ph_ec_pump import On
 import time
 import datetime
 
@@ -18,6 +18,7 @@ def index():
     day = 86400
     hour = 3600
     now = datetime.date.today()
+
     startTimes = [int(((now - (datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour)))).days / 7) * 100),
                   int(((now - (datetime.date.fromtimestamp((eTime - 3 * day - 2 * hour)))).days / 7) * 100),
                   int(((now - (datetime.date.fromtimestamp((eTime - 1 * day - 0 * hour)))).days / 7) * 100),
@@ -61,10 +62,10 @@ def control(trayid):
     data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(PI4_STATUS)}
     conn.close()
     print("Page data: " + str(data))
-    return render_template('trayCtrl.html', status=data)
+    return render_template('trayCtrl.html', status=data, trayId=trayid)
 
 @main.route('/trayinfo/<trayid>/trayControl/newGrow', methods=['GET', 'POST'])
 def formsubmit(trayid):
-    On()
-    read_temp_humidity()
+#    On()
+#   read_temp_humidity()
     return redirect("/")

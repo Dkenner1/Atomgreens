@@ -168,7 +168,8 @@
                         Math.floor(Math.random() * 10) + 40],
                     fill: false,
                 }],
-                options: {
+
+            options: {
                     responsive: false,
                     maintainAspectRatio: false,
                     scales: {
@@ -182,8 +183,7 @@
                             }
                         }]
                     }
-                }
-            }
+                }}
 		});
 
     var ctx6 = document.getElementById('extempChart').getContext('2d');

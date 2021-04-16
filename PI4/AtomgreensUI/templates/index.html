@@ -35,7 +35,7 @@
 								  		    <h6>Tray 2</h6>
                                             {% if times[1] < 100 %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:{{times[4]}}%">{{times[4]}}%</div>
+  											    <div class="progress-bar" style="width:{{times[4]}}%">{{times[1]}}%</div>
 										    </div>
                                             {% else %}
                                             <div class="progress">
@@ -126,10 +126,10 @@
                             </div>
 
                             <div class="container-fluid">
-                            {%for i in range(0,5)%}
-                                {% if times[i] >= 100 %}
+                            {%for trayId in range(0,5)%}
+                                {% if times[(trayId | int) - 1] >= 100 %}
                                     <div class="alert alert-success">
-                                        <p><b>Tray {{i + 1}} ready to harvest!</b></p>
+                                        <p><b>Tray {{(trayId | int + 1)}} ready to harvest!</b></p>
                                     </div>
                                 {% endif %}
                             {%endfor%}
@@ -143,15 +143,27 @@
                                 {% endif %}
                             </div>
 
+
+                            {% for trayId in range(0,5) %}
+                                <div class="container-fluid">
+                                    <div class="alert alert-info">
+                                        <p><b>Tray {{(trayId |int + 1)}} Weight: {{status.weight}} grams</b></p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        <!--
                             <div class="container-fluid">
                                 <div class="alert alert-info">
-                                    <p><b>Tray 1 Weight: {{status.weight}} grams</b></p>
-                                    <p><b>Tray 2 Weight: {{status.weight}} grams</b></p>
-                                    <p><b>Tray 3 Weight: {{status.weight}} grams</b></p>
-                                    <p><b>Tray 4 Weight: {{status.weight}} grams</b></p>
-                                    <p><b>Tray 5 Weight: {{status.weight}} grams</b></p>
-                                </div>
+                                    {/% for i in range(0,5) %}
+                                         <p><b>Tray 1 Weight: {/{status.weight}} grams</b></p>
+                                         <p><b>Tray 2 Weight: {/{status.weight}} grams</b></p>
+                                         <p><b>Tray 3 Weight: {/{status.weight}} grams</b></p>
+                                         <p><b>Tray 4 Weight: {/{status.weight}} grams</b></p>
+                                         <p><b>Tray 5 Weight: {/{status.weight}} grams</b></p>
+                                    {/% endfor %}
+                                 </div>
                             </div>
+                        -->
                         </section>
                     </div>
 

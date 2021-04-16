@@ -3,7 +3,6 @@ from routes import main, service
 import logging, threading
 from waitress import serve
 
-
 app = Flask('Atomgreens')
 app.register_blueprint(main.main)
 app.register_blueprint(service.service_routes)
