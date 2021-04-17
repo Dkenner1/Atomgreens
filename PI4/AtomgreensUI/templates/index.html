@@ -138,7 +138,7 @@
                             <div class="container-fluid">
                                 {% if status.water_level is defined and status.water_level == 0 %}
                                 <div class="alert alert-warning">
-                                    <p><b>Water Level is at low. Currently below 15%</b></p>
+                                    <p><b>Water Level below 15% %</b></p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -147,7 +147,7 @@
                             {% for trayId in range(0,5) %}
                                 <div class="container-fluid">
                                     <div class="alert alert-info">
-                                        <p><b>Tray {{(trayId |int + 1)}} Weight: {{status.weight}} grams</b></p>
+                                        <p><b>Tray {{(trayId | int + 1)}} Weight: {{weights[trayId]}} grams</b></p>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -178,7 +178,7 @@
                                         <tr>
                                             <th>PH</th>
                                             <th>PH Pump</th>
-                                            <th>Heater</th>
+                                            <th>External Temperature</th>
                                             <th>External Humidity (%) </th>
                                         </tr>
                                         <tr>
@@ -194,8 +194,8 @@
                                             <td> 0.0 </td>
                                             {% endif %}
 
-                                            {% if status.heater is defined %}
-                                            <td>{{ status.heater }}</td>
+                                            {% if status.temperature is defined %}
+                                            <td>{{ status.temperature }}</td>
                                             {% else %}
                                             <td> 0.0 </td>
                                             {% endif %}
