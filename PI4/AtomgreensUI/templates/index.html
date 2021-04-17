@@ -136,9 +136,9 @@
                             </div>
 
                             <div class="container-fluid">
-                                {% if status.water_level is defined and status.water_level < 50 %}
+                                {% if status.water_level is defined and status.water_level == 0 %}
                                 <div class="alert alert-warning">
-                                    <p><b>Water Level is at low. Currently {{ status.water_level }}%</b></p>
+                                    <p><b>Water Level is at low. Currently below 15%</b></p>
                                 </div>
                                 {% endif %}
                             </div>

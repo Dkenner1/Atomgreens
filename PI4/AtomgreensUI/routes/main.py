@@ -18,12 +18,7 @@ def index():
     day = 86400
     hour = 3600
     now = datetime.date.today()
-
-    startTimes = [int(((now - (datetime.date.fromtimestamp((eTime - 2 * day - 5 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 3 * day - 2 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 1 * day - 0 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 4 * day - 5 * hour)))).days / 7) * 100),
-                  int(((now - (datetime.date.fromtimestamp((eTime - 5 * day - 2 * hour)))).days / 7) * 100)]
+    startTime = []
     conn.close()
     print("Page data: " + str(data))
     return render_template('index.html', status=data, times=startTimes)
