@@ -77,7 +77,7 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            {% if times[(trayId | int) - 1] < 10 %}
+                            {% if times[(trayId | int) - 1] < 100 %}
                                 <div class="progress">
                                     <div class="progress-bar" style="width:{{times[0]}}%">{{ times[(trayId | int) - 1]}}%</div>
                                 </div>
