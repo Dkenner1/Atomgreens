@@ -3,7 +3,7 @@
     <div class="wrapper">
         <div class="content-header">
             <div class="container-fluid">
-                <h1>Tray Controls</h1>
+                <h1>Tray {{trayId}} Controls</h1>
                 <div class="d-flex justify-content-center">
                     <button class="button button2 back-button" onclick="goBackTray()">Back</button>
                 </div>
@@ -19,11 +19,11 @@
                                 <div class="fullCard">
                                     <div class="cardContent">
                                         <div class="cardInfo">
-                                            <h6>Tray</h6>
+                                            <h6>Tray {{trayId}}</h6>
                                             <div class="progress">
                                                 <div class="progress-bar" style="width:100%">100%</div>
                                             </div>
-                                                <p>Tray done!</p>
+                                                <p>Tray {{trayId}} done! 🌿</p>
                                             <button class="cardButton" onclick="harvestButton()">Harvest</button>
                                         </div>
                                     </div>
@@ -72,14 +72,14 @@
                 <div id="options" style="display: none">
 
                     <div id="waterCheck" style="display: none">
-                       {% if status.water_level < 50%}
+                       {% if status.water_level == 50%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
                                         <div class="fullCard">
                                             <div class="cardContent">
                                                 <div class="cardInfo">
-                                                    <p>Water level low.</p>
+                                                    <p>Water level: Below 15%.</p>
                                                     <p><b>Perform Maintenance</b></p>
                                                 </div>
                                             </div>
@@ -91,7 +91,7 @@
                     </div>
 
                     <div id="phCheck" style="display: none">
-                        {% if status.ph < 7%}
+                        {% if status.ph < 190%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
@@ -110,7 +110,7 @@
                     </div>
 
                     <div id="ecCheck" style="display: none">
-                        {% if status.EC < 7%}
+                        {% if status.EC < 150%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
@@ -135,14 +135,14 @@
                                     <div class="cardContent">
                                         <div class="cardInfo">
                                             <p>Select Microgreen Type</p>
-                                            <form action="/trayinfo/1/trayControl/newGrow" method="POST">
+                                            <form action="/trayinfo/{{trayId}}/trayControl/newGrow" method="POST">
                                               <label for="microgreen">Choose a microgreen:</label>
                                                 <select name="microgreen" id="microgreen">
                                                     <option value="broccoli">Broccoli</option>
                                                     <option value="beets">Beets</option>
                                                 </select>
                                               <br><br>
-                                              <input type="submit" value="Start Growing">
+                                              <input type="submit" style="align-content: center" value="Start Growing" onclick="confirm()">
                                             </form>
                                         </div>
                                     </div>
@@ -158,4 +158,9 @@
 {% endblock %}
 {% block script %}
 <script src="/static/js/trayControl.js"></script>
+<script>
+function confirm(){
+    alert("Microgreen type saved!");
+}
+</script>
 {% endblock %}

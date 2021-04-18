@@ -77,7 +77,7 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            {% if times[(trayId | int) - 1] < 100 %}
+                            {% if times[(trayId | int) - 1] < 10 %}
                                 <div class="progress">
                                     <div class="progress-bar" style="width:{{times[0]}}%">{{ times[(trayId | int) - 1]}}%</div>
                                 </div>
@@ -110,7 +110,7 @@ function convertTime(ts) {
     var phData = {
         labels :  [
                     {% for etime in data['ph'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
+                        {% if loop.index <= 7 %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -118,7 +118,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'PH of Water',
             data : [{% for item in data['ph'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
+                        {% if loop.index <= 7 %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -141,16 +141,16 @@ function convertTime(ts) {
 
     var ecData = {
         labels :  [{% for etime in data['EC'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                        {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'EC of Water',
             data : [{% for item in data['EC'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                        {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -167,16 +167,16 @@ function convertTime(ts) {
 
     var weightData = {
         labels :  [{% for etime in data['weight'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                    {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'Tray Weight',
             data : [{% for item in data['weight'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                     {% endif %}
                     {% endfor %}],
             fill: false,
@@ -193,16 +193,16 @@ function convertTime(ts) {
 
     var inTempData = {
         labels :  [{% for etime in data['heater'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                    {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'Internal Temperature (°F)',
             data : [{% for item in data['heater'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -219,16 +219,16 @@ function convertTime(ts) {
 
     var humidityData = {
         labels :  [{% for etime in data['humidity'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                    {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'Humidity',
             data : [{% for item in data['humidity'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -245,16 +245,16 @@ function convertTime(ts) {
 
     var exTempData = {
         labels :  [{% for etime in data['temperature'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                        {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'External Temperature (°F)',
             data : [{% for item in data['temperature'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -271,16 +271,16 @@ function convertTime(ts) {
 
     var redData = {
         labels :  [{% for etime in data['red light'] %}
-                        {% if loop.index % 2 == 0 and loop.index < 18%}
-                                (convertTime({{etime[1]}})),
+                        {% if loop.index <= 7%}
+                                (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'Lighting Power (Red)',
             data : [{% for item in data['red light'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -297,16 +297,16 @@ function convertTime(ts) {
 
     var blueData = {
         labels :  [{% for etime in data['blue light'] %}
-                       {% if loop.index % 2 == 0 and loop.index < 18%}
-                            (convertTime({{etime[1]}})),
+                       {% if loop.index <= 7%}
+                            (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
 
         datasets: [{
             label: 'Lighting Power (Blue)',
             data : [{% for item in data['blue light'] %}
-                    {% if loop.index % 2 == 0 and loop.index < 18%}
-                            {{item[0]}},
+                    {% if loop.index <= 7%}
+                            {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
@@ -324,7 +324,6 @@ function convertTime(ts) {
 
 </script>
 {% endblock %}
-
 
 
 

@@ -12,9 +12,7 @@ def start_server():
     print('~ ' * 5)
     print('in start_server')
     app.logger.setLevel(logging.INFO)
-    logger=logging.getLogger('waitress')
-    logger.setLevel(logging.INFO)
-    serve(app, host='localhost', port=5000)
+    serve(app, host='0.0.0.0', port=5000)
     #app.run(host='0.0.0.0', port=5000, threaded=True)
 
 

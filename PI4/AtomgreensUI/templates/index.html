@@ -138,7 +138,7 @@
                             <div class="container-fluid">
                                 {% if status.water_level is defined and status.water_level == 0 %}
                                 <div class="alert alert-warning">
-                                    <p><b>Water Level below 15% %</b></p>
+                                    <p><b>Water level: Below 15% %</b></p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -170,16 +170,18 @@
                     <div class="col">
                          <section id="info">
                             <div class="container-fluid">
-                                <div class="d-flex justify-content-center">
-                                    <div class="container-fluid">
-                                        <h2>Current Status</h2>
+                                <!--<div class="d-flex justify-content-center">-->
+                                    <div class="content-header">
+                                        <div class="container-fluid">
+                                            <h2>Current Status</h2>
+                                        </div>
                                     </div>
                                     <table id="infoTable" >
                                         <tr>
                                             <th>PH</th>
-                                            <th>PH Pump</th>
+                                            <th>Remaining PH Tank Level</th>
                                             <th>External Temperature</th>
-                                            <th>External Humidity (%) </th>
+                                            <th>External Humidity</th>
                                         </tr>
                                         <tr>
                                             {% if status.ph is defined %}
@@ -208,9 +210,9 @@
                                         </tr>
                                         <tr>
                                             <th>EC</th>
-                                            <th>EC Pump</th>
-                                            <th>Temperature (℉) </th>
-                                            <th>Humidity (%) </th>
+                                            <th>Remaining Nutrient Tank Level</th>
+                                            <th>Temperature (Tray 4) </th>
+                                            <th>Humidity (Tray 4) </th>
                                         </tr>
                                         <tr>
                                             {% if status.EC is defined %}
@@ -225,21 +227,13 @@
                                             <td> 0.0 </td>
                                             {% endif %}
 
-                                            {% if status.temperature is defined %}
-                                            <td>{{ status.temperature }}</td>
-                                            {% else %}
-                                            <td> 0.0 </td>
-                                            {% endif %}
+                                            <td>{{ temps[3] }}</td>
 
-                                            {% if status.humidity is defined %}
-                                            <td>{{ status.humidity }}</td>
-                                            {% else %}
-                                            <td> 0.0 </td>
-                                            {% endif %}
+                                            <td>{{ hums[3] }}</td>
                                         </tr>
                                     </table>
                                 </div>
-			                </div>
+			                <!--</div>-->
 		                </section>
                     </div>
                 </div>
