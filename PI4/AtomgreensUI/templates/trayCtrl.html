@@ -72,7 +72,7 @@
                 <div id="options" style="display: none">
 
                     <div id="waterCheck" style="display: none">
-                       {% if status.water_level == 50%}
+                       {% if status.water_level == 0%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
@@ -91,14 +91,14 @@
                     </div>
 
                     <div id="phCheck" style="display: none">
-                        {% if status.ph < 190%}
+                        {% if status.ph_pump < 15%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
                                         <div class="fullCard">
                                             <div class="cardContent">
                                                 <div class="cardInfo">
-                                                    <p>PH level low.</p>
+                                                    <p>PH tank level low.</p>
                                                     <p><b>Perform Maintenance</b></p>
                                                 </div>
                                             </div>
@@ -110,14 +110,14 @@
                     </div>
 
                     <div id="ecCheck" style="display: none">
-                        {% if status.EC < 150%}
+                        {% if status.ec_pump < 15%}
                             <div class="container-fluid">
                                 <div class="d-flex justify-content-center">
                                      <div class="container">
                                         <div class="fullCard">
                                             <div class="cardContent">
                                                 <div class="cardInfo">
-                                                    <p>Nutrient level low.</p>
+                                                    <p>Nutrient tank level low.</p>
                                                     <p><b>Perform Maintenance</b></p>
                                                 </div>
                                             </div>

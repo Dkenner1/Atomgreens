@@ -33,39 +33,27 @@
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="weightChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                        <canvas id="weightChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="inTempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                        <canvas id="inTempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="humtempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                       <canvas id="humtempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="extempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                       <canvas id="extempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>>
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="redChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                       <canvas id="redChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                     <div class="card-body">
-                        <div class="chart-container">
-                             <canvas id="blueChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 90%;"></canvas>
-                        </div>
+                         <canvas id="blueChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                 </div>
@@ -105,30 +93,25 @@
 <script>
 function convertTime(ts) {
     var d = new Date(ts*1000);
-    return d.toLocaleString();
+    return d.toLocaleString(undefined, {month: "short", day:"numeric", hour:"numeric", minute: "numeric"});
 }
     var phData = {
-        labels :  [
-                    {% for etime in data['ph'] %}
-                        {% if loop.index <= 7 %}
-                            (convertTime({{etime[(trayId | int)]}})),
-                        {% endif %}
-                    {% endfor %}],
+        labels: [
+                {% for etime in data['ph'] %}
+                    {% if loop.index %}
+                        (convertTime({{etime[(trayId | int)]}})),
+                    {% endif %}
+                {% endfor %}],
 
         datasets: [{
             label: 'PH of Water',
             data : [{% for item in data['ph'] %}
-                        {% if loop.index <= 7 %}
+                        {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
             fill: false,
         }],
-         options:{
-            responsive: false,
-            maintainAspectRatio: true,
-         }
-
     }
 
     var ctx1 = document.getElementById('phChart').getContext('2d');
@@ -137,11 +120,22 @@ function convertTime(ts) {
     var phChart = new Chart(ctx1, {
 			type: 'line',
 			data: phData,
-		});
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
+	});
 
     var ecData = {
         labels :  [{% for etime in data['EC'] %}
-                        {% if loop.index <= 7%}
+                        {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -149,7 +143,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'EC of Water',
             data : [{% for item in data['EC'] %}
-                        {% if loop.index <= 7%}
+                        {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -163,11 +157,22 @@ function convertTime(ts) {
     var ecChart = new Chart(ctx2, {
 			type: 'line',
 			data: ecData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var weightData = {
         labels :  [{% for etime in data['weight'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -175,7 +180,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'Tray Weight',
             data : [{% for item in data['weight'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                     {% endif %}
                     {% endfor %}],
@@ -189,11 +194,22 @@ function convertTime(ts) {
     var weightChart = new Chart(ctx3, {
 			type: 'line',
 			data: weightData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var inTempData = {
         labels :  [{% for etime in data['heater'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -201,7 +217,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'Internal Temperature (°F)',
             data : [{% for item in data['heater'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -215,11 +231,22 @@ function convertTime(ts) {
     var inTempChart = new Chart(ctx4, {
 			type: 'line',
 			data: inTempData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var humidityData = {
         labels :  [{% for etime in data['humidity'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -227,7 +254,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'Humidity',
             data : [{% for item in data['humidity'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -241,11 +268,22 @@ function convertTime(ts) {
     var humtempChart = new Chart(ctx5, {
 			type: 'line',
 			data: humidityData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var exTempData = {
         labels :  [{% for etime in data['temperature'] %}
-                        {% if loop.index <= 7%}
+                        {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -253,7 +291,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'External Temperature (°F)',
             data : [{% for item in data['temperature'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -267,11 +305,22 @@ function convertTime(ts) {
     var extempChart = new Chart(ctx6, {
 			type: 'line',
 			data: exTempData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var redData = {
         labels :  [{% for etime in data['red light'] %}
-                        {% if loop.index <= 7%}
+                        {% if loop.index %}
                                 (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -279,7 +328,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'Lighting Power (Red)',
             data : [{% for item in data['red light'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -293,11 +342,22 @@ function convertTime(ts) {
     var redChart = new Chart(ctx7, {
 			type: 'line',
 			data: redData,
+            options: {
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            maxRotation: 0,
+                            autoSkip: true,
+                            maxTicksLimit: 8
+                        }
+                    }]
+                }
+            }
 		});
 
     var blueData = {
         labels :  [{% for etime in data['blue light'] %}
-                       {% if loop.index <= 7%}
+                       {% if loop.index %}
                             (convertTime({{etime[(trayId | int)]}})),
                         {% endif %}
                     {% endfor %}],
@@ -305,7 +365,7 @@ function convertTime(ts) {
         datasets: [{
             label: 'Lighting Power (Blue)',
             data : [{% for item in data['blue light'] %}
-                    {% if loop.index <= 7%}
+                    {% if loop.index %}
                             {{item[(trayId | int) - 1]}},
                         {% endif %}
                     {% endfor %}],
@@ -317,9 +377,20 @@ function convertTime(ts) {
     ctx8.canvas.width = 1000;
     ctx8.canvas.height = 250;
     var blueChart = new Chart(ctx8, {
-			type: 'line',
-			data: blueData,
-		});
+        type: 'line',
+        data: blueData,
+        options: {
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        maxRotation: 0,
+                        autoSkip: true,
+                        maxTicksLimit: 8
+                    }
+                }]
+            }
+        }
+    });
 
 
 </script>
