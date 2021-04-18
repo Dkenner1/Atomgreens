@@ -19,9 +19,15 @@
 								    <div class="cardContent">
 									    <div class="cardInfo">
 								  		    <h6>Tray 1</h6>
-										     <div class="progress">
-                                                <div class="progress-bar" style="width:{{times[0]}}%">{{ times[0]}}%</div>
-                                            </div>
+										    {% if times[0] < 100 %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:{{times[0]}}%">{{times[0]}}%</div>
+										    </div>
+                                            {% else %}
+                                            <div class="progress">
+  											    <div class="progress-bar" style="width:100%">100% 🌿</div>
+										    </div>
+                                            {% endif %}
                                             <button class="cardButton" onclick="document.location='trayinfo/1'">More info</button>
 									    </div>
 							  	    </div>
@@ -35,11 +41,11 @@
 								  		    <h6>Tray 2</h6>
                                             {% if times[1] < 100 %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:{{times[4]}}%">{{times[1]}}%</div>
+  											    <div class="progress-bar" style="width:{{times[1]}}%">{{times[1]}}%</div>
 										    </div>
                                             {% else %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:100%">100%</div>
+  											    <div class="progress-bar" style="width:100%">100% 🌿</div>
 										    </div>
                                             {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/2'">More info</button>
@@ -59,7 +65,7 @@
 										    </div>
                                             {% else %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:100%">100%</div>
+  											    <div class="progress-bar" style="width:100%">100% 🌿</div>
 										    </div>
                                             {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/3'">More info</button>
@@ -72,14 +78,17 @@
                                 <div class="fullCard">
 								    <div class="cardContent">
 									    <div class="cardInfo">
-								  		    <h6>Tray 4</h6>
+								  		    <div class="align-content-center">
+                                                <h6>Tray 4</h6>
+                                            </div>
+
                                             {% if times[3] < 100 %}
                                             <div class="progress">
   											    <div class="progress-bar" style="width:{{times[3]}}%">{{times[3]}}%</div>
 										    </div>
                                             {% else %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:100%">100%</div>
+  											    <div class="progress-bar" style="width:100%">100% 🌿</div>
 										    </div>
                                             {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/4'">More info</button>
@@ -99,7 +108,7 @@
 										    </div>
                                             {% else %}
                                             <div class="progress">
-  											    <div class="progress-bar" style="width:100%">100%</div>
+  											    <div class="progress-bar" style="width:100%">100% 🌿</div>
 										    </div>
                                             {% endif %}
 								  		    <button class="cardButton" onclick="document.location='trayinfo/5'">More info</button>
