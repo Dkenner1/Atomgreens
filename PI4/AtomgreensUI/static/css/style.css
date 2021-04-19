@@ -53,9 +53,9 @@ body {
 }
 
 .back-button {
-    line-height: 50px;
-    width: 90px;
-    font-size: 12pt;
+    line-height: 40px;
+    width: 100px;
+    font-size: 10pt;
     text-align: center;
     margin-top: 1px;
     margin-right: 2px;
@@ -240,4 +240,9 @@ tr:nth-child(even) {
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    position: relative;
+}
+
+.notBlindingYellow {
+    background-color: #E9C46A;
 }

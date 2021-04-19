@@ -23,6 +23,3 @@ function toggle(){
   }
 }
 
-   $('#bell').click(function() {
-    $("i", this).toggleClass("fas fa-bell-slash");
-    });
