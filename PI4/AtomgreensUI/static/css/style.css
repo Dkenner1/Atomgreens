@@ -246,3 +246,7 @@ tr:nth-child(even) {
 .notBlindingYellow {
     background-color: #E9C46A;
 }
+
+.noBlend {
+    background-color: #CDC8C6;
+}
