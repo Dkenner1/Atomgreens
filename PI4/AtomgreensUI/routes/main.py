@@ -1,11 +1,13 @@
 from flask import Blueprint, render_template, json, \
     redirect, request, url_for
-from database.db import connect
+from database.db import connect, new_run
 from database.SQL import *
+from devices.trayCtrl import *
 # from devices.Temp_and_humidity_sensor_pi4 import read_temp_humidity
 # from devices.ph_ec_pump import On
 import time
 import datetime
+
 
 main = Blueprint('main', __name__, template_folder='templates')
 
@@ -67,7 +69,8 @@ def control(trayid):
 
 
 @main.route('/trayinfo/<trayid>/trayControl/newGrow', methods=['GET', 'POST'])
-def formsubmit(trayid):
-    #    On()
-    #   read_temp_humidity()
+def newCycle(trayid):
+    if request.form['microgreen']:
+        tray_start(request.form['microgreen'])
+
     return redirect("/")

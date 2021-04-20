@@ -40,3 +40,10 @@ def get_latest(pi, devId, dbpath=db_dir):
     data = list(cur.execute(SELECT_LATEST_PIDEV, (pi, devId)).fetchall())
     conn.close()
     return data
+
+def new_run(piId, runTime=604800, dbpath=None):
+    conn = connect(dbpath)
+    cur = conn.cursor()
+    cur.execute(RUN_START_WSTOP, (piId, time.time(), time.time()+runTime))
+    conn.commit()
+    conn.close()

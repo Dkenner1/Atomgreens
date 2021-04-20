@@ -23,11 +23,20 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             INNER JOIN devices ON devices.id = active_nodes.devId
                             WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?;"""
 
+SELECT_EXPIRED_RUNS = """SELECT * 
+                            FROM runs
+                            WHERE stop < ? ;"""
+
+
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
 
 STATUS = """SELECT device, val FROM status"""
 
 SELECT_LATEST_PIDEV="""SELECT * FROM status WHERE devId=? and piId=?"""
+
+ADD_CONDITION_DEFAULT="""INSERT INTO flags (flag) VALUES (?)"""
+ADD_CONDITION="""INSERT INTO flags (flag, state) VALUES (?, ?)"""
+
 
 def create_status_view(name, ID):
     return "CREATE VIEW " + name + " AS SELECT * FROM status WHERE piId=" + str(ID)
