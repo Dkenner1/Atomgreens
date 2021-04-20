@@ -74,13 +74,8 @@ def create_tables():
     print(cur.fetchall())
 
 
-def start_run(piId, start=0, stop=0):
-    # Populate Sensor table
-    if stop != 0:
-        cur.execute(RUN_START_WSTOP, (piId, start, stop))
-    else:
-        cur.execute(RUN_START, (piId, int(time.time())))
-
+def new_run(piId, runTime=604800, dbpath=None):
+    cur.execute(RUN_START_WSTOP, (piId, int(time.time()), int(time.time()+runTime)))
 
 def add_device(device, sensor=False):
     # Populate Sensor table
@@ -167,12 +162,12 @@ if __name__ == "__main__":
     hour = 3600
     eTime = time.time()
 
-    start_run(1)
-    start_run(2)
-    start_run(3)
-    start_run(4)
-    start_run(5)
-    start_run(5, int(eTime-7*day), int(eTime))
+    new_run(1, 0)
+    new_run(2, 0 )
+    new_run(3, 0)
+    new_run(4, 0)
+    new_run(5, 0)
+    new_run(5, 0)
     # Populate active_device tables
     for pi in range(0, 5):
         for dev in range(1, 15):

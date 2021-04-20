@@ -47,11 +47,8 @@ def data(trayid):
         else:
             data[row[0]] = [(row[1], row[2])]
 
-    day = 86400
-    hour = 3600
-
-    startTimes = [(round(100 * (eTime - item[1]) / (5 * days), 1)) for item in
-                  cur.execute("""SELECT piId, start FROM current_runs""")]
+    runs = [item for item in cur.execute("""SELECT piId, start, stop FROM current_runs""")]
+    startTimes = [(round(100 * (eTime - item[1]) / (item[2]-item[1]+1), 1)) for item in runs]
     conn.close()
     return render_template('tray.html', data=data, times=startTimes, trayId=trayid)
 

@@ -2,20 +2,20 @@ import schedule
 import time
 from time import sleep
 import serial
-from utcp import UTCP
-from listener import listen
-from EventHub import eventHub
-from behaviors import *  #you might not need this file
+from serial.utcp import UTCP
+from serial.listener import listen
+from util.EventHub import eventHub
+#from behaviors import *  #you might not need this file
 from database.db import connect
 from database.db import add_meas
 from database.SQL import * 
 
-import Temp_and_humidity_sensor_pi4
-import Water_level
-import ph_ec_sensors
-import water_pump_ctrl
-import ph_ec_pump
-import climate_control
+import devices.Temp_and_humidity_sensor_pi4
+import devices.Water_level
+import devices.ph_ec_sensors
+import devices.water_pump_ctrl
+import devices.ph_ec_pump
+import devices.climate_control
 
 ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
 sender = UTCP(ser)
@@ -84,7 +84,7 @@ def water():
     Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
     global solOn
     solOn = 1
-    water_pump_ctrl.water(1) #turn on the air and water pump 
+    water(1) #turn on the air and water pump
     #ph_ec_sensors.PH_EC.readPHEC() #read the water temp, ph, and ec
 
 def scheduler(): #run every 10 minutes - have all of the sensor files run
@@ -103,7 +103,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
         #ph_ec_pump.PhEcPump.On() #activate the PH and EC pump in order to keep the level constent in the water
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 
-        water_pump_ctrl.water(0)
+        water(0)
     else:
         print('Itorate for solinoids')
         solOn = solOn - 1 # determines if we have waited the right amount of time 
