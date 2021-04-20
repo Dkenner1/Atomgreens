@@ -2,13 +2,13 @@ import RPi.GPIO as GPIO
 from time import sleep
 from database.db import connect, add_meas
 from database.SQL import PI4_STATUS
-from util.util import threaded
+from util import threaded 
 import water_pump_ctrl
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
-SPR = 200 # Steps per revolution
+SPR = 200/4 # Steps per revolution
 delay = 0.027
 
 pinPHBlack = 40
@@ -36,52 +36,63 @@ stdValEC = 250
 phPumpCount = 0
 ecPumpCount = 0
 
-@threaded
+#@threaded
 def On():
     conn = connect()
     cur = conn.cursor()
-    for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 11'): #get the latest temp value
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=11'): #get the latest temp value 
         phVal = row
-    for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 12'): #get the latest temp value
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=12'): #get the latest temp value 
         ecVal = row
-    for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 10'): #get the latest temp value
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=10'): #get the latest temp value 
         phPumpCtDB = row
-    for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = 0 and devid = 9'): #get the latest temp value
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=9'): #get the latest temp value 
         ecPumpCtDB = row
     conn.close()
-
-    GPIO.output(29, GPIO.HIGH) #turn on the pumps
+    '''
+    phVal = 5.9
+    ecVal = 230
+    phPumpCtDB = 100
+    ecPumpCtDB = 100
+    '''
+    
+    GPIO.output(29, GPIO.HIGH) #turn on the pumps 
     # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
-
+    
     # PH pump
-    if (phVal < (stdValPH-.2)):
-        runPH = ((phVal - stdValPH) * 10) * SPR
-        phPumpCount = ((phVal - stdValPH) * 10)
+    if (phVal>(stdValPH+.2) and phVal<9 and phPumpCtDB>0): #if the measured value is out of range, the sensor is not broken, and we have sloution in the tank 
+        print('ph')
+        runPH = ((phVal - stdValPH) * 10) * SPR #total spins * steps per spin 
+        phPumpCount = ((phVal - stdValPH) * 10)/200 #total spins/spins until empty 
+        add_meas(1,10,(phPumpCtDB - phPumpCount)) #amount of sloution left - amount used in this cycle
         # Turn on PH pump
         for x in range(round(runPH)):
-                GPIO.output(pinECBlack, GPIO.LOW)
-                GPIO.output(pinECRed, GPIO.HIGH)
+                GPIO.output(pinPHRed, GPIO.LOW)
+                GPIO.output(pinPHBlack, GPIO.HIGH)
                 sleep(delay)
-                GPIO.output(pinECRed, GPIO.LOW)
-                GPIO.output(pinECGrn, GPIO.HIGH)
+                GPIO.output(pinPHBlack, GPIO.LOW)
+                GPIO.output(pinPHBlue, GPIO.HIGH)
                 sleep(delay)
-                GPIO.output(pinECGrn, GPIO.LOW)
-                GPIO.output(pinECBlue, GPIO.HIGH)
+                GPIO.output(pinPHBlue, GPIO.LOW)
+                GPIO.output(pinPHGrn, GPIO.HIGH)
                 sleep(delay)
-                GPIO.output(pinECBlue, GPIO.LOW)
-                GPIO.output(pinECBlack, GPIO.HIGH)
+                GPIO.output(pinPHGrn, GPIO.LOW)
+                GPIO.output(pinPHRed, GPIO.HIGH)
                 sleep(delay)
     GPIO.output(pinPHGrn, GPIO.LOW)
     GPIO.output(pinPHBlue, GPIO.LOW)
     GPIO.output(pinPHGrn, GPIO.LOW)
     GPIO.output(pinPHBlue, GPIO.LOW)
+    print('ph done')
     # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
-    add_meas(1,10,(phPumpCtDB + phPumpCount))
+
 
     # EC pump
-    if (ecVal < (stdValEC - 10) and ecVal > 5):
-        runEC = ((stdValEC - ecVal)/10) * SPR
-        ecPumpCount = ((stdValEC - ecVal) * 10)
+    if (ecVal<(stdValEC-10) and ecVal>5 and ecPumpCtDB>0): #if the measured value is out of range, the sensor is not broken, and we have sloution in the tank 
+        print('ec')
+        runEC = ((stdValEC - ecVal)/10) * SPR #total spins * steps per spin 
+        ecPumpCount = ((stdValEC - ecVal)/10)/200 #total spins/spins until empty 
+        add_meas(1, 9, (ecPumpCtDB - ecPumpCount)) #amount of sloution left - amount used in this cycle 
         # Turn on EC pump
         for x in range(round(runEC)):
             GPIO.output(pinECBlack, GPIO.LOW)
@@ -96,13 +107,13 @@ def On():
             GPIO.output(pinECBlue, GPIO.LOW)
             GPIO.output(pinECBlack, GPIO.HIGH)
             sleep(delay)
-    GPIO.output(pinECBlack, GPIO.LOW) #turn off all of the leads
+    GPIO.output(pinECBlack, GPIO.LOW) #turn off all of the leads 
     GPIO.output(pinECRed, GPIO.LOW)
     GPIO.output(pinECGrn, GPIO.LOW)
     GPIO.output(pinECBlue, GPIO.LOW)
     # Increment ecPumpCount and insert ecPumpCount value into database | Question: add_meas() function to be used?
-    add_meas(1, 9, (ecPumpCtDB + ecPumpCount))
     GPIO.output(29, GPIO.LOW) #turn off the pumps
+    print('ec done')
 
     sleep(5)
-    water_pump_ctrl.WaterPumpCtrl.water(0) #turn off the water & air pump
+    water_pump_ctrl.water(0) #turn off the water & air pump
