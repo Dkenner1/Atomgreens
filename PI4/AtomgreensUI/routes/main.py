@@ -49,11 +49,10 @@ def data(trayid):
 
     day = 86400
     hour = 3600
-    now = datetime.date.today()
+
     startTimes = [(round(100 * (eTime - item[1]) / (5 * days), 1)) for item in
                   cur.execute("""SELECT piId, start FROM current_runs""")]
     conn.close()
-
     return render_template('tray.html', data=data, times=startTimes, trayId=trayid)
 
 

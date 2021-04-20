@@ -153,13 +153,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #eaecef;
   text-decoration: none;
   background-color: transparent;
+  align-content: center;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #646566;
   text-decoration: underline;
 }
 
@@ -5375,9 +5376,9 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-info {
-  color: #0c5460;
-  background-color: #d1ecf1;
-  border-color: #bee5eb;
+  color: #575F70;
+  background-color: #A7B9C9;
+  border-color: #A7B9C9;
 }
 
 .alert-info hr {
@@ -5484,7 +5485,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #007bff;
+  background-color: #73a746;
   transition: width 0.6s ease;
 }
 

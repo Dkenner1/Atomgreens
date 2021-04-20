@@ -69,3 +69,7 @@ function options(){
     z.style.display = "block";
   }
 }
+
+function confirm(){
+    alert("Microgreen type saved!");
+}

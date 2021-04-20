@@ -21,7 +21,8 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             FROM measurements
                             INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
-                            WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?;"""
+                            WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?
+                            ORDER BY etime;"""
 
 SELECT_EXPIRED_RUNS = """SELECT * 
                             FROM runs
