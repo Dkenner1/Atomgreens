@@ -1,7 +1,11 @@
 import serial
 from serial.utcp import UTCP
-ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
-sender = UTCP(ser)
+try:
+    ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
+    sender = UTCP(ser)
+except:
+    print("unable to open serial object")
+
 config={
   "beets": {
     "red": 70,

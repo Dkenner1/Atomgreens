@@ -71,5 +71,4 @@ def control(trayid):
 def newCycle(trayid):
     if request.form['microgreen']:
         tray_start(request.form['microgreen'])
-
     return redirect("/")

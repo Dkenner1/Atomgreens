@@ -25,7 +25,7 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             ORDER BY etime;"""
 
 SELECT_EXPIRED_RUNS = """SELECT * 
-                            FROM runs
+                            FROM current_runs
                             WHERE stop < ? ;"""
 
 

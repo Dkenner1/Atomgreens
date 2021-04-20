@@ -26,7 +26,7 @@ if __name__ == '__main__':
         t = time.time()
         conn = connect()
         cur = conn.cursor()
-        for run in cur.execute(SELECT_EXPIRED_RUNS, (int(time.time()))):
+        for run in cur.execute(SELECT_EXPIRED_RUNS, (int(time.time()), )):
             tray_stop(1)
         time.sleep(1)
 
