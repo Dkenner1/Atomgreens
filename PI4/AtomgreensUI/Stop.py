@@ -1,7 +1,11 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
+from serial.utcp import UTCP
 
+ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
+sender = UTCP(ser)
+    
 SDA = 3
 SLC = 5
 TEC_Perisoltic = 7
@@ -38,3 +42,8 @@ def off():
         
     for pin in control_pins:
         GPIO.output(pin, GPIO.LOW)  
+
+    for x in range(5): #turn off LEDs & solinoids
+        sender.send(x, 4, 0) #solinoids
+        sender.send(x, 5, 0) #red 
+        sender.send(x, 6, 0) #blue 
