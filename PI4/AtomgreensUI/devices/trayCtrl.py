@@ -1,5 +1,6 @@
 import serial
 from serial.utcp import UTCP
+from database.db import new_run
 try:
     ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
     sender = UTCP(ser)
@@ -14,7 +15,7 @@ config={
     "ec turns": 10,
     "runTime": 604800
   },
-  "brocolli": {
+  "broccoli": {
     "red": 50,
     "blue": 50,
     "ph turns": 10,
@@ -24,16 +25,20 @@ config={
 }
 
 def tray_start(trayid, microgreen):
-    sel = config[microgreen]
-    red = sel['red']
-    blue = sel['blue']
-    ec = sel['ec turns']
-    ph = sel['ph turns']
+    try:
+        new_run(trayid, config['runTime'])
+        sel = config[microgreen]
+        red = sel['red']
+        blue = sel['blue']
+        ec = sel['ec turns']
+        ph = sel['ph turns']
 
-    sender.send(trayid, 5, red)
-    sender.send(trayid, 6, blue)
-    sender.send(trayid, 9, ph)
-    sender.send(trayid, 10, ec)
+        sender.send(trayid, 5, red)
+        sender.send(trayid, 6, blue)
+        sender.send(trayid, 9, ph)
+        sender.send(trayid, 10, ec)
+    except:
+        print("Sender error")
 
 def tray_stop(trayid):
     ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate

@@ -67,5 +67,5 @@ def control(trayid):
 @main.route('/trayinfo/<trayid>/trayControl/newGrow', methods=['GET', 'POST'])
 def newCycle(trayid):
     if request.form['microgreen']:
-        tray_start(request.form['microgreen'])
+        tray_start(trayid, request.form['microgreen'])
     return redirect("/")
