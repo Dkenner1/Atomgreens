@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 from database.db import connect
 from database.SQL import PI4_STATUS
-from util.util import threaded
+from util import threaded 
 
 # Constant variable declaration 
 idealTemp = 26.5
@@ -24,15 +24,15 @@ GPIO.setup(heater, GPIO.OUT)
 # @threaded
 def control():
     # Query database for last stored temperature value of tray 4
-    '''
+    
     conn = connect()
     cur = conn.cursor()
-    for row in cur.execute('SELECT val, MAX(epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1, nodes.devId=2'): #get the latest temp value 
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=2'): #get the latest temp value 
         curTemp = row
     conn.close()
-    '''
-    curTemp = 24.3
+    
     print(curTemp)
+    curTemp = int(curTemp[0])
 
     if curTemp < underTemp:
         # Determine difference from curTemp and underTemp
