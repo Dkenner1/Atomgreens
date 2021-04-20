@@ -110,9 +110,9 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     #climate_control.control() #activate climate control for this chunk of time 
    
 def call():
-    schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
-    schedule.every(1).minutes.do(scheduler) #every 10 min get data
-    schedule.every().day.at("16:02").do(LEDon)
+    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
+    schedule.every(10).minutes.do(scheduler) #every 10 min get data
+    schedule.every().day.at("21:00").do(LEDon)
     schedule.every().day.at("13:00").do(LEDoff)
 
     while True:

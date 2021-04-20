@@ -2,20 +2,20 @@ import schedule
 import time
 from time import sleep
 import serial
-from utcp import UTCP
-from listener import listen
-from EventHub import eventHub
-from behaviors import *  #you might not need this file
+from serial.utcp import UTCP
+from serial.listener import listen
+from util.EventHub import eventHub
+#from behaviors import *  #you might not need this file
 from database.db import connect
 from database.db import add_meas
 from database.SQL import * 
 
-import Temp_and_humidity_sensor_pi4
-import Water_level
-import ph_ec_sensors
-import water_pump_ctrl
-import ph_ec_pump
-import climate_control
+import devices.Temp_and_humidity_sensor_pi4
+import devices.Water_level
+import devices.ph_ec_sensors
+import devices.water_pump_ctrl
+import devices.ph_ec_pump
+import devices.climate_control
 
 ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
 sender = UTCP(ser)
