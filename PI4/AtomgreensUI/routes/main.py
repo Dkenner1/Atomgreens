@@ -14,7 +14,6 @@ main = Blueprint('main', __name__, template_folder='templates')
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    print(time.time())
     conn = connect()
     cur = conn.cursor()
     data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(PI4_STATUS)}
@@ -48,8 +47,11 @@ def data(trayid):
         else:
             data[row[0]] = [(row[1], row[2])]
 
-    runs = [item for item in cur.execute("""SELECT piId, start, stop FROM current_runs""")]
-    startTimes = [(round(100 * (eTime - item[1]) / (item[2]-item[1]+1), 1)) for item in runs]
+    day = 86400
+    hour = 3600
+
+    startTimes = [(round(100 * (eTime - item[1]) / (5 * days), 1)) for item in
+                  cur.execute("""SELECT piId, start FROM current_runs""")]
     conn.close()
     return render_template('tray.html', data=data, times=startTimes, trayId=trayid)
 
@@ -68,5 +70,5 @@ def control(trayid):
 @main.route('/trayinfo/<trayid>/trayControl/newGrow', methods=['GET', 'POST'])
 def newCycle(trayid):
     if request.form['microgreen']:
-        tray_start(trayid, request.form['microgreen'])
+        tray_start(request.form['microgreen'])
     return redirect("/")
