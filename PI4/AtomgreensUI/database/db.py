@@ -4,7 +4,6 @@ from database.SQL import *
 
 
 def connect(dp_path=db_dir):
-    print(db_dir)
     return sqlite3.connect(dp_path)
 
 
@@ -41,9 +40,10 @@ def get_latest(pi, devId, dbpath=db_dir):
     conn.close()
     return data
 
-def new_run(piId, runTime=604800, dbpath=None):
+def new_run(piId, microgreen, runTime=604800, dbpath=db_dir):
     conn = connect(dbpath)
     cur = conn.cursor()
-    cur.execute(RUN_START_WSTOP, (piId, time.time(), time.time()+runTime))
+    t=int(time.time())
+    cur.execute(RUN_START_WSTOP, (piId, t, t+runTime, microgreen))
     conn.commit()
     conn.close()

@@ -14,6 +14,7 @@ main = Blueprint('main', __name__, template_folder='templates')
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
+    print(time.time())
     conn = connect()
     cur = conn.cursor()
     data = {item[0].replace(' ', '_'): item[1] for item in cur.execute(PI4_STATUS)}

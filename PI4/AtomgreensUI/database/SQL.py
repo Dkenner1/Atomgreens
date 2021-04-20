@@ -1,7 +1,7 @@
 DEV_INSRT = """INSERT INTO devices (device, sensor) VALUES (?, ?)"""
 NODE_INSRT = """INSERT INTO nodes (piId, devId, active) VALUES (?,?,?)"""
 MEAS_INSRT = """INSERT INTO measurements (nodeId, epoch_time, val)  VALUES (?,?,?)"""
-RUN_START_WSTOP = """INSERT INTO runs (piId, start, stop)  VALUES (?,?,?)"""
+RUN_START_WSTOP = """INSERT INTO runs (piId, start, stop, type) VALUES (?,?,?,?)"""
 RUN_START = """INSERT INTO runs (piId, start)  VALUES (?,?)"""
 
 SELECT_NODEID = """SELECT id FROM nodes WHERE piId=? AND devId=?"""
@@ -24,9 +24,7 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             WHERE active_nodes.piId = ? AND measurements.epoch_time BETWEEN ? and ?
                             ORDER BY etime;"""
 
-SELECT_EXPIRED_RUNS = """SELECT * 
-                            FROM current_runs
-                            WHERE stop < ? ;"""
+SELECT_EXPIRED_RUNS = """SELECT * FROM current_runs WHERE stop < ? ;"""
 
 
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
