@@ -148,7 +148,7 @@ function convertTime(ts) {
                             {{item[0]}},
                         {% endif %}
                     {% endfor %}],
-            borderColor: 'purple',
+            borderColor: 'lightblue',
             fill: false,
         }],
     }
@@ -186,7 +186,7 @@ function convertTime(ts) {
                             {{item[0]}},
                     {% endif %}
                     {% endfor %}],
-            borderColor: 'pink',
+            borderColor: 'firebrick',
             fill: false,
         }]
     }
@@ -218,13 +218,13 @@ function convertTime(ts) {
                     {% endfor %}],
 
         datasets: [{
-            label: 'Internal Temperature (°F)',
+            label: 'Internal Temperature',
             data : [{% for item in data['heater'] %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
                     {% endfor %}],
-            borderColor: 'cyan',
+            borderColor: 'darkblue',
             fill: false,
         }]
     }
@@ -262,7 +262,7 @@ function convertTime(ts) {
                             {{item[0]}},
                         {% endif %}
                     {% endfor %}],
-            borderColor: 'yellow',
+            borderColor: 'tan',
             fill: false,
         }]
     }
@@ -294,13 +294,13 @@ function convertTime(ts) {
                     {% endfor %}],
 
         datasets: [{
-            label: 'External Temperature (°F)',
+            label: 'External Temperature',
             data : [{% for item in data['temperature'] %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
                     {% endfor %}],
-            borderColor: 'orange',
+            borderColor: 'darkorange',
             fill: false,
         }]
     }
