@@ -1,19 +1,34 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
-import climate_control
-import ph_ec_pump
-from time import sleep 
+#import climate_control
+#import ph_ec_pump
+from time import sleep
+import ph_ec_sensors
+import ADC_callable
+import water_pump_ctrl
 
-# ph_ec_pump.On()
+#GPIO.output(13, GPIO.LOW)
+
+#water_pump_ctrl.water(1)
+ph_ec_sensors.readPHEC()
+'''
+GPIO.setup(15, GPIO.OUT)
+GPIO.output(15, GPIO.HIGH)
+sleep(5)
+test = ADC_callable.call(0)
+print(test)
+temperature = (74.4921 / (test-3.3)) + 70.1467
+print(temperature)
+GPIO.output(15, GPIO.LOW)
+'''
+#ph_ec_pump.On()
 #climate_control.control()
 
 
 
-GPIO.setup(11, GPIO.OUT)
-GPIO.setup(29, GPIO.OUT)
-GPIO.output(11, GPIO.LOW) #turns off both pumps
-GPIO.output(29, GPIO.LOW) #turns off both pumps
+
+
 
 
 

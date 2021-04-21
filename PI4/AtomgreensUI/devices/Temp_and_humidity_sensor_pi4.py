@@ -1,10 +1,7 @@
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 from time import sleep
-import serial
-from serial.utcp import UTCP
 from database.db import connect, add_meas
-from database.SQL import PI4_STATUS
 
 import smbus
 from smbus import SMBus

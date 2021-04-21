@@ -2,7 +2,7 @@ import schedule
 import time
 from time import sleep
 import serial
-from utcp import UTCP
+from serial.utcp import UTCP
 from listener import listen
 from EventHub import eventHub
 from behaviors import *  #you might not need this file
@@ -89,10 +89,10 @@ def water():
 
 def scheduler(): #run every 10 minutes - have all of the sensor files run
     print('Scheduler')
-    #Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
+    Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
     Pi0All(1, 0) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
-    #Water_level.read_waterLevel() #get the water level
+    Water_level.read_waterLevel() #get the water level
     
     global solOn
     #actuators
@@ -110,8 +110,8 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     #climate_control.control() #activate climate control for this chunk of time 
    
 def call():
-    schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
-    schedule.every(1).minutes.do(scheduler) #every 10 min get data
+    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
+    schedule.every(10).minutes.do(scheduler) #every 10 min get data
     schedule.every().day.at("21:00").do(LEDon)
     schedule.every().day.at("13:00").do(LEDoff)
 
