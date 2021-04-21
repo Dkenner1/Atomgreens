@@ -63,6 +63,12 @@ def create_tables():
     stop INTEGER DEFAULT 0)"""
     cur.execute(CREATE_RUNS_TABLE_SQL)
 
+    CREATE_FLAGS_TABLE_SQL = """ CREATE TABLE IF NOT EXISTS flags 
+    (id INTEGER PRIMARY KEY, 
+    flag INTEGER NOT NULL, 
+    state INTEGER DEFAULT 0)"""
+    cur.execute(CREATE_FLAGS_TABLE_SQL)
+
     # Check that tables have been created
     cur.execute(SELECT_TBLE_NAMES)
     print(cur.fetchall())
@@ -80,6 +86,8 @@ def add_device(device, sensor=False):
     # Populate Sensor table
     cur.execute(DEV_INSRT, (device, sensor))
 
+def add_condition(flag, state=0):
+    cur.execute(ADD_CONDITION, (flag, state))
 
 def add_node(piId, devId, active=True):
     cur.execute(NODE_INSRT, (piId, devId, active))
@@ -136,21 +144,24 @@ def view_create():
 if __name__ == "__main__":
     create_tables()
     add_device('humidity', True)
-    add_device('temperature', True)
+    add_device('internal temperature', True)
     add_device('weight', True)
     add_device('watering actuator')
     add_device('red light')
     add_device('blue light')
     add_device('air pump')
     add_device('water pump')
-    add_device('ph pump')
-    add_device('ec pump')
+    add_device('ph pump', True)
+    add_device('ec pump', True)
     add_device('ph', True)
     add_device('EC', True)
     add_device('water temperature', True)
     add_device('water level', True)
     add_device('heater')
     add_device('cooler')
+    add_device('external temperature', True)
+
+    add_condition("MAINT")
 
     day = 86400
     hour = 3600
@@ -166,12 +177,8 @@ if __name__ == "__main__":
     for pi in range(0, 5):
         for dev in range(1, 15):
             add_node(pi, dev)
+            add_meas(pi, dev, 0)
 
-
-    # Populate measurement table
-    for rec in range(1, 10000):
-        add_meas(random.randint(0, 5), random.randint(1, 15), random.randint(1, 50),
-                 int(eTime - random.randint(0, 7) * day - random.randint(0, 24) * hour))
     # Create Views
     view_create()
     con.commit()

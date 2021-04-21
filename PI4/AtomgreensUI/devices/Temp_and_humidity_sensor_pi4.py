@@ -1,8 +1,12 @@
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 from time import sleep
+<<<<<<< HEAD
 from database.db import connect, add_meas
 
+=======
+from database.db import add_meas
+>>>>>>> 71cbb9aa14fc13a8b4d4d7a004026baa1e09b802
 import smbus
 from smbus import SMBus
 from smbus2 import SMBus, i2c_msg
