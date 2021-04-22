@@ -23,16 +23,16 @@ def water(ctrl):
         # print("Water Pump: On")
         GPIO.output(waterPump, GPIO.HIGH)
         GPIO.output(airPump, GPIO.HIGH)
-        add_meas(1, 14, GPIO.input(waterLevel)) #tell the database that the water level is okay 
+        add_meas(0, 14, GPIO.input(waterLevel)) #tell the database that the water level is okay 
     elif (ctrl == 0): #if the user says to turn off the pump
         GPIO.output(waterPump, GPIO.LOW)
         GPIO.output(airPump, GPIO.LOW)
-        add_meas(1, 14, GPIO.input(waterLevel)) #pi id, dev id, value
+        add_meas(0, 14, GPIO.input(waterLevel)) #pi id, dev id, value
     else: #if the water level is too low to turn on the pump
         print('water level low')
         GPIO.output(waterPump, GPIO.LOW)
         GPIO.output(airPump, GPIO.LOW)
-        add_meas(1, 14, GPIO.input(waterLevel)) #pi id, dev id, value
+        add_meas(0, 14, GPIO.input(waterLevel)) #pi id, dev id, value
         
         
             
