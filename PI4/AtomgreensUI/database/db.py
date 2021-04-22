@@ -1,6 +1,6 @@
 import sqlite3, time
 from database.paths import db_dir
-from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT, select_table
+from database.SQL import SELECT_NODEID, MEAS_INSRT, NODE_INSRT, RUN_START_WSTOP
 # Setup File
 con=sqlite3.connect('./atomgreens.db')
 cur = con.cursor()
