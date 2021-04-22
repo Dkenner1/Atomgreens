@@ -29,8 +29,8 @@ def Pi0All(devid, data):
     sleep(2)
     sender.send(1, devid, data) # get the temp and humidity sensor data from the 1st pi0
     sleep(2)
-    #sender.send(2, devid, data) # 2nd pi0
-    #sleep(.5)
+    sender.send(2, devid, data) # 2nd pi0
+    sleep(.5)
     #sender.send(3, devid, data) # 3rd pi0
     #sleep(.5)
     #sender.send(4, devid, data) # 4th pi0
