@@ -2,7 +2,7 @@ import sqlite3
 import time, random
 from paths import db_dir
 from SQL import *
-from db import connect
+from db import connect, new_run
 # Setup File
 con = sqlite3.connect('./atomgreens.db')
 cur = con.cursor()
@@ -60,7 +60,8 @@ def create_tables():
     (id INTEGER PRIMARY KEY, 
     piId INTEGER NOT NULL, 
     start INTEGER NOT NULL, 
-    stop INTEGER DEFAULT 0)"""
+    stop INTEGER DEFAULT 0,
+    type TEXT)"""
     cur.execute(CREATE_RUNS_TABLE_SQL)
 
     CREATE_FLAGS_TABLE_SQL = """ CREATE TABLE IF NOT EXISTS flags 
@@ -74,12 +75,10 @@ def create_tables():
     print(cur.fetchall())
 
 
-def start_run(piId, start=0, stop=0):
+def start_run(piId, microgreen, runTime=604800):
     # Populate Sensor table
-    if stop != 0:
-        cur.execute(RUN_START_WSTOP, (piId, start, stop))
-    else:
-        cur.execute(RUN_START, (piId, int(time.time())))
+    t = int(time.time())
+    cur.execute(RUN_START_WSTOP, (piId, t, t + runTime, microgreen))
 
 
 def add_device(device, sensor=False):
@@ -167,12 +166,11 @@ if __name__ == "__main__":
     hour = 3600
     eTime = time.time()
 
-    start_run(1)
-    start_run(2)
-    start_run(3)
-    start_run(4)
-    start_run(5)
-    start_run(5, int(eTime-7*day), int(eTime))
+    start_run(1, 'brocolli', 0)
+    start_run(2, 'brocolli', 0)
+    start_run(3, 'beets')
+    start_run(4, 'brocolli')
+    start_run(5, 'beets' )
     # Populate active_device tables
     for pi in range(0, 5):
         for dev in range(1, 15):

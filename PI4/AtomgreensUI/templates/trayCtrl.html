@@ -9,7 +9,7 @@
                 </div>
             </div>
         </div>
-
+        {% if exists != None %}
         <div class="container-fluid">
             <div id="trayControls">
                 <div id="trayDone">
@@ -137,6 +137,82 @@
                     </div>
                  </div>
             </div>
+            {% else %}
+                <div id="options">
+                    <div id="waterCheck" style="display: none">
+                       {% if status.water_level == 0%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard noBlend">
+                                            <div class="inCard">
+                                                <p>Water level: Below 15%.</p>
+                                                <p><b>Perform Maintenance</b></p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div id="phCheck">
+                        {% if status.ph_pump < 15%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard noBlend">
+                                            <div class="inCard">
+                                                <p>PH tank level low.</p>
+                                                <p><b>Perform Maintenance</b></p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div id="ecCheck">
+                        {% if status.ec_pump < 15%}
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-center">
+                                     <div class="container">
+                                        <div class="fullCard noBlend">
+                                            <div class="inCard">
+                                                <p>Nutrient tank level low.</p>
+                                                <p><b>Perform Maintenance</b></p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center">
+                             <div class="container">
+                                <div class="fullCard noBlend">
+                                    <div class="inCard">
+                                        <p>Select Microgreen Type</p>
+                                        <form action="/trayinfo/{{trayId}}/trayControl/newGrow" method="POST">
+                                          <label for="microgreen">Choose a microgreen:</label>
+                                            <select name="microgreen" id="microgreen">
+                                                <option value="broccoli">Broccoli</option>
+                                                <option value="beets">Beets</option>
+                                            </select>
+                                          <br><br>
+                                          <input type="submit" style="align-content: center" value="Start Growing" onclick="confirm()">
+                                        </form>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        {% endif %}
         </div>
     </div>
 

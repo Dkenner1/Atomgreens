@@ -25,7 +25,7 @@ SELECT_PI_SENSOR_BETWEEN = """SELECT devices.device AS device, measurements.val 
                             ORDER BY etime;"""
 
 SELECT_EXPIRED_RUNS = """SELECT * FROM current_runs WHERE stop < ? ;"""
-
+CHECK_RUN_EXISTS = """SELECT * FROM current_runs WHERE piId=?"""
 
 PI4_STATUS = """SELECT device, val FROM pi4_status"""
 

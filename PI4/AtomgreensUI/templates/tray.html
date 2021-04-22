@@ -65,7 +65,12 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            {% if times[(trayId | int) - 1] < 100 %}
+                            {% if times[(trayId | int)-1] == None %}
+                                <div class="progress">
+                                    <div class="progress-bar red" style="width:100%">No Run Started</div>
+                                </div>
+                             <button class="cardButton" onclick="document.location='/trayinfo/{{ trayId }}/trayControl'">Tray Control</button>
+                            {% elif  times[(trayId | int) - 1] < 100 %}
                                 <div class="progress">
                                     <div class="progress-bar" style="width:{{times[0]}}%">{{ times[(trayId | int) - 1]}}%</div>
                                 </div>

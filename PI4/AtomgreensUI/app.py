@@ -5,14 +5,14 @@ import logging
 from waitress import serve
 from database.db import connect
 import time
-
+import webview
 from database.SQL import SELECT_EXPIRED_RUNS
 app = Flask('Atomgreens')
 app.register_blueprint(main.main)
 app.register_blueprint(service.service_routes)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1
 
-
+@threaded
 def start_server():
     print('~ ' * 5)
     print('in start_server')
