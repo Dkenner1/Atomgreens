@@ -106,7 +106,11 @@
                                 <div class="fullCard tan">
 								    <div class="inCard">
                                         <h6>Tray 5</h6>
-                                        {% if times[4] < 100 %}
+                                        {% if times[4] == None %}
+                                        <div class="progress">
+                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
+                                        </div>
+                                        {% elif times[4] < 100 %}
                                         <div class="progress">
                                             <div class="progress-bar" style="width:{{times[4]}}%">{{times[4]}}%</div>
                                         </div>
