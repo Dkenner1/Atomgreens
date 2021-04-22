@@ -2,13 +2,10 @@ import RPi.GPIO as GPIO
 from time import sleep
 from database.db import connect, add_meas
 from database.SQL import PI4_STATUS
-<<<<<<< HEAD
 from util.util import threaded
 from devices.water_pump_ctrl import *
-=======
 from util import threaded 
 import water_pump_ctrl
->>>>>>> 71cbb9aa14fc13a8b4d4d7a004026baa1e09b802
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -47,7 +44,6 @@ ecPumpCount = 0
 def On():
     conn = connect()
     cur = conn.cursor()
-<<<<<<< HEAD
     for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=11'): #get the latest temp value
         phVal = row
     for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=12'): #get the latest temp value
@@ -57,36 +53,11 @@ def On():
     for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=9'): #get the latest temp value
         ecPumpCtDB = row
     conn.close()
-
     phVal = int(phVal[0])
     ecVal = int(ecVal[0])
     phPumpCtDB = int(phPumpCtDB[0])
     ecPumpCtDB = int(ecPumpCtDB[0])
-    
 
-    GPIO.output(29, GPIO.HIGH) #turn on the pumps
-    # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
-    # PH pump
-    if ((phVal < (stdValPH-.2)) and (phPumpCtDB > 1)):
-        runPH = ((phVal - stdValPH) * 10) * SPR
-        phPumpCount = ((phVal - stdValPH) * 10)/2 #percentage of stuff used in this round
-        add_meas(1,10,(phPumpCtDB - phPumpCount))
-=======
-    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=11'): #get the latest temp value 
-        phVal = row
-    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=12'): #get the latest temp value 
-        ecVal = row
-    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=10'): #get the latest temp value 
-        phPumpCtDB = row
-    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=9'): #get the latest temp value 
-        ecPumpCtDB = row
-    conn.close()
-    '''
-    phVal = 5.9
-    ecVal = 230
-    phPumpCtDB = 100
-    ecPumpCtDB = 100
-    '''
     
     GPIO.output(29, GPIO.HIGH) #turn on the pumps 
     # If below cutoff, turn on respective pumps, increment pump count and write pump count value to database
@@ -97,7 +68,6 @@ def On():
         runPH = ((phVal - stdValPH) * 10) * SPR #total spins * steps per spin 
         phPumpCount = ((phVal - stdValPH) * 10)/200 #total spins/spins until empty 
         add_meas(1,10,(phPumpCtDB - phPumpCount)) #amount of sloution left - amount used in this cycle
->>>>>>> 71cbb9aa14fc13a8b4d4d7a004026baa1e09b802
         # Turn on PH pump
         for x in range(round(runPH)):
                 GPIO.output(pinPHRed, GPIO.LOW)
@@ -118,16 +88,7 @@ def On():
     GPIO.output(pinPHBlue, GPIO.LOW)
     print('ph done')
     # Increment phPumpCount and insert phPumpCount value into database | Question: add_meas() function to be used?
-<<<<<<< HEAD
     
-
-    # EC pump
-    if (ecVal < (stdValEC - 10) and ecVal > 5 and (ecPumpCtDB > 1)):
-        runEC = ((stdValEC - ecVal)/10) * SPR
-        ecPumpCount = ((stdValEC - ecVal) * 10)/2
-        add_meas(1, 9, (ecPumpCtDB - ecPumpCount))
-=======
-
 
     # EC pump
     if (ecVal<(stdValEC-10) and ecVal>5 and ecPumpCtDB>0): #if the measured value is out of range, the sensor is not broken, and we have sloution in the tank 
@@ -135,7 +96,6 @@ def On():
         runEC = ((stdValEC - ecVal)/10) * SPR #total spins * steps per spin 
         ecPumpCount = ((stdValEC - ecVal)/10)/200 #total spins/spins until empty 
         add_meas(1, 9, (ecPumpCtDB - ecPumpCount)) #amount of sloution left - amount used in this cycle 
->>>>>>> 71cbb9aa14fc13a8b4d4d7a004026baa1e09b802
         # Turn on EC pump
         for x in range(round(runEC)):
             GPIO.output(pinECBlack, GPIO.LOW)

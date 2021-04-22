@@ -39,30 +39,32 @@ def Pi0All(devid, data):
     #sleep(.5)
 
 def LEDon():
-    #get LED intesnity Data
-    '''
-    Red = [0,0,0,0,0]
-    Blue = [0,0,0,0,0]
-    on = [0,0,0,0,0]
     conn = connect()
     cur = conn.cursor()
+    for row in cur.execute('SELECT state FROM flags'): #determine if we are in maintenence mode
+        flag = row
     conn.close()
-    for x in range(5):
-        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = ? and devid = 17', str(x)): #Determine if the tray is active 
-            on[x] = row
-        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = ? and devid = 5', str(x)): #if the tray is active, turn on the red lights 
-            if (on[x][0] >= 1): #if the tray is on then turn on the red lights
-                Red[x] = row
-                sender.send(x, 5, Red[x][0]) #sender.send(piID, devID, Data)
-        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = ? and devid = 6', str(x)): #if the tray is active, turn on the Blue lights
-            if (on[x][0] >= 1): #if the tray is on then turn on the red lights
-                Blue[x] = row
-                sender.send(x, 6, Blue[x][0]) #sender.send(piID, devID, Data)
-    conn.close()
-    '''
-    print('LED on')
-    #Pi0All(5, 80) #turn on the Red LEDs to 80%
-    #Pi0All(6, 50) #turn on the Blue LEDs to 50%
+
+    if (flag[0] == 0): 
+        print('LED on')
+        #get LED intesnity Data
+        off = [0,0,0,0,0]
+        conn = connect()
+        cur = conn.cursor()
+        for x in range(5): #turn on the solinoids
+            for row in cur.execute('SELECT stop, red, blue, start FROM current_runs WHERE piId=?', str(x)): #get the tray epoch time and type of microgreen
+                off[x] = row
+                red = off[x][1]
+                blue = off[x][2]
+                start = off[x][3]
+                #if the current time is before the stop time and after the blackout period then turn on the LEDs
+                if (time.time() < off[x][0] and time.time() > start+86400*2):  
+                    sleep(.5)
+                    sender.send(x, 5, red) #(piID, devID, Data) turn on red to desired intensity 
+                    sleep(.5)
+                    sender.send(x, 6, blue) # turn on blue to desired intensity 
+                    sleep(.5)
+        conn.close()
     
 def LEDoff():
     print('LED off')
@@ -70,22 +72,31 @@ def LEDoff():
     Pi0All(6, 0) 
     
 def water():
-    '''
-    on = [0,0,0,0,0]
     conn = connect()
     cur = conn.cursor()
-    for x in range(5): #turn on the solinoids
-        for row in cur.execute('SELECT val, MAX(epoch_time) FROM STATUS WHERE piID = ? and devid = 17', str(x)): #get the latest temp value 
-            on[x] = row
-            if (on[x][0] >= 1):
-                sender.send(x, 4, 1) #sender.send(piID, devID, Data)
+    for row in cur.execute('SELECT state FROM flags'): #determine if we are in maintenence mode
+        flag = row
     conn.close()
-    '''
-    print('Water')
-    Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
-    global solOn
-    solOn = 1
-    water_pump_ctrl.water(1) #turn on the air and water pump 
+
+    if (flag[0] == 0): 
+        print('Water')
+        off = [0,0,0,0,0]
+        active = 0
+        conn = connect()
+        cur = conn.cursor()
+        for x in range(5): #turn on the solinoids
+            for row in cur.execute('SELECT stop FROM current_runs WHERE piId=?', str(x)): #get the tray epoch time and type of microgreen
+                off[x] = row
+                if (time.time() < off[x][0]): #if the current time is before the stop time then open the solinoids.
+                    sender.send(x, 4, 1) #sender.send(piID, devID, Data)
+                    active = 1
+        conn.close()
+
+        #Pi0All(4, 1) #turn on the solinoids (replace this with the above code)
+        if (active): #if at least one solinoid opens
+            global solOn
+            solOn = 1 #leave water on for x*10 minutes
+            water_pump_ctrl.water(1) #turn on the air and water pump 
     
 
 def scheduler(): #run every 10 minutes - have all of the sensor files run
@@ -101,25 +112,19 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     if (solOn == 0): #check to see if the solinoids should be shut
         Pi0All(4, 0) #turn off the solinoids
         print('turn off solinoids')
-        #ph_ec_sensors.readPHEC() #read the water temp, ph, and ec
-        #ph_ec_pump.On() #activate the PH and EC pump in order to keep the level constent in the water
+        ph_ec_sensors.readPHEC() #read the water temp, ph, and ec
+        ph_ec_pump.On() #activate the PH and EC pump in order to keep the level constent in the water
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 
-        water_pump_ctrl.water(0)
+        #water_pump_ctrl.water(0)
     else:
         print('Itorate for solinoids')
-        
         solOn = solOn - 1 # determines if we have waited the right amount of time 
     #climate_control.control() #activate climate control for this chunk of time 
    
 def call():
-<<<<<<< HEAD
-    schedule.every(10).minutes.do(scheduler) #every 10 min get data
-    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
-=======
-    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
-    schedule.every(10).minutes.do(scheduler) #every 10 min get data
->>>>>>> 71cbb9aa14fc13a8b4d4d7a004026baa1e09b802
+    schedule.every(1).minutes.do(scheduler) #every 10 min get data
+    schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
     schedule.every().day.at("21:00").do(LEDon)
     schedule.every().day.at("13:00").do(LEDoff)
 
