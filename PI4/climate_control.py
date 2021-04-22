@@ -21,16 +21,16 @@ GPIO.setup(DCTEC, GPIO.OUT)
 GPIO.setup(fan, GPIO.OUT)
 GPIO.setup(heater, GPIO.OUT)
     
-# @threaded
+@threaded
 def control():
     # Query database for last stored temperature value of tray 4
-    
+    print('climate control for real')
     conn = connect()
     cur = conn.cursor()
     for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=1 AND nodes.devId=2'): #get the latest temp value 
         curTemp = row
     conn.close()
-    
+    print('temp::::::::::::::::::::::::::::::::::::::::::::::::::::')
     print(curTemp)
     curTemp = int(curTemp[0])
 

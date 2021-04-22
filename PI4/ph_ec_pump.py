@@ -72,7 +72,7 @@ def On():
         print('ph')
         runPH = ((phVal - stdValPH) * 10) * SPR #total spins * steps per spin 
         phPumpCount = ((phVal - stdValPH) * 10)/200 #total spins/spins until empty 
-        add_meas(1,10,(phPumpCtDB - phPumpCount)) #amount of sloution left - amount used in this cycle
+        add_meas(0,10,(phPumpCtDB - phPumpCount)) #amount of sloution left - amount used in this cycle
         # Turn on PH pump
         for x in range(round(runPH)):
                 GPIO.output(pinPHRed, GPIO.LOW)
@@ -100,7 +100,7 @@ def On():
         print('ec')
         runEC = ((stdValEC - ecVal)/10) * SPR #total spins * steps per spin 
         ecPumpCount = ((stdValEC - ecVal)/10)/200 #total spins/spins until empty 
-        add_meas(1, 9, (ecPumpCtDB - ecPumpCount)) #amount of sloution left - amount used in this cycle 
+        add_meas(0, 9, (ecPumpCtDB - ecPumpCount)) #amount of sloution left - amount used in this cycle 
         # Turn on EC pump
         for x in range(round(runEC)):
             GPIO.output(pinECRed, GPIO.LOW)

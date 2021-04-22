@@ -8,7 +8,8 @@ from EventHub import eventHub
 from behaviors import *  #you might not need this file
 from database.db import connect
 from database.db import add_meas
-from database.SQL import * 
+from database.SQL import *
+import behaviors
 
 import Temp_and_humidity_sensor_pi4
 import Water_level
@@ -21,16 +22,17 @@ import climate_control
 ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
 sender = UTCP(ser)
 listen(ser, ser)
+eventHub.subscribe(behaviors.store, "DEFAULT")
 global solOn
-solOn = 0
+solOn = -1
 
 def Pi0All(devid, data):
     #sender.send(piID, devID, Data)
     sleep(2)
     sender.send(1, devid, data) # get the temp and humidity sensor data from the 1st pi0
     sleep(2)
-    sender.send(2, devid, data) # 2nd pi0
-    sleep(.5)
+    #sender.send(2, devid, data) # 2nd pi0
+    #sleep(.5)
     #sender.send(3, devid, data) # 3rd pi0
     #sleep(.5)
     #sender.send(4, devid, data) # 4th pi0
@@ -54,16 +56,17 @@ def LEDon():
         for x in range(5): #turn on the solinoids
             for row in cur.execute('SELECT stop, red, blue, start FROM current_runs WHERE piId=?', str(x)): #get the tray epoch time and type of microgreen
                 off[x] = row
+                print(off)
                 red = off[x][1]
                 blue = off[x][2]
                 start = off[x][3]
                 #if the current time is before the stop time and after the blackout period then turn on the LEDs
                 if (time.time() < off[x][0] and time.time() > start+86400*2):  
-                    sleep(.5)
+                    sleep(2)
                     sender.send(x, 5, red) #(piID, devID, Data) turn on red to desired intensity 
-                    sleep(.5)
+                    sleep(2)
                     sender.send(x, 6, blue) # turn on blue to desired intensity 
-                    sleep(.5)
+                    sleep(2)
         conn.close()
     
 def LEDoff():
@@ -104,7 +107,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     Temp_and_humidity_sensor_pi4.read_temp_humidity() #get the temp and humidity data from the breakout board 
     Pi0All(1, 0) # get the temp and humidity data from all of the pi0s
     #Pi0All(3, 5) # get the weight data from all PI0's 
-    Water_level.read_waterLevel() #get the water level
+    Water_level.read_waterLevel() #get the water level 
     
     global solOn
     global solOff
@@ -122,13 +125,14 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     else:
         print('Itorate for solinoids')
         solOn = solOn - 1 # determines if we have waited the right amount of time 
-    #climate_control.control() #activate climate control for this chunk of time 
+    climate_control.control() #activate climate control for this chunk of time
+    print('end schedule')
    
 def call():
-    schedule.every(1).minutes.do(scheduler) #every 10 min get data
-    schedule.every(2).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
+    schedule.every(10).minutes.do(scheduler) #every 10 min get data
+    schedule.every(60).minutes.do(water) #every hour, find which trays should be open and turn them on for the correct amount of time
     schedule.every().day.at("21:00").do(LEDon)
-    schedule.every().day.at("13:00").do(LEDoff)
+    schedule.every().day.at("15:00").do(LEDoff)
 
     while True:
         schedule.run_pending()
