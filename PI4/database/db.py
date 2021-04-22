@@ -26,6 +26,7 @@ def add_meas(piId, devId, val, etime=int(time.time()), dbpath=db_dir):
     print('Record to be inserted: ')
     print(meas_data)
     cur.execute(MEAS_INSRT, meas_data)
+    conn.commit()
     conn.close()
     
 

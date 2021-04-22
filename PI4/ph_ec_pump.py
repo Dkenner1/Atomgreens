@@ -35,9 +35,9 @@ stdValEC = 250
 
 # initalizing values 
 phPumpCount = 0
-ecPumpCount = 0
-#add_meas(1, 11, 5.7) #inserting origonal PH value
-#add_meas(1, 12, 220) #inserting origonal EC value 
+ecPumpCount = 0 
+#add_meas(0, 10, 100) #inserting origonal PH value
+#add_meas(0, 9, 100) #inserting origonal EC value 
 
 #@threaded
 def On():
@@ -49,7 +49,7 @@ def On():
         ecVal = row
     for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=10'): #get the latest temp value
         phPumpCtDB = row
-    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=13'): #get the latest temp value
+    for row in cur.execute('SELECT measurements.val, MAX(measurements.epoch_time) FROM measurements INNER JOIN nodes ON measurements.nodeId=nodes.id WHERE nodes.piId=0 AND nodes.devId=9'): #get the latest temp value
         ecPumpCtDB = row
     conn.close()
     
