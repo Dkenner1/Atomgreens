@@ -37,7 +37,11 @@ def add_node(piId, devId, active=True, dbpath=db_dir):
     cur.execute(NODE_INSRT, (piId, devId, active))
     conn.close()
     
-def new_run(piId, microgreen, runTime=604800):
+def new_run(piId, microgreen, runTime=604800, dbpath=db_dir):
     # Populate Sensor table
     t = int(time.time())
-    cur.execute(RUN_START_WSTOP, (piId, t, t + runTime, microgreen))    
+    conn = connect(dbpath)
+    cur = conn.cursor()
+    cur.execute(RUN_START_WSTOP, (piId, t, t + runTime, microgreen))
+    conn.commit()
+    conn.close()
