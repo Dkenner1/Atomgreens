@@ -26,7 +26,7 @@ def call(line):
     B = answer[1]>>2
     answer = ((A+B)/1024)*3.3 #calculate voltage from abstract 
     
-    formatted_string = "{:.3f}".format(answer) #truncate float 
+    formatted_string = "{:.4f}".format(answer) #truncate float 
     answer = float(formatted_string)
     print(answer)
     spi.close()

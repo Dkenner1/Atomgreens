@@ -85,7 +85,7 @@ def On():
                 GPIO.output(pinPHGrn, GPIO.HIGH)
                 sleep(delay)
                 GPIO.output(pinPHGrn, GPIO.LOW)
-                GPIO.output(pinPHRed, GPIO.HIGH)
+                GPIO.output(pinPHRed, GPIO.HIGH) 
                 sleep(delay)
     GPIO.output(pinPHGrn, GPIO.LOW)
     GPIO.output(pinPHBlue, GPIO.LOW)
@@ -103,17 +103,17 @@ def On():
         add_meas(1, 9, (ecPumpCtDB - ecPumpCount)) #amount of sloution left - amount used in this cycle 
         # Turn on EC pump
         for x in range(round(runEC)):
-            GPIO.output(pinECBlack, GPIO.LOW)
-            GPIO.output(pinECRed, GPIO.HIGH)
-            sleep(delay)
             GPIO.output(pinECRed, GPIO.LOW)
-            GPIO.output(pinECGrn, GPIO.HIGH)
+            GPIO.output(pinECBlack, GPIO.HIGH)
             sleep(delay)
-            GPIO.output(pinECGrn, GPIO.LOW)
+            GPIO.output(pinECBlack, GPIO.LOW)
             GPIO.output(pinECBlue, GPIO.HIGH)
             sleep(delay)
             GPIO.output(pinECBlue, GPIO.LOW)
-            GPIO.output(pinECBlack, GPIO.HIGH)
+            GPIO.output(pinECGrn, GPIO.HIGH)
+            sleep(delay)
+            GPIO.output(pinECGrn, GPIO.LOW)
+            GPIO.output(pinECRed, GPIO.HIGH)
             sleep(delay)
     GPIO.output(pinECBlack, GPIO.LOW) #turn off all of the leads 
     GPIO.output(pinECRed, GPIO.LOW)

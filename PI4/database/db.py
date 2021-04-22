@@ -13,9 +13,10 @@ def query(queryStr):
     cur = conn.cursor()
     return [item for item in cur.execute(queryStr)]    
     
-def add_meas(piId, devId, val, etime=int(time.time()), dbpath=db_dir):
+def add_meas(piId, devId, val, dbpath=db_dir):
     conn = connect(dbpath)
     cur = conn.cursor()
+    etime=int(time.time())
     result = cur.execute(SELECT_NODEID, (piId, devId)).fetchone()
     if result:
         id = result[0]

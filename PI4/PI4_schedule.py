@@ -107,6 +107,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
     Water_level.read_waterLevel() #get the water level
     
     global solOn
+    global solOff
     #actuators
     print(solOn)
     if (solOn == 0): #check to see if the solinoids should be shut
@@ -117,6 +118,7 @@ def scheduler(): #run every 10 minutes - have all of the sensor files run
         #pump turns off in the PH_EC_pump file
         # Delete when adding the PH and EC stuff in the loop 
         #water_pump_ctrl.water(0)
+        solOn = solOn - 1
     else:
         print('Itorate for solinoids')
         solOn = solOn - 1 # determines if we have waited the right amount of time 
