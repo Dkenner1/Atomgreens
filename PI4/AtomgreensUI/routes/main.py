@@ -29,12 +29,14 @@ def index():
     weights = {item[0]: item[2] for item in
                cur.execute("""SELECT piID, device, val FROM status WHERE device='weight'""")}
     temps = {item[0]: item[2] for item in
-               cur.execute("""SELECT piID, device, val FROM status WHERE device='temperature'""")}
+               cur.execute("""SELECT piID, device, val FROM status WHERE device='internal temperature'""")}
     hums = {item[0]: item[2] for item in
              cur.execute("""SELECT piID, device, val FROM status WHERE device='humidity'""")}
-
+    microgreens = {item[0]: item[1] for item in
+                   cur.execute("""SELECT piID, type FROM current_runs""")}
     conn.close()
-    return render_template('index.html', status=data, times=startTimes, weights=weights, temps=temps, hums=hums)
+    print(microgreens)
+    return render_template('index.html', status=data, times=startTimes, weights=weights, temps=temps, hums=hums, greenType=microgreens)
 
 
 @main.route('/trayinfo/<trayid>', methods=['GET', 'POST'])
