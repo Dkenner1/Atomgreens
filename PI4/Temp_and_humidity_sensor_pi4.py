@@ -24,8 +24,8 @@ reg_Manufacturer_ID = 0xFE#ID of Texas Instruments
 reg_Device_ID = 0xFF      #ID of the device
 
 def read_temp_humidity(): #get a temp measurment     
-    register_config = [0x10,0x00]
-    bus.write_i2c_block_data(i2c_address, reg_Configuration, register_config) #update the resister configuration 
+    #register_config = [0x10,0x00]
+    #bus.write_i2c_block_data(i2c_address, reg_Configuration, register_config) #update the resister configuration 
     msg = i2c_msg.write(i2c_address,[reg_Temperature])
     bus.i2c_rdwr(msg)
     sleep(.02)

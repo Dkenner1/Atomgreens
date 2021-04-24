@@ -34,8 +34,8 @@ def readPHEC():
     EC = DFRobot_EC.readEC(ec, temperature)
     
     add_meas(0, 13, temperature)
-    PH = 5.5
     add_meas(0, 11, PH)
+    EC = 275
     add_meas(0, 12, EC)
 
     print("Temperature: %.1f ^C EC: %.3f ppm PH: %.3f" % (temperature, EC, PH))

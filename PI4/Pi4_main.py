@@ -7,6 +7,11 @@ from time import sleep
 import ph_ec_sensors
 import ADC_callable
 import water_pump_ctrl
+import ph_ec_pump
+from database.db import add_meas
+
+add_meas(0, 11, 8)
+ph_ec_pump.On()
 
 #GPIO.output(13, GPIO.LOW)
 

@@ -7,9 +7,9 @@ from time import sleep
 
 # from AtomgreensUI.app import start_server
 import PI4_schedule
-# import Stop
+import Stop
 # sleep(1)
-# Stop.off() #turns off all of the GPIO in order to prevent undesired premature function
+Stop.off() #turns off all of the GPIO in order to prevent undesired premature function
 #threading.Thread(target=start_server())
 sleep(1)
 PI4_schedule.call()

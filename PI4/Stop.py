@@ -1,7 +1,12 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
+from utcp import UTCP
+import serial
 
+ser = serial.Serial(port="/dev/serial0", baudrate=9600)  # Open port with baud rate
+sender = UTCP(ser)
+    
 SDA = 3
 SLC = 5
 TEC_Perisoltic = 7
@@ -29,15 +34,19 @@ PH_Red = 36
 PH_Grn = 38
 PH_Black = 40 
 global control_pins
-control_pins = [SDA, SLC, TEC_Perisoltic, Fan, PH_on, EC_on, Din, SCLK, Step_CTRL,
-                EC_Blue, EC_Red, RC_Grn, EC_Black, TX, heater, water_pump, Air_pump,
-                PH_Blue, PH_Red, PH_Grn, PH_Black]
+control_pins = [TEC_Perisoltic, Fan, PH_on, EC_on, Step_CTRL, heater, water_pump, Air_pump]
+
 def off():
     global control_pins
     for pin in control_pins:
         GPIO.setup(pin, GPIO.OUT)
-    GPIO.setup(ADC_CS, GPIO.OUT)
         
     for pin in control_pins:
         GPIO.output(pin, GPIO.LOW)  
-    GPIO.output(ADC_CS, GPIO.HIGH)
+    '''
+    for x in range(5): #turn off LEDs & solinoids
+        sender.send(x, 4, 0) #solinoids
+        sender.send(x, 5, 0) #red 
+        sender.send(x, 6, 0) #blue
+    '''
+
