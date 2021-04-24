@@ -18,6 +18,7 @@
                                 <div class="fullCard tan">
                                     <div class="inCard">
                                         <h6>Tray 1</h6>
+                                        <h6><i>{{ (greenType[1] | string) }}</i></h6>
                                         {% if times[0] == None  %}
                                         <div class="progress">
                                             <div class="progress-bar red" style="width:100%">Run Not Started</div>
@@ -141,7 +142,7 @@
                 <div id="harvest" style="display:block">
                    <div class="container-fluid">
                        {%for trayId in range(0,5)%}
-                            {% if times[(trayId)-1] != None and times[(trayId | int) - 1] >= 100 %}
+                            {% if times[(trayId | int) - 1] != None and times[(trayId | int) - 1] >= 100 %}
                                 <div class="alert alert-success">
                                     <p><b>Tray {{(trayId | int + 1)}} ready to harvest!</b></p>
                                 </div>
@@ -226,18 +227,26 @@
                         {% if status.EC is defined %}
                         <td>{{ status.EC }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
 
                         {% if status.ec_pump is defined %}
                         <td>{{ status.ec_pump }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
 
+                        {% if status.internal_temperature is defined %}
                         <td>{{ temps[3] }}</td>
+                        {% else %}
+                        <td> -- </td>
+                        {% endif %}
 
+                        {% if status.humidity %}
                         <td>{{ hums[3] }}</td>
+                        {% else %}
+                        <td> -- </td>
+                        {% endif %}
                     </tr>
                 </table>
             </div>

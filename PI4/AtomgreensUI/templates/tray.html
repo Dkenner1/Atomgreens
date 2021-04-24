@@ -216,7 +216,7 @@ function convertTime(ts) {
 		});
 
     var inTempData = {
-        labels :  [{% for etime in data['heater'] %}
+        labels :  [{% for etime in data['internal temperature'] %}
                     {% if loop.index %}
                             (convertTime({{etime[1]}})),
                         {% endif %}
@@ -224,7 +224,7 @@ function convertTime(ts) {
 
         datasets: [{
             label: 'Internal Temperature',
-            data : [{% for item in data['heater'] %}
+            data : [{% for item in data['internal temperature'] %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
@@ -292,7 +292,7 @@ function convertTime(ts) {
 		});
 
     var exTempData = {
-        labels :  [{% for etime in data['temperature'] %}
+        labels :  [{% for etime in data['external temperature'] %}
                         {% if loop.index %}
                             (convertTime({{etime[1]}})),
                         {% endif %}
@@ -300,7 +300,7 @@ function convertTime(ts) {
 
         datasets: [{
             label: 'External Temperature',
-            data : [{% for item in data['temperature'] %}
+            data : [{% for item in data['external temperature'] %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
@@ -404,7 +404,6 @@ function convertTime(ts) {
             }
         }
     });
-
 
 </script>
 {% endblock %}
