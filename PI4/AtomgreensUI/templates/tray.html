@@ -41,11 +41,11 @@
                     </div>
                     <br>
                     <div class="card-body">
-                       <canvas id="humtempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                       <canvas id="extempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>>
                     </div>
                     <br>
                     <div class="card-body">
-                       <canvas id="extempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>>
+                       <canvas id="humtempChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                     </div>
                     <br>
                     <div class="card-body">
@@ -140,7 +140,7 @@ function convertTime(ts) {
 	});
 
     var ecData = {
-        labels :  [{% for etime in data['EC'] %}
+        labels :  [{% for etime in data['ec'] %}
                         {% if loop.index %}
                             (convertTime({{etime[1]}})),
                         {% endif %}
@@ -148,7 +148,7 @@ function convertTime(ts) {
 
         datasets: [{
             label: 'EC of Water',
-            data : [{% for item in data['EC'] %}
+            data : [{% for item in data['ec'] %}
                         {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
@@ -216,7 +216,7 @@ function convertTime(ts) {
 		});
 
     var inTempData = {
-        labels :  [{% for etime in data['internal temperature'] %}
+        labels :  [{% for etime in data['temperature'] %}
                     {% if loop.index %}
                             (convertTime({{etime[1]}})),
                         {% endif %}
@@ -224,7 +224,7 @@ function convertTime(ts) {
 
         datasets: [{
             label: 'Internal Temperature',
-            data : [{% for item in data['internal temperature'] %}
+            data : [{% for item in data['temperature'] %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}
@@ -292,7 +292,7 @@ function convertTime(ts) {
 		});
 
     var exTempData = {
-        labels :  [{% for etime in data['external temperature'] %}
+        labels :  [{% for etime in external_temp %}
                         {% if loop.index %}
                             (convertTime({{etime[1]}})),
                         {% endif %}
@@ -300,7 +300,7 @@ function convertTime(ts) {
 
         datasets: [{
             label: 'External Temperature',
-            data : [{% for item in data['external temperature'] %}
+            data : [{% for item in external_temp %}
                     {% if loop.index %}
                             {{item[0]}},
                         {% endif %}

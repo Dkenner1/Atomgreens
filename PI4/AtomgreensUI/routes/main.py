@@ -51,32 +51,37 @@ def data(trayid):
     runs = [item for item in cur.execute("""SELECT piId, start, stop FROM current_runs""")]
 
     startTimes = [None, None, None, None, None]
-    internal_temp=data["temperature"]
+    data['temperature'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
+                            FROM measurements
+                            INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
+                            INNER JOIN devices ON devices.id = active_nodes.devId
+                            WHERE active_nodes.piId = 1 AND devices.device="temperature" AND etime BETWEEN ? and ?
+                            ORDER BY etime;""", (1619238114, 1619269749))]
+
     external_temp = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
                             FROM measurements
                             INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
-                            WHERE active_nodes.piId = 0 AND devices.device="temperature" AND etime > ?
-                            ORDER BY etime;""", (data['temperature'][0][1],))]
+                            WHERE active_nodes.piId = 0 AND devices.device="temperature" AND etime BETWEEN ? and ?
+                            ORDER BY etime;""", (data['temperature'][0][1], data['temperature'][-1][1]))]
 
     data['ec'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
                             FROM measurements
                             INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
                             WHERE active_nodes.piId = 1 AND devices.device="ec" AND etime BETWEEN ? and ?
-                            ORDER BY etime;""", (1619062979, 1619284373))]
+                            ORDER BY etime;""", (1619062979, 1619195473))]
 
     data['ph'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
                             FROM measurements
                             INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
                             INNER JOIN devices ON devices.id = active_nodes.devId
                             WHERE active_nodes.piId = 1 AND devices.device="ph" AND etime BETWEEN ? and ?
-                            ORDER BY etime;""", (1619062979, 1619284373))]
+                            ORDER BY etime;""", (1619191817, 1619284373))]
     for item in runs:
         startTimes[item[0]-1] = round(100 * (eTime - item[1]) / (item[2]-item[1]+1), 1)
     conn.close()
-    return render_template('tray.html', data=data, times=startTimes, trayId=trayid, external_temp=external_temp,
-                           internal_temp=internal_temp)
+    return render_template('tray.html', data=data, times=startTimes, trayId=trayid, external_temp=external_temp)
 
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
