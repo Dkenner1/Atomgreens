@@ -1,12 +1,10 @@
 from flask import Blueprint, render_template, json, \
     redirect, request, url_for
-from database.db import connect, new_run
+from database.db import connect
 from database.SQL import *
 from devices.trayCtrl import *
-# from devices.Temp_and_humidity_sensor_pi4 import read_temp_humidity
-# from devices.ph_ec_pump import On
 import time
-import datetime
+
 
 
 main = Blueprint('main', __name__, template_folder='templates')
@@ -14,7 +12,6 @@ main = Blueprint('main', __name__, template_folder='templates')
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    print(time.time())
     conn = connect()
     cur = conn.cursor()
     try:
@@ -44,7 +41,6 @@ def data(trayid):
     conn = connect()
     cur = conn.cursor()
     eTime = time.time()
-    days = 60 * 60 * 24
     time_range = eTime - 604800  # 604800 = 1 week period
     data = {}
     for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, eTime)).fetchall():
@@ -52,13 +48,35 @@ def data(trayid):
             data[row[0]].append((row[1], row[2]))
         else:
             data[row[0]] = [(row[1], row[2])]
-
     runs = [item for item in cur.execute("""SELECT piId, start, stop FROM current_runs""")]
+
     startTimes = [None, None, None, None, None]
+    internal_temp=data["temperature"]
+    external_temp = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
+                            FROM measurements
+                            INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
+                            INNER JOIN devices ON devices.id = active_nodes.devId
+                            WHERE active_nodes.piId = 0 AND devices.device="temperature" AND etime > ?
+                            ORDER BY etime;""", (data['temperature'][0][1],))]
+
+    data['ec'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
+                            FROM measurements
+                            INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
+                            INNER JOIN devices ON devices.id = active_nodes.devId
+                            WHERE active_nodes.piId = 1 AND devices.device="ec" AND etime BETWEEN ? and ?
+                            ORDER BY etime;""", (1619062979, 1619284373))]
+
+    data['ph'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
+                            FROM measurements
+                            INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
+                            INNER JOIN devices ON devices.id = active_nodes.devId
+                            WHERE active_nodes.piId = 1 AND devices.device="ph" AND etime BETWEEN ? and ?
+                            ORDER BY etime;""", (1619062979, 1619284373))]
     for item in runs:
         startTimes[item[0]-1] = round(100 * (eTime - item[1]) / (item[2]-item[1]+1), 1)
     conn.close()
-    return render_template('tray.html', data=data, times=startTimes, trayId=trayid)
+    return render_template('tray.html', data=data, times=startTimes, trayId=trayid, external_temp=external_temp,
+                           internal_temp=internal_temp)
 
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
