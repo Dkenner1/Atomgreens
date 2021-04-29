@@ -65,7 +65,7 @@
                 <div class="fullCard">
                     <div class="cardContent">
                         <div class="cardInfo">
-                            {% if times[(trayId | int)-1] == None %}
+                            {% if times[(trayId | int) - 1] == None %}
                                 <div class="progress">
                                     <div class="progress-bar red" style="width:100%">No Run Started</div>
                                 </div>
@@ -149,8 +149,8 @@ function convertTime(ts) {
         datasets: [{
             label: 'EC of Water',
             data : [{% for item in data['ec'] %}
-                        {% if loop.index %}
-                            {{item[0]}},
+                        {% if loop.index %},
+                            {{item[0]}}
                         {% endif %}
                     {% endfor %}],
             borderColor: 'lightblue',
@@ -246,7 +246,7 @@ function convertTime(ts) {
                         ticks: {
                             maxRotation: 0,
                             autoSkip: true,
-                            maxTicksLimit: 8
+                            maxTicksLimit: 8,
                         }
                     }]
                 }

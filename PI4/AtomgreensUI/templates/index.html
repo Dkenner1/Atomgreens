@@ -18,7 +18,11 @@
                                 <div class="fullCard tan">
                                     <div class="inCard">
                                         <h6>Tray 1</h6>
+                                        {% if greenType is defined %}
                                         <h6><i>{{ (greenType[1] | string) }}</i></h6>
+                                        {% else %}
+                                        <h6><i>No Microgreen Planted</i></h6>
+                                        {% endif %}
                                         {% if times[0] == None  %}
                                         <div class="progress">
                                             <div class="progress-bar red" style="width:100%">Run Not Started</div>
@@ -41,6 +45,7 @@
                                 <div class="fullCard tan">
                                     <div class="inCard">
                                         <h6>Tray 2</h6>
+                                        <h6><i>{{ (greenType[2] | string) }}</i></h6>
                                         {% if times[1] == None %}
                                         <div class="progress">
                                             <div class="progress-bar red" style="width:100%">Run Not Started</div>
@@ -63,9 +68,10 @@
                                 <div class="fullCard tan">
                                     <div class="inCard">
                                         <h6>Tray 3</h6>
+                                         <h6><i>{{ (greenType[3] | string) }}</i></h6>
                                         {% if times[2] == None %}
                                         <div class="progress">
-                                            <div class="progress-bar red" style="width:100%">No Run Avaliable</div>
+                                            <div class="progress-bar red" style="width:100%">Run Not Started</div>
                                         </div>
                                         {% elif times[2] < 100 %}
                                         <div class="progress">
@@ -84,7 +90,8 @@
                             <div class="col">
                                 <div class="fullCard tan">
                                     <div class="inCard">
-                                            <h6>Tray 4</h6>
+                                        <h6>Tray 4</h6>
+                                        <h6><i>{{ (greenType[4] | string) }}</i></h6>
                                         {% if times[3] == None %}
                                         <div class="progress">
                                             <div class="progress-bar red" style="width:100%">Run Not Started</div>
@@ -107,6 +114,7 @@
                                 <div class="fullCard tan">
 								    <div class="inCard">
                                         <h6>Tray 5</h6>
+                                        <h6><i>{{ (greenType[5] | string) }}</i></h6>
                                         {% if times[4] == None %}
                                         <div class="progress">
                                             <div class="progress-bar red" style="width:100%">Run Not Started</div>
@@ -196,25 +204,25 @@
                         {% if status.ph is defined %}
                         <td>{{ status.ph }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
 
                         {% if status.ph_pump is defined %}
                         <td>{{ status.ph_pump }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
 
                         {% if status.temperature is defined %}
                         <td>{{ status.temperature }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
 
                         {% if status.humidity is defined %}
                         <td>{{ status.humidity }}</td>
                         {% else %}
-                        <td> 0.0 </td>
+                        <td> -- </td>
                         {% endif %}
                     </tr>
                     <tr>
