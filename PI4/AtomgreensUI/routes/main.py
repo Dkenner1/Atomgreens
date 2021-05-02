@@ -4,7 +4,7 @@ from database.db import connect
 from database.SQL import *
 from devices.trayCtrl import *
 import time
-
+from collections import defaultdict
 
 
 main = Blueprint('main', __name__, template_folder='templates')
@@ -41,19 +41,21 @@ def data(trayid):
     conn = connect()
     cur = conn.cursor()
     eTime = time.time()
-    time_range = eTime - 604800  # 604800 = 1 week period
-    data = {}
-    for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, eTime)).fetchall():
-        if row[0] in data:
-            data[row[0]].append((row[1], row[2]))
-        else:
-            data[row[0]] = [(row[1], row[2])]
-    runs = [item for item in cur.execute("""SELECT piId, start, stop FROM current_runs""")]
-
-    startTimes = [None, None, None, None, None]
+    data = defaultdict()
+    run = cur.execute("""SELECT piId, start, stop FROM current_runs WHERE piID=?""", (trayid, )).fetchone()
+    startTime = None
+    if run:
+        time_range= run[2]-run[1]
+        for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, eTime)).fetchall():
+            if row[0] in data:
+                data[row[0]].append((row[1], row[2]))
+            else:
+                data[row[0]] = [(row[1], row[2])]
+        if run:
+            startTime = round(100 * (eTime - run[1]) / (run[2] - run[1] + 1), 1)
 
     external_temp = []
-    if data['temperature']:
+    if "temperature" in data and data['temperature']:
         external_temp = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
                                 FROM measurements
                                 INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
@@ -61,10 +63,8 @@ def data(trayid):
                                 WHERE active_nodes.piId = 0 AND devices.device="temperature" AND etime BETWEEN ? and ?
                                 ORDER BY etime;""", (data['temperature'][0][1], data['temperature'][-1][1]))]
 
-    for item in runs:
-        startTimes[item[0]-1] = round(100 * (eTime - item[1]) / (item[2]-item[1]+1), 1)
     conn.close()
-    return render_template('tray.html', data=data, times=startTimes, trayId=trayid, external_temp=external_temp)
+    return render_template('tray.html', data=data, times=startTime,  trayId=trayid, external_temp=external_temp)
 
 
 @main.route('/trayinfo/<trayid>/trayControl', methods=['GET', 'POST'])
@@ -82,3 +82,28 @@ def newCycle(trayid):
     if request.form['microgreen']:
         tray_start(trayid, request.form['microgreen'])
     return redirect("/")
+
+@main.route('/trayinfo/<trayid>/download', methods=['GET', 'POST'])
+def downloadTrayData(trayid):
+    conn = connect()
+    cur=conn.cursor()
+    eTime = time.time()
+    time_range = eTime - 604800
+    import csv
+    data = defaultdict()
+    for row in cur.execute(SELECT_PI_SENSOR_BETWEEN, (trayid, time_range, eTime)).fetchall():
+        if row[0] in data:
+            data[row[0]].append((row[1], row[2]))
+        else:
+            data[row[0]] = [(row[1], row[2])]
+    if data['temperature']:
+        data['external temperature'] = [item for item in cur.execute("""SELECT measurements.val AS val, measurements.epoch_time AS etime 
+                                FROM measurements
+                                INNER JOIN active_nodes ON active_nodes.id = measurements.nodeId
+                                INNER JOIN devices ON devices.id = active_nodes.devId
+                                WHERE active_nodes.piId = 0 AND devices.device="temperature" AND etime BETWEEN ? and ?
+                                ORDER BY etime;""", (data['temperature'][0][1], data['temperature'][-1][1]))]
+    with open('output.csv', 'w') as output:
+        writer = csv.writer(output)
+        for key, value in data.items():
+            writer.writerow([key, value[1], [value[2]]])
