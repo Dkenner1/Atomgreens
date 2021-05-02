@@ -72,7 +72,7 @@
                              <button class="cardButton" onclick="document.location='/trayinfo/{{ trayId }}/trayControl'">Tray Control</button>
                             {% elif  times < 100 %}
                                 <div class="progress">
-                                    <div class="progress-bar" style="width:{{times[0]}}%">{{ times }}%</div>
+                                    <div class="progress-bar" style="width:{{ times }}%">{{ times }}%</div>
                                 </div>
                             {% else %}
                                <div class="progress">
